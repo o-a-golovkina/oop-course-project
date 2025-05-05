@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="EventPass.Models.Users.Admin">
+    <Position X="0.5" Y="0.5" Width="10.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAIAAAAAAAAgAAgAAAAAAACAIAQAAAAkAA=</HashCode>
+      <FileName>Models\Users\Admin.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="EventPass.Models.Users.RegisteredUser" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="4" Width="7.25" />
+    <AssociationLine Name="Orders" Type="EventPass.Models.Order">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.176" Y="-1.595" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>EAEAAADAAGAIAZAgBAigSAQIAEAEAAEGAIAQAwAAEAA=</HashCode>
+      <FileName>Models\Users\RegisteredUser.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Orders" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="EventPass.Models.Tickets.ConcertTicket">
+    <Position X="15.5" Y="11.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Tickets\ConcertTicket.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EventPass.Models.Tickets.TicketBase">
+    <Position X="11.75" Y="10" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>EAACAAAgAQAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Tickets\TicketBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EventPass.Models.Tickets.TheaterTicket">
+    <Position X="8.5" Y="11.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Models\Tickets\TheaterTicket.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EventPass.Models.Tickets.StandUpTicket">
+    <Position X="11.75" Y="13" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Tickets\StandUpTicket.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EventPass.Models.Events.Event" BaseTypeListCollapsed="true">
+    <Position X="8.25" Y="4" Width="9.75" />
+    <TypeIdentifier>
+      <HashCode>AAQCAACAgAAAgJQIAAAACIQEAQAEAAAEAAAAAAAAAgA=</HashCode>
+      <FileName>Models\Events\Event.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="EventType" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Tickets" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="EventPass.Models.Order" BaseTypeListCollapsed="true">
+    <Position X="19.75" Y="4" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>EAADAAAAAQIAAAQCAAAAAAAAEQAAABAAAAAAABAAAgA=</HashCode>
+      <FileName>Models\Order.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="OrderedEvent" />
+      <Property Name="Ticket" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="EventPass.Models.Tickets.TicketFactory">
+    <Position X="18.25" Y="10" Width="8" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Tickets\TicketFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EventPass.Models.Users.UserRepository">
+    <Position X="18.25" Y="13.75" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAEAACAgAAAAAAAAAAAAAAAAAAAAAAAgAABAAAAAEAA=</HashCode>
+      <FileName>Models\Users\UserRepository.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Users" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="DateOnlyJsonConverter">
+    <Position X="18.25" Y="11.5" Width="6" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAgAAgAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>DateOnlyJsonConverter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="EventPass.Interfaces.IAdmin">
+    <Position X="11.25" Y="0.5" Width="10.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAAAAAAAAAgAAAAAAACAIAQAAAAAAA=</HashCode>
+      <FileName>Interfaces\IAdmin.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="EventPass.Interfaces.IUser">
+    <Position X="22.25" Y="0.5" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAABAAGAIAIAAAAgASAQAAAAAAAACAIAQAQAAAAA=</HashCode>
+      <FileName>Interfaces\IUser.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="EventPass.Models.Events.EventType">
+    <Position X="19" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAgAAAAAAABAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Events\EventType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
