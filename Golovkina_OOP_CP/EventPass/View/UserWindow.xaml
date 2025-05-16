@@ -62,9 +62,9 @@
                 </Border>
                 <Button x:Name="Button_Concerts" Content="Concerts" Margin="42,164,670,0" Width="88" Height="25" VerticalAlignment="Top"
         Style="{StaticResource TextOnlyHoverButtonStyle}" Cursor="Hand"/>
-                <Button x:Name="Button_Theatre" Content="Theatre" Margin="42,205,670,0" Width="88" Height="28" VerticalAlignment="Top"
+                <Button x:Name="Button_Theater" Content="Theater" Margin="42,205,670,0" Width="88" Height="28" VerticalAlignment="Top"
         Style="{StaticResource TextOnlyHoverButtonStyle}" Cursor="Hand"/>
-                <Button x:Name="Button_StandUp" Content="Stand-up" Margin="42,245,670,0" Width="88" Height="25" VerticalAlignment="Top"
+                <Button x:Name="Button_StandUp" Content="StandUp" Margin="42,245,670,0" Width="88" Height="25" VerticalAlignment="Top"
         Style="{StaticResource TextOnlyHoverButtonStyle}" Cursor="Hand"/>
                 <Image Margin="24,168,757,247" Source="/Resources/icon-concert.png" Stretch="Fill"/>
                 <Image Margin="24,208,757,207" Source="/Resources/icon-theater.png" Stretch="Fill"/>

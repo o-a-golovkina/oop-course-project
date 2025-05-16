@@ -18,7 +18,6 @@ namespace EventPass.Models.Users
         private string? password;
         private decimal balance;
 
-        private static int UserCount = 0;
         public static event Action<string>? UserRegistered;
 
         public string FullName
@@ -123,7 +122,6 @@ namespace EventPass.Models.Users
             Email = email!;
             Login = login!;
             Password = password!;
-            UserCount++;
             UserRegistered?.Invoke(Login);
         }
 

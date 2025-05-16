@@ -26,32 +26,38 @@ namespace EventPass.View
 
         private void TextBox_Name_GotFocus(object sender, RoutedEventArgs e)
         {
-            TextBox_Name.Text = string.Empty;
+            if (TextBox_Name.Text == "Your full name")
+                TextBox_Name.Text = string.Empty;
         }
 
         private void TextBox_Date_GotFocus(object sender, RoutedEventArgs e)
         {
-            TextBox_Date.Text = string.Empty;
+            if (TextBox_Date.Text == "Date of birth")
+                TextBox_Date.Text = string.Empty;
         }
 
         private void TextBox_Number_GotFocus(object sender, RoutedEventArgs e)
         {
-            TextBox_Number.Text = "(+380)";
+            if (TextBox_Number.Text == "Phone number")
+                TextBox_Number.Text = "(+380)";
         }
 
         private void TextBox_Email_GotFocus(object sender, RoutedEventArgs e)
         {
-            TextBox_Email.Text = string.Empty;
+            if (TextBox_Email.Text == "Email")
+                TextBox_Email.Text = string.Empty;
         }
 
         private void TextBox_Login_GotFocus(object sender, RoutedEventArgs e)
         {
-            TextBox_Login.Text = string.Empty;
+            if (TextBox_Login.Text == "Create login")
+                TextBox_Login.Text = string.Empty;
         }
 
         private void TextBox_Password_GotFocus(object sender, RoutedEventArgs e)
         {
-            TextBox_Password.Text = string.Empty;
+            if (TextBox_Password.Text == "Password")
+                TextBox_Password.Text = string.Empty;
         }
 
         private void TextBox_Name_LostFocus(object sender, RoutedEventArgs e)

@@ -282,7 +282,7 @@
                 Background="Transparent"
                 BorderThickness="0"
                 Padding="8,0"
-                SelectedIndex="0" Cursor="Hand">
+                SelectedIndex="0" Cursor="Hand" GotFocus="ComboBox_EventType_GotFocus">
                 <ComboBox.Resources>
                     <Style TargetType="{x:Type ComboBoxItem}">
                         <Setter Property="Padding" Value="8,2"/>
@@ -349,8 +349,8 @@
 
                 <!-- Пункти меню -->
                 <ComboBoxItem Content="Concert" IsSelected="True"/>
-                <ComboBoxItem Content="Theatre"/>
-                <ComboBoxItem Content="Stand-up"/>
+                <ComboBoxItem Content="Theater"/>
+                <ComboBoxItem Content="StandUp"/>
             </ComboBox>
             <ComboBox x:Name="ComboBox_Drinks" Width="55"
                 Height="18"

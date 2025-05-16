@@ -14,6 +14,9 @@ namespace EventPass.View
     public partial class AdminCreateEventWindow : Window
     {
         string? imagePath;
+        string? singer = null;
+        short numberOfActs = 1;
+        bool includeDrink = false;
 
         public AdminCreateEventWindow()
         {
@@ -22,6 +25,9 @@ namespace EventPass.View
             Image_EmptyImage.Visibility = Visibility.Visible;
             Rectangle_Gray.Visibility = Visibility.Visible;
             Image_Event.Source = null;
+            TextBox_Singer.IsEnabled = true;
+            ComboBox_Acts.IsEnabled = false;
+            ComboBox_Drinks.IsEnabled = false;
         }
 
         private void TextBox_EventName_GotFocus(object sender, RoutedEventArgs e)
@@ -107,11 +113,6 @@ namespace EventPass.View
                     string? city = ComboBox_City.Text;
                     int countFreeTickets = int.Parse(TextBox_NumTickets.Text);
                     EventType eventType = (EventType)Enum.Parse(typeof(EventType), ComboBox_EventType.Text + "Event");
-                    string? singer = TextBox_Singer.Text;
-                    if (singer == "No")
-                        singer = null;
-                    short numberOfActs = short.Parse(ComboBox_Acts.Text);
-                    bool includeDrink = ComboBox_Drinks.Text == "Yes";
                     string mes;
                     Admin.Instance.CreateEvent(name, dateAndTime, price, city, imagePath, countFreeTickets, eventType, out mes, singer, includeDrink, numberOfActs);
                     if (mes != null)
@@ -125,7 +126,6 @@ namespace EventPass.View
                 FormReset();
                 MessageBox.Show("The event was created!", "Message", MessageBoxButton.OK, MessageBoxImage.Information);
             }
-
         }
 
         private void Button_PlaceImage_Click(object sender, RoutedEventArgs e)
@@ -206,9 +206,38 @@ namespace EventPass.View
             Image_Event.Source = null;
             Label_Exception.Visibility = Visibility.Hidden;
             ComboBox_EventType.Text = "Concert";
-            ComboBox_City.Text = "kharkiv";
+            ComboBox_City.Text = "Kharkiv";
             ComboBox_Acts.Text = "1";
             ComboBox_Drinks.Text = "No";
+        }
+
+        private void ComboBox_EventType_GotFocus(object sender, RoutedEventArgs e)
+        {
+            switch (ComboBox_EventType.Text)
+            {
+                case "Concert":
+                    TextBox_Singer.IsEnabled = true;
+                    ComboBox_Acts.IsEnabled = false;
+                    ComboBox_Drinks.IsEnabled = false;
+                    singer = TextBox_Singer.Text;
+                    if (singer == "Singer" || singer == " " || singer == "")
+                        singer = null;
+                    break;
+
+                case "Theater":
+                    TextBox_Singer.IsEnabled = false;
+                    ComboBox_Acts.IsEnabled = true;
+                    ComboBox_Drinks.IsEnabled = false;
+                    numberOfActs = short.Parse(ComboBox_Acts.Text);
+                    break;
+
+                case "StandUp":
+                    TextBox_Singer.IsEnabled = false;
+                    ComboBox_Acts.IsEnabled = false;
+                    ComboBox_Drinks.IsEnabled = true;
+                    includeDrink = ComboBox_Drinks.Text == "Yes";
+                    break;
+            }
         }
     }
 }
