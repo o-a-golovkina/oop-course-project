@@ -9,6 +9,8 @@ namespace EventPass.Models.Users
         private string? login;
         private string? passwordHash;
 
+        public static readonly Admin Instance = new("admin", "ItIs@dmin22");
+
         public List<Event> CreatedEvents { get; set; } = [];
 
         public string Login
@@ -23,7 +25,7 @@ namespace EventPass.Models.Users
             set => passwordHash = value?.GetHashCode().ToString();
         }
 
-        public Admin(string? login, string? password)
+        private Admin(string? login, string? password)
         {
             if (string.IsNullOrWhiteSpace(login) || string.IsNullOrWhiteSpace(password))
                 throw new ArgumentException("Login and password cannot be empty!");

@@ -11,7 +11,7 @@
         <Grid Width="400" Height="450">
             <Border BorderBrush="White" BorderThickness="1" CornerRadius="30" Background="White"/>
             <Grid Margin="10">
-                <Image x:Name="Image_EventImage" Margin="21,23,25,168"/>
+                <Image x:Name="Image_EventImage" Margin="21,23,25,168" Stretch="Fill"/>
                 <Label x:Name="Label_EventName" Content="Label" Margin="27,0,27,105" FontSize="22" FontWeight="Bold" Height="39" VerticalAlignment="Bottom"/>
                 <Button x:Name="Button_View" Content="View" Margin="62,0,62,27" Background="#FF9B72CF" Foreground="White" FontSize="22" FontWeight="Bold" Height="59" VerticalAlignment="Bottom" Cursor="Hand" BorderBrush="{x:Null}" Click="Button_View_Click">
                     <Button.Template>

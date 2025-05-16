@@ -52,7 +52,7 @@
                     Style="{StaticResource TextOnlyHoverButtonStyle}" Cursor="Hand" FontSize="8"/>
                 <Button x:Name="Button_AddEvent" Content="Add event" Margin="306,25,450,0" Height="20" VerticalAlignment="Top"
                     Style="{StaticResource TextOnlyHoverButtonStyle}" Cursor="Hand" FontSize="8"/>
-                <Button x:Name="Button_Admin" Content="Admin" Margin="726,25,30,0" Height="20" VerticalAlignment="Top"
+                <Button x:Name="Button_AdminExit" Content="Admin exit" Margin="720,25,30,0" Height="20" VerticalAlignment="Top"
                     Style="{StaticResource TextOnlyHoverButtonStyle}" Cursor="Hand" FontSize="8"/>
                 <Button x:Name="Button_Home" Content="Button" HorizontalAlignment="Left" Margin="49,35,0,0" VerticalAlignment="Top" BorderBrush="{x:Null}" Foreground="{x:Null}" Height="44" Width="43" Background="{x:Null}" Cursor="Hand">
                     <Button.Template>
@@ -68,7 +68,7 @@
                     Style="{StaticResource TextOnlyHoverButtonStyle}" Cursor="Hand" FontSize="8"/>
                 <Image Margin="288,25,492,389" Source="/Resources/icon-add.png" Stretch="Fill"/>
                 <Image Margin="382,25,398,389" Source="/Resources/icon-remove.png" Stretch="Fill"/>
-                <Image Margin="708,24,71,388" Source="/Resources/icon-admin.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5">
+                <Image Margin="699,24,80,388" Source="/Resources/icon-admin.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5">
                     <Image.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform ScaleX="-1"/>

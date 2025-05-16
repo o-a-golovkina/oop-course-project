@@ -47,12 +47,12 @@
                 <Label Content="Event" Margin="34,64,718,342" FontWeight="Bold" Foreground="#FFA6A6A6" FontSize="14"/>
                 <Label Content="Pass" Margin="71,64,689,342" FontWeight="Bold" Foreground="#FF9B72CF" FontSize="14"/>
                 <Label x:Name="Lable_Poster" Content="Events poster" HorizontalAlignment="Left" Margin="170,81,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14"/>
-                <local:EventControl Margin="170,115,507,177"/>
-                <local:EventControl Margin="317,115,360,177"/>
-                <local:EventControl Margin="464,115,213,177"/>
-                <local:EventControl Margin="170,275,507,17"/>
-                <local:EventControl Margin="317,275,360,17"/>
-                <local:EventControl Margin="464,275,213,17"/>
+                <local:EventControl x:Name="EventControl_1" Margin="170,115,507,177" Visibility="Hidden"/>
+                <local:EventControl x:Name="EventControl_2" Margin="317,115,360,177" Visibility="Hidden"/>
+                <local:EventControl x:Name="EventControl_3" Margin="464,115,213,177" Visibility="Hidden"/>
+                <local:EventControl x:Name="EventControl_4" Margin="170,275,507,17" Visibility="Hidden"/>
+                <local:EventControl x:Name="EventControl_5" Margin="317,275,360,17" Visibility="Hidden"/>
+                <local:EventControl x:Name="EventControl_6" Margin="464,275,213,17" Visibility="Hidden"/>
                 <Border BorderThickness="1" HorizontalAlignment="Left" Height="46" Margin="610,65,0,0" VerticalAlignment="Top" Width="190" Background="White" CornerRadius="15,15,15,15">
                     <Label Content="Choose city" HorizontalAlignment="Left" Height="20" Margin="9,-1,0,0" VerticalAlignment="Top" Width="61" FontSize="8" FontWeight="Bold"/>
                 </Border>
@@ -179,6 +179,7 @@
                     Style="{StaticResource TextOnlyHoverButtonStyle}" Cursor="Hand" FontSize="8" Click="Button_Balance_Click"/>
                 <Button x:Name="Button_UserLogin" Content="User login" Margin="712,25,44,0" Height="20" VerticalAlignment="Top"
                     Style="{StaticResource TextOnlyHoverButtonStyle}" Cursor="Hand" FontSize="8" Click="Button_UserLogin_Click"/>
+                <Label x:Name="Label_NoEvents" Content="Unfortunately, there are no suitable events." HorizontalAlignment="Left" Margin="181,110,0,0" VerticalAlignment="Top" Width="249" Foreground="#FFA6A6A6" FontStyle="Italic"/>
             </Grid>
             <Border BorderThickness="1" HorizontalAlignment="Left" Height="70" Margin="620,319,0,0" VerticalAlignment="Top" Width="170" Background="#FFF5F1FA" CornerRadius="15,15,15,15">
                 <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Love creating unforgettable memories? With EventPass, discovering and booking events is effortless — especially with our exclusive deals! Enjoy 5% OFF your ticket to any event! Use before 16/06." VerticalAlignment="Top" FontSize="8" Width="154" Margin="0,7,0,0" TextAlignment="Justify"/>

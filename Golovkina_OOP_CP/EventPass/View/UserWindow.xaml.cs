@@ -1,4 +1,6 @@
-﻿using System.Windows;
+﻿using EventPass.Models.Users;
+using System.Windows;
+using System.Windows.Media.Imaging;
 
 namespace EventPass.View
 {
@@ -10,6 +12,8 @@ namespace EventPass.View
         public UserWindow()
         {
             InitializeComponent();
+            WindowState = WindowState.Maximized;
+            DownloadEvents();
         }
 
         private void TextBox_Search_GotFocus(object sender, RoutedEventArgs e)
@@ -86,6 +90,25 @@ namespace EventPass.View
             {
                 if (window != userWindow)
                     window.Close();
+            }
+        }
+
+        private void DownloadEvents()
+        {
+            var CreatedEvents = Admin.Instance.CreatedEvents;
+            if (CreatedEvents.Count == 0)
+                return;
+            Label_NoEvents.Visibility = Visibility.Hidden;
+            List<EventControl> Controls = new List<EventControl>
+            {
+                EventControl_1, EventControl_2, EventControl_3, EventControl_4, EventControl_5, EventControl_6
+            };
+
+            for (int i = 0; i < CreatedEvents.Count; i++)
+            {
+                Controls[i].Visibility = Visibility.Visible;
+                Controls[i].Label_EventName.Content = CreatedEvents[i].Name;
+                Controls[i].Image_EventImage.Source = new BitmapImage(new Uri(CreatedEvents[i].ImagePath!));
             }
         }
     }

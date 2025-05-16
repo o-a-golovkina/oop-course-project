@@ -10,6 +10,7 @@ namespace EventPass.View
         public UserOrdersWindow()
         {
             InitializeComponent();
+            WindowState = WindowState.Maximized;
         }
 
         private void TextBox_Search_GotFocus(object sender, RoutedEventArgs e)

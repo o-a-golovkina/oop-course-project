@@ -125,7 +125,7 @@ namespace EventPass.View {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/EventPass;V1.0.0.0;component/view/registationwindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/EventPass;component/view/registationwindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\View\RegistationWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
