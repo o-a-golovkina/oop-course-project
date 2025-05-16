@@ -61,7 +61,7 @@
     FocusVisualStyle="{x:Null}" GotFocus="TextBox_Date_GotFocus" LostFocus="TextBox_Date_LostFocus" Margin="18,56,18,0" />
                 <Rectangle Height="1" Stroke="#FFA6A6A6" VerticalAlignment="Top" Margin="18,88,18,0"/>
                 <Label x:Name="Label_Exception" Content="Exception" HorizontalAlignment="Center" Margin="0,281,0,0" VerticalAlignment="Top" Width="312" Foreground="#FFCC0000" FontSize="14" FontWeight="Bold" Visibility="Hidden"/>
-                <Button x:Name="Button_Register" Content="Register" Margin="89,318,89,0" Background="#FF9B72CF" Foreground="White" FontWeight="Bold" Height="36" VerticalAlignment="Top" Cursor="Hand" BorderBrush="{x:Null}" FontSize="14">
+                <Button x:Name="Button_Register" Content="Register" Margin="89,318,89,0" Background="#FF9B72CF" Foreground="White" FontWeight="Bold" Height="36" VerticalAlignment="Top" Cursor="Hand" BorderBrush="{x:Null}" FontSize="14" Click="Button_Register_Click">
                     <Button.Template>
                         <ControlTemplate TargetType="{x:Type Button}">
                             <Border x:Name="border"

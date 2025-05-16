@@ -45,9 +45,10 @@
             </Border>
             <Border BorderThickness="1" Background="White" CornerRadius="30,30,30,30" Margin="205,91,60,40"/>
             <Grid HorizontalAlignment="Left" Height="434" VerticalAlignment="Top" Width="800" Grid.ColumnSpan="2">
+                <Label x:Name="Label_Exception" Content="Exception" HorizontalAlignment="Left" Margin="486,293,0,0" VerticalAlignment="Top" Width="222" Foreground="#FFCC0000" FontWeight="Bold" Visibility="Hidden"/>
                 <Label Content="Event" Margin="34,64,718,342" FontWeight="Bold" Foreground="#FFA6A6A6" FontSize="14"/>
                 <Label Content="Pass" Margin="71,64,689,342" FontWeight="Bold" Foreground="#FF9B72CF" FontSize="14"/>
-                <Label Content="Create event" HorizontalAlignment="Left" Margin="257,125,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14"/>
+                <Label Content="Create event" HorizontalAlignment="Left" Margin="227,105,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14"/>
                 <Image Margin="210,25,571,390" Source="/Resources/icon-cart.png" Stretch="Fill"/>
                 <Button x:Name="Button_Orders" Content="Orders" Margin="224,24,540,0" Height="20" VerticalAlignment="Top"
                     Style="{StaticResource TextOnlyHoverButtonStyle}" Cursor="Hand" FontSize="8"/>
@@ -64,7 +65,7 @@
                         </ControlTemplate>
                     </Button.Template>
                 </Button>
-                <Button x:Name="Button_RemoveEvent" Content="Place image" Margin="341,339,407,0" Height="20" VerticalAlignment="Top"
+                <Button x:Name="Button_PlaceImage" Content="Place image" Margin="330,339,418,0" Height="20" VerticalAlignment="Top"
                     Style="{StaticResource TextOnlyHoverButtonStyle}" Cursor="Hand" FontSize="8"/>
                 <Image Margin="288,25,492,389" Source="/Resources/icon-add.png" Stretch="Fill"/>
                 <Image Margin="382,25,398,389" Source="/Resources/icon-remove.png" Stretch="Fill"/>
@@ -78,8 +79,438 @@
                         </TransformGroup>
                     </Image.RenderTransform>
                 </Image>
-                <Image HorizontalAlignment="Left" Height="178" Margin="275,161,0,0" VerticalAlignment="Top" Width="185"/>
+                <Image x:Name="Image_Event" HorizontalAlignment="Left" Height="160" Margin="263,178,0,0" VerticalAlignment="Top" Width="183"/>
+                <Button x:Name="Button_RemoveEvent" Content="Remove event" Margin="397,25,344,0" Height="20" VerticalAlignment="Top"
+                    Style="{StaticResource TextOnlyHoverButtonStyle}" Cursor="Hand" FontSize="8"/>
+                <TextBox x:Name="TextBox_EventName" 
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Margin="249,144,0,0"
+                    Width="451"
+                    Height="22"
+                    Text="Event name"
+                    TextWrapping="Wrap"
+                    Background="{x:Null}"
+                    BorderBrush="{x:Null}"
+                    BorderThickness="0"
+                    Foreground="#FFA6A6A6"
+                    SelectionBrush="#FF9B72CF"
+                    VerticalContentAlignment="Center"
+                    FocusVisualStyle="{x:Null}" GotFocus="TextBox_EventName_GotFocus" LostFocus="TextBox_EventName_LostFocus" FontSize="8"/>
+                <Rectangle HorizontalAlignment="Left" Height="0.5" Stroke="#FFA6A6A6" VerticalAlignment="Top" Width="444" Margin="249,166,0,0"/>
+                <TextBox x:Name="TextBox_Date" 
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Margin="472,189,0,0"
+                    Width="103"
+                    Height="22"
+                    Text="Date"
+                    TextWrapping="Wrap"
+                    Background="{x:Null}"
+                    BorderBrush="{x:Null}"
+                    BorderThickness="0"
+                    Foreground="#FFA6A6A6"
+                    SelectionBrush="#FF9B72CF"
+                    VerticalContentAlignment="Center"
+                    FocusVisualStyle="{x:Null}" GotFocus="TextBox_Date_GotFocus" LostFocus="TextBox_Date_LostFocus" FontSize="8"/>
+                <Rectangle HorizontalAlignment="Left" Height="0.5" Stroke="#FFA6A6A6" VerticalAlignment="Top" Width="103" Margin="472,210,0,0"/>
+                <TextBox x:Name="TextBox_Price" 
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Margin="624,223,0,0"
+                    Width="69"
+                    Height="21"
+                    Text="Price"
+                    TextWrapping="Wrap"
+                    Background="{x:Null}"
+                    BorderBrush="{x:Null}"
+                    BorderThickness="0"
+                    Foreground="#FFA6A6A6"
+                    SelectionBrush="#FF9B72CF"
+                    VerticalContentAlignment="Center"
+                    FocusVisualStyle="{x:Null}" GotFocus="TextBox_Price_GotFocus" LostFocus="TextBox_Price_LostFocus" FontSize="8"/>
+                <Rectangle HorizontalAlignment="Left" Height="0.5" Stroke="#FFA6A6A6" VerticalAlignment="Top" Width="69" Margin="624,243,0,0"/>
+                <TextBox x:Name="TextBox_NumTickets" 
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Margin="623,189,0,0"
+                    Width="69"
+                    Height="22"
+                    Text="Count of tickets"
+                    TextWrapping="Wrap"
+                    Background="{x:Null}"
+                    BorderBrush="{x:Null}"
+                    BorderThickness="0"
+                    Foreground="#FFA6A6A6"
+                    SelectionBrush="#FF9B72CF"
+                    VerticalContentAlignment="Center"
+                    FocusVisualStyle="{x:Null}" GotFocus="TextBox_NumTickets_GotFocus" LostFocus="TextBox_NumTickets_LostFocus" FontSize="8"/>
+                <Rectangle HorizontalAlignment="Left" Height="0.5" Stroke="#FFA6A6A6" VerticalAlignment="Top" Width="69" Margin="624,210,0,0"/>
+                <Label Content="Drinks included?" HorizontalAlignment="Left" Margin="621,318,0,0" VerticalAlignment="Top" FontSize="6" Foreground="#FFACACAC" Height="18"/>
+                <Label Content="Number of acts" HorizontalAlignment="Left" Margin="621,277,0,0" VerticalAlignment="Top" FontSize="6" Foreground="#FFACACAC" Height="18"/>
+                <Label Content="Type of event" HorizontalAlignment="Left" Margin="474,277,0,0" VerticalAlignment="Top" FontSize="6" Foreground="#FFACACAC" Height="18"/>
+                <Label Content="City" HorizontalAlignment="Left" Margin="474,319,0,0" VerticalAlignment="Top" FontSize="6" Foreground="#FFACACAC" Height="18"/>
+                <Image x:Name="Image_EmptyImage" Margin="263,178,354,95" Source="/Resources/placeholder-img.jpg" Stretch="Fill"/>
+                <TextBox x:Name="TextBox_Singer" 
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Margin="472,224,0,0"
+                    Width="103"
+                    Height="22"
+                    Text="Singer"
+                    TextWrapping="Wrap"
+                    Background="{x:Null}"
+                    BorderBrush="{x:Null}"
+                    BorderThickness="0"
+                    Foreground="#FFA6A6A6"
+                    SelectionBrush="#FF9B72CF"
+                    VerticalContentAlignment="Center"
+                    FocusVisualStyle="{x:Null}" GotFocus="TextBox_Date_GotFocus" LostFocus="TextBox_Date_LostFocus" FontSize="8"/>
+                <Rectangle HorizontalAlignment="Left" Height="0.5" Stroke="#FFA6A6A6" VerticalAlignment="Top" Width="103" Margin="472,244,0,0"/>
             </Grid>
+            <ComboBox x:Name="ComboBox_City" Width="102"
+                Height="18"
+                FontSize="8"
+                FontFamily="Segoe UI"
+                Foreground="#FFACACAC"
+                Margin="472,305,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Background="Transparent"
+                BorderThickness="0"
+                Padding="8,0"
+                SelectedIndex="0" Cursor="Hand">
+                <ComboBox.Resources>
+                    <Style TargetType="{x:Type ComboBoxItem}">
+                        <Setter Property="Padding" Value="8,2"/>
+                        <Setter Property="FontSize" Value="8"/>
+                        <Setter Property="Foreground" Value="Gray"/>
+                        <Setter Property="Background" Value="Transparent"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#EEE"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </ComboBox.Resources>
+
+                <ComboBox.Template>
+                    <ControlTemplate TargetType="{x:Type ComboBox}">
+                        <Border CornerRadius="6" 
+                            Background="White" 
+                            BorderBrush="#DDD" 
+                            BorderThickness="1">
+                            <Grid>
+                                <ToggleButton x:Name="ToggleButton"
+                                    Grid.Column="2"
+                                    Focusable="False"
+                                    IsChecked="{Binding IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource Mode=TemplatedParent}}"
+                                    ClickMode="Press"
+                                    Background="Transparent"
+                                    BorderThickness="0">
+                                    <Path HorizontalAlignment="Right"
+                                        Margin="0,0,8,0"
+                                        VerticalAlignment="Center"
+                                        Data="M 0 0 L 4 4 L 8 0 Z"
+                                        Fill="#FFACACAC"
+                                        Width="8" Height="4"/>
+                                </ToggleButton>
+                                <ContentPresenter x:Name="ContentSite"
+                                    IsHitTestVisible="False"
+                                    Content="{TemplateBinding SelectionBoxItem}"
+                                    ContentTemplate="{TemplateBinding SelectionBoxItemTemplate}"
+                                    ContentTemplateSelector="{TemplateBinding ItemTemplateSelector}"
+                                    Margin="8,0"
+                                    VerticalAlignment="Center"
+                                    HorizontalAlignment="Left"/>
+                                <Popup x:Name="Popup"
+                                    Placement="Bottom"
+                                    IsOpen="{TemplateBinding IsDropDownOpen}"
+                                    AllowsTransparency="True"
+                                    Focusable="False"
+                                    PopupAnimation="Slide">
+                                    <Border CornerRadius="6"
+                                        Background="White"
+                                        BorderBrush="#DDD"
+                                        BorderThickness="1"
+                                        SnapsToDevicePixels="True">
+                                        <ScrollViewer Margin="0" SnapsToDevicePixels="True">
+                                            <StackPanel IsItemsHost="True" KeyboardNavigation.DirectionalNavigation="Contained"/>
+                                        </ScrollViewer>
+                                    </Border>
+                                </Popup>
+                            </Grid>
+                        </Border>
+                    </ControlTemplate>
+                </ComboBox.Template>
+
+                <!-- Пункти меню -->
+                <ComboBoxItem Content="Kharkiv" IsSelected="True"/>
+                <ComboBoxItem Content="Odesa"/>
+                <ComboBoxItem Content="Dnipro"/>
+                <ComboBoxItem Content="Kyiv"/>
+            </ComboBox>
+            <Button x:Name="Button_CreateEvent" Content="Create event" Margin="606,350,73,0" Background="#FF9B72CF" Foreground="White" FontWeight="Bold" Height="35" VerticalAlignment="Top" Cursor="Hand" BorderBrush="{x:Null}" Click="Button_CreateEvent_Click">
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="20">
+                            <ContentPresenter HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                RecognizesAccessKey="True"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#decdff"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <ComboBox x:Name="ComboBox_EventType" Width="102"
+                Height="18"
+                FontSize="8"
+                FontFamily="Segoe UI"
+                Foreground="#FFACACAC"
+                Margin="472,263,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Background="Transparent"
+                BorderThickness="0"
+                Padding="8,0"
+                SelectedIndex="0" Cursor="Hand">
+                <ComboBox.Resources>
+                    <Style TargetType="{x:Type ComboBoxItem}">
+                        <Setter Property="Padding" Value="8,2"/>
+                        <Setter Property="FontSize" Value="8"/>
+                        <Setter Property="Foreground" Value="Gray"/>
+                        <Setter Property="Background" Value="Transparent"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#EEE"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </ComboBox.Resources>
+
+                <ComboBox.Template>
+                    <ControlTemplate TargetType="{x:Type ComboBox}">
+                        <Border CornerRadius="6" 
+                            Background="White" 
+                            BorderBrush="#DDD" 
+                            BorderThickness="1">
+                            <Grid>
+                                <ToggleButton x:Name="ToggleButton"
+                                    Grid.Column="2"
+                                    Focusable="False"
+                                    IsChecked="{Binding IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource Mode=TemplatedParent}}"
+                                    ClickMode="Press"
+                                    Background="Transparent"
+                                    BorderThickness="0">
+                                    <Path HorizontalAlignment="Right"
+                                        Margin="0,0,8,0"
+                                        VerticalAlignment="Center"
+                                        Data="M 0 0 L 4 4 L 8 0 Z"
+                                        Fill="#FFACACAC"
+                                        Width="8" Height="4"/>
+                                </ToggleButton>
+                                <ContentPresenter x:Name="ContentSite"
+                                    IsHitTestVisible="False"
+                                    Content="{TemplateBinding SelectionBoxItem}"
+                                    ContentTemplate="{TemplateBinding SelectionBoxItemTemplate}"
+                                    ContentTemplateSelector="{TemplateBinding ItemTemplateSelector}"
+                                    Margin="8,0"
+                                    VerticalAlignment="Center"
+                                    HorizontalAlignment="Left"/>
+                                <Popup x:Name="Popup"
+                                    Placement="Bottom"
+                                    IsOpen="{TemplateBinding IsDropDownOpen}"
+                                    AllowsTransparency="True"
+                                    Focusable="False"
+                                    PopupAnimation="Slide">
+                                    <Border CornerRadius="6"
+                                        Background="White"
+                                        BorderBrush="#DDD"
+                                        BorderThickness="1"
+                                        SnapsToDevicePixels="True">
+                                        <ScrollViewer Margin="0" SnapsToDevicePixels="True">
+                                            <StackPanel IsItemsHost="True" KeyboardNavigation.DirectionalNavigation="Contained"/>
+                                        </ScrollViewer>
+                                    </Border>
+                                </Popup>
+                            </Grid>
+                        </Border>
+                    </ControlTemplate>
+                </ComboBox.Template>
+
+                <!-- Пункти меню -->
+                <ComboBoxItem Content="Concerts" IsSelected="True"/>
+                <ComboBoxItem Content="Theatre"/>
+                <ComboBoxItem Content="Stand-up"/>
+            </ComboBox>
+            <ComboBox x:Name="ComboBox_Drinks" Width="55"
+                Height="18"
+                FontSize="8"
+                FontFamily="Segoe UI"
+                Foreground="#FFACACAC"
+                Margin="622,305,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Background="Transparent"
+                BorderThickness="0"
+                Padding="8,0"
+                SelectedIndex="0" Cursor="Hand">
+                <ComboBox.Resources>
+                    <Style TargetType="{x:Type ComboBoxItem}">
+                        <Setter Property="Padding" Value="8,2"/>
+                        <Setter Property="FontSize" Value="8"/>
+                        <Setter Property="Foreground" Value="Gray"/>
+                        <Setter Property="Background" Value="Transparent"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#EEE"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </ComboBox.Resources>
+
+                <ComboBox.Template>
+                    <ControlTemplate TargetType="{x:Type ComboBox}">
+                        <Border CornerRadius="6" 
+                            Background="White" 
+                            BorderBrush="#DDD" 
+                            BorderThickness="1">
+                            <Grid>
+                                <ToggleButton x:Name="ToggleButton"
+                                    Grid.Column="2"
+                                    Focusable="False"
+                                    IsChecked="{Binding IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource Mode=TemplatedParent}}"
+                                    ClickMode="Press"
+                                    Background="Transparent"
+                                    BorderThickness="0">
+                                    <Path HorizontalAlignment="Left"
+                                        VerticalAlignment="Center"
+                                        Data="M 0 0 L 4 4 L 8 0 Z"
+                                        Fill="#FFACACAC"
+                                        Width="8" Height="4"/>
+                                </ToggleButton>
+                                <ContentPresenter x:Name="ContentSite"
+                                    IsHitTestVisible="False"
+                                    Content="{TemplateBinding SelectionBoxItem}"
+                                    ContentTemplate="{TemplateBinding SelectionBoxItemTemplate}"
+                                    ContentTemplateSelector="{TemplateBinding ItemTemplateSelector}"
+                                    Margin="8,0"
+                                    VerticalAlignment="Center"
+                                    HorizontalAlignment="Left"/>
+                                <Popup x:Name="Popup"
+                                    Placement="Bottom"
+                                    IsOpen="{TemplateBinding IsDropDownOpen}"
+                                    AllowsTransparency="True"
+                                    Focusable="False"
+                                    PopupAnimation="Slide">
+                                    <Border CornerRadius="6"
+                                        Background="White"
+                                        BorderBrush="#DDD"
+                                        BorderThickness="1"
+                                        SnapsToDevicePixels="True">
+                                        <ScrollViewer Margin="0" SnapsToDevicePixels="True">
+                                            <StackPanel IsItemsHost="True" KeyboardNavigation.DirectionalNavigation="Contained"/>
+                                        </ScrollViewer>
+                                    </Border>
+                                </Popup>
+                            </Grid>
+                        </Border>
+                    </ControlTemplate>
+                </ComboBox.Template>
+
+                <!-- Пункти меню -->
+                <ComboBoxItem Content="No" IsSelected="True"/>
+                <ComboBoxItem Content="Yes"/>
+            </ComboBox>
+            <ComboBox x:Name="ComboBox_Acts" Width="55"
+                Height="18"
+                FontSize="8"
+                FontFamily="Segoe UI"
+                Foreground="#FFACACAC"
+                Margin="622,263,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Background="Transparent"
+                BorderThickness="0"
+                Padding="8,0"
+                SelectedIndex="0" Cursor="Hand">
+                <ComboBox.Resources>
+                    <Style TargetType="{x:Type ComboBoxItem}">
+                        <Setter Property="Padding" Value="8,2"/>
+                        <Setter Property="FontSize" Value="8"/>
+                        <Setter Property="Foreground" Value="Gray"/>
+                        <Setter Property="Background" Value="Transparent"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#EEE"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </ComboBox.Resources>
+
+                <ComboBox.Template>
+                    <ControlTemplate TargetType="{x:Type ComboBox}">
+                        <Border CornerRadius="6" 
+                            Background="White" 
+                            BorderBrush="#DDD" 
+                            BorderThickness="1">
+                            <Grid>
+                                <ToggleButton x:Name="ToggleButton"
+                                    Grid.Column="2"
+                                    Focusable="False"
+                                    IsChecked="{Binding IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource Mode=TemplatedParent}}"
+                                    ClickMode="Press"
+                                    Background="Transparent"
+                                    BorderThickness="0">
+                                    <Path HorizontalAlignment="Right"
+                                        Margin="0,0,8,0"
+                                        VerticalAlignment="Center"
+                                        Data="M 0 0 L 4 4 L 8 0 Z"
+                                        Fill="#FFACACAC"
+                                        Width="8" Height="4"/>
+                                </ToggleButton>
+                                <ContentPresenter x:Name="ContentSite"
+                                    IsHitTestVisible="False"
+                                    Content="{TemplateBinding SelectionBoxItem}"
+                                    ContentTemplate="{TemplateBinding SelectionBoxItemTemplate}"
+                                    ContentTemplateSelector="{TemplateBinding ItemTemplateSelector}"
+                                    Margin="8,0"
+                                    VerticalAlignment="Center"
+                                    HorizontalAlignment="Left"/>
+                                <Popup x:Name="Popup"
+                                    Placement="Bottom"
+                                    IsOpen="{TemplateBinding IsDropDownOpen}"
+                                    AllowsTransparency="True"
+                                    Focusable="False"
+                                    PopupAnimation="Slide">
+                                    <Border CornerRadius="6"
+                                        Background="White"
+                                        BorderBrush="#DDD"
+                                        BorderThickness="1"
+                                        SnapsToDevicePixels="True">
+                                        <ScrollViewer Margin="0" SnapsToDevicePixels="True">
+                                            <StackPanel IsItemsHost="True" KeyboardNavigation.DirectionalNavigation="Contained"/>
+                                        </ScrollViewer>
+                                    </Border>
+                                </Popup>
+                            </Grid>
+                        </Border>
+                    </ControlTemplate>
+                </ComboBox.Template>
+
+                <!-- Пункти меню -->
+                <ComboBoxItem Content="1" IsSelected="True"/>
+                <ComboBoxItem Content="2"/>
+                <ComboBoxItem Content="3"/>
+            </ComboBox>
         </Grid>
     </Viewbox>
 </Window>

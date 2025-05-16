@@ -22,6 +22,7 @@
     <None Remove="Resources\icon-search.png" />
     <None Remove="Resources\icon-theater.png" />
     <None Remove="Resources\icon.png" />
+    <None Remove="Resources\placeholder-img.jpg" />
   </ItemGroup>
 
   <ItemGroup>
@@ -66,6 +67,9 @@
 
   <ItemGroup>
     <Resource Include="icon.png" />
+    <Resource Include="Resources\placeholder-img.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
 </Project>

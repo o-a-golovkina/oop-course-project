@@ -90,5 +90,23 @@ namespace EventPass.View
             if (TextBox_Password.Text == string.Empty || TextBox_Password.Text == " ")
                 TextBox_Password.Text = "Password";
         }
+
+        private void Button_Register_Click(object sender, RoutedEventArgs e)
+        {
+            var currentMain = Application.Current.MainWindow;
+            var adminWindow = new AdminCreateEventWindow();
+
+            if (currentMain != null && currentMain.WindowState == WindowState.Maximized)
+            {
+                adminWindow.WindowState = WindowState.Maximized;
+            }
+            adminWindow.Show();
+
+            foreach (Window window in Application.Current.Windows)
+            {
+                if (window != adminWindow)
+                    window.Close();
+            }
+        }
     }
 }

@@ -183,7 +183,7 @@
             <Border BorderThickness="1" HorizontalAlignment="Left" Height="70" Margin="620,319,0,0" VerticalAlignment="Top" Width="170" Background="#FFF5F1FA" CornerRadius="15,15,15,15">
                 <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Love creating unforgettable memories? With EventPass, discovering and booking events is effortless — especially with our exclusive deals! Enjoy 5% OFF your ticket to any event! Use before 16/06." VerticalAlignment="Top" FontSize="8" Width="154" Margin="0,7,0,0" TextAlignment="Justify"/>
             </Border>
-            <Button x:Name="Button_Home" Content="Button" HorizontalAlignment="Left" Margin="49,35,0,0" VerticalAlignment="Top" BorderBrush="{x:Null}" Foreground="{x:Null}" Height="44" Width="43" Background="{x:Null}" Cursor="Hand">
+            <Button x:Name="Button_Home" Content="Button" HorizontalAlignment="Left" Margin="49,35,0,0" VerticalAlignment="Top" BorderBrush="{x:Null}" Foreground="{x:Null}" Height="44" Width="43" Background="{x:Null}" Cursor="Hand" Click="Button_Home_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <Border Background="{TemplateBinding Background}">

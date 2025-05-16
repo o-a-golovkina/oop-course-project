@@ -44,5 +44,27 @@ namespace EventPass.View
 
             modalWindow.ShowDialog();
         }
+
+        private void Button_Home_Click(object sender, RoutedEventArgs e)
+        {
+            var currentActiveWindow = Application.Current.Windows
+                .OfType<Window>()
+                .SingleOrDefault(w => w.IsActive);
+
+            var userWindow = new UserWindow();
+
+            if (currentActiveWindow != null && currentActiveWindow.WindowState == WindowState.Maximized)
+            {
+                userWindow.WindowState = WindowState.Maximized;
+            }
+
+            userWindow.Show();
+
+            foreach (Window window in Application.Current.Windows)
+            {
+                if (window != userWindow)
+                    window.Close();
+            }
+        }
     }
 }

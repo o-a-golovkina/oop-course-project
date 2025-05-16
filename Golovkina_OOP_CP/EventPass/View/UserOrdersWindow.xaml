@@ -82,7 +82,7 @@
                     Style="{StaticResource TextOnlyHoverButtonStyle}" Cursor="Hand" FontSize="8" Click="Button_Balance_Click"/>
                 <Button x:Name="Button_UserLogin" Content="User login" Margin="712,25,44,0" Height="20" VerticalAlignment="Top"
                     Style="{StaticResource TextOnlyHoverButtonStyle}" Cursor="Hand" FontSize="8" Click="Button_UserLogin_Click"/>
-                <Button x:Name="Button_Home" Content="Button" HorizontalAlignment="Left" Margin="49,35,0,0" VerticalAlignment="Top" BorderBrush="{x:Null}" Foreground="{x:Null}" Height="44" Width="43" Background="{x:Null}" Cursor="Hand">
+                <Button x:Name="Button_Home" Content="Button" HorizontalAlignment="Left" Margin="49,35,0,0" VerticalAlignment="Top" BorderBrush="{x:Null}" Foreground="{x:Null}" Height="44" Width="43" Background="{x:Null}" Cursor="Hand" Click="Button_Home_Click">
                     <Button.Template>
                         <ControlTemplate TargetType="Button">
                             <Border Background="{TemplateBinding Background}">
