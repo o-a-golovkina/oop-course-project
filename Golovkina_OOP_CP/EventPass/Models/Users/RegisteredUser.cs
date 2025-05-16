@@ -55,7 +55,7 @@ namespace EventPass.Models.Users
             {
                 if (!Regex.IsMatch(value, @"^\d{9}$"))
                     throw new ArgumentException("Phone number must contain exactly 9 digits!");
-                phoneNumber = "+380" + value;
+                phoneNumber = "(+380)" + value;
             }
         }
 

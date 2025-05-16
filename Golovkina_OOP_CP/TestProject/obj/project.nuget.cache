@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "SvqumeuJAp0=",
+  "dgSpecHash": "KyAPEMl+vX4=",
   "success": true,
   "projectFilePath": "D:\\1KHAI\\2 semester\\ООП\\GitHub\\Golovkina_OOP_CP\\TestProject\\UnitTests.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Admin\\.nuget\\packages\\materialdesigncolors\\5.2.1\\materialdesigncolors.5.2.1.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\materialdesignthemes\\5.2.1\\materialdesignthemes.5.2.1.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.applicationinsights\\2.22.0\\microsoft.applicationinsights.2.22.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.codecoverage\\17.12.0\\microsoft.codecoverage.17.12.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.net.test.sdk\\17.12.0\\microsoft.net.test.sdk.17.12.0.nupkg.sha512",
@@ -14,6 +16,7 @@
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.testing.platform.msbuild\\1.4.3\\microsoft.testing.platform.msbuild.1.4.3.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.testplatform.objectmodel\\17.12.0\\microsoft.testplatform.objectmodel.17.12.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.testplatform.testhost\\17.12.0\\microsoft.testplatform.testhost.17.12.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.39\\microsoft.xaml.behaviors.wpf.1.1.39.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\mstest\\3.6.4\\mstest.3.6.4.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\mstest.analyzers\\3.6.4\\mstest.analyzers.3.6.4.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\mstest.testadapter\\3.6.4\\mstest.testadapter.3.6.4.nupkg.sha512",

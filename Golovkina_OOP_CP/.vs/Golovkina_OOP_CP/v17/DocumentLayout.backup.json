@@ -3,239 +3,55 @@
   "WorkspaceRootPath": "D:\\1KHAI\\2 semester\\\u041E\u041E\u041F\\GitHub\\Golovkina_OOP_CP\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{69BE29E6-3EAF-4744-9EC2-42A3C5FA6D52}|TestProject\\UnitTests.csproj|d:\\1khai\\2 semester\\\u043E\u043E\u043F\\github\\golovkina_oop_cp\\testproject\\models\\users\\registeredusertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69BE29E6-3EAF-4744-9EC2-42A3C5FA6D52}|TestProject\\UnitTests.csproj|solutionrelative:testproject\\models\\users\\registeredusertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{56A47727-F98D-4C2A-8868-2965520DCCAE}|EventPass\\EventPass.csproj|d:\\1khai\\2 semester\\\u043E\u043E\u043F\\github\\golovkina_oop_cp\\eventpass\\view\\adminremoveeventwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{56A47727-F98D-4C2A-8868-2965520DCCAE}|EventPass\\EventPass.csproj|solutionrelative:eventpass\\view\\adminremoveeventwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69BE29E6-3EAF-4744-9EC2-42A3C5FA6D52}|TestProject\\UnitTests.csproj|d:\\1khai\\2 semester\\\u043E\u043E\u043F\\github\\golovkina_oop_cp\\testproject\\models\\tickets\\theatertickettests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69BE29E6-3EAF-4744-9EC2-42A3C5FA6D52}|TestProject\\UnitTests.csproj|solutionrelative:testproject\\models\\tickets\\theatertickettests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{56A47727-F98D-4C2A-8868-2965520DCCAE}|EventPass\\EventPass.csproj|d:\\1khai\\2 semester\\\u043E\u043E\u043F\\github\\golovkina_oop_cp\\eventpass\\view\\adminorderswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{56A47727-F98D-4C2A-8868-2965520DCCAE}|EventPass\\EventPass.csproj|solutionrelative:eventpass\\view\\adminorderswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69BE29E6-3EAF-4744-9EC2-42A3C5FA6D52}|TestProject\\UnitTests.csproj|d:\\1khai\\2 semester\\\u043E\u043E\u043F\\github\\golovkina_oop_cp\\testproject\\models\\tickets\\standuptickettests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69BE29E6-3EAF-4744-9EC2-42A3C5FA6D52}|TestProject\\UnitTests.csproj|solutionrelative:testproject\\models\\tickets\\standuptickettests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{56A47727-F98D-4C2A-8868-2965520DCCAE}|EventPass\\EventPass.csproj|d:\\1khai\\2 semester\\\u043E\u043E\u043F\\github\\golovkina_oop_cp\\eventpass\\view\\admincreateeventwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{56A47727-F98D-4C2A-8868-2965520DCCAE}|EventPass\\EventPass.csproj|solutionrelative:eventpass\\view\\admincreateeventwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{56A47727-F98D-4C2A-8868-2965520DCCAE}|EventPass\\EventPass.csproj|d:\\1khai\\2 semester\\\u043E\u043E\u043F\\github\\golovkina_oop_cp\\eventpass\\models\\tickets\\ticketfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56A47727-F98D-4C2A-8868-2965520DCCAE}|EventPass\\EventPass.csproj|solutionrelative:eventpass\\models\\tickets\\ticketfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{56A47727-F98D-4C2A-8868-2965520DCCAE}|EventPass\\EventPass.csproj|d:\\1khai\\2 semester\\\u043E\u043E\u043F\\github\\golovkina_oop_cp\\eventpass\\eventcontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{56A47727-F98D-4C2A-8868-2965520DCCAE}|EventPass\\EventPass.csproj|solutionrelative:eventpass\\eventcontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{56A47727-F98D-4C2A-8868-2965520DCCAE}|EventPass\\EventPass.csproj|d:\\1khai\\2 semester\\\u043E\u043E\u043F\\github\\golovkina_oop_cp\\eventpass\\models\\tickets\\ticketbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56A47727-F98D-4C2A-8868-2965520DCCAE}|EventPass\\EventPass.csproj|solutionrelative:eventpass\\models\\tickets\\ticketbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{56A47727-F98D-4C2A-8868-2965520DCCAE}|EventPass\\EventPass.csproj|d:\\1khai\\2 semester\\\u043E\u043E\u043F\\github\\golovkina_oop_cp\\eventpass\\view\\userwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{56A47727-F98D-4C2A-8868-2965520DCCAE}|EventPass\\EventPass.csproj|solutionrelative:eventpass\\view\\userwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{56A47727-F98D-4C2A-8868-2965520DCCAE}|EventPass\\EventPass.csproj|d:\\1khai\\2 semester\\\u043E\u043E\u043F\\github\\golovkina_oop_cp\\eventpass\\models\\tickets\\theaterticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56A47727-F98D-4C2A-8868-2965520DCCAE}|EventPass\\EventPass.csproj|solutionrelative:eventpass\\models\\tickets\\theaterticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{56A47727-F98D-4C2A-8868-2965520DCCAE}|EventPass\\EventPass.csproj|d:\\1khai\\2 semester\\\u043E\u043E\u043F\\github\\golovkina_oop_cp\\eventpass\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{56A47727-F98D-4C2A-8868-2965520DCCAE}|EventPass\\EventPass.csproj|solutionrelative:eventpass\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{56A47727-F98D-4C2A-8868-2965520DCCAE}|EventPass\\EventPass.csproj|d:\\1khai\\2 semester\\\u043E\u043E\u043F\\github\\golovkina_oop_cp\\eventpass\\models\\tickets\\standupticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56A47727-F98D-4C2A-8868-2965520DCCAE}|EventPass\\EventPass.csproj|solutionrelative:eventpass\\models\\tickets\\standupticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{56A47727-F98D-4C2A-8868-2965520DCCAE}|EventPass\\EventPass.csproj|d:\\1khai\\2 semester\\\u043E\u043E\u043F\\github\\golovkina_oop_cp\\eventpass\\view\\userorderswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{56A47727-F98D-4C2A-8868-2965520DCCAE}|EventPass\\EventPass.csproj|solutionrelative:eventpass\\view\\userorderswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{56A47727-F98D-4C2A-8868-2965520DCCAE}|EventPass\\EventPass.csproj|d:\\1khai\\2 semester\\\u043E\u043E\u043F\\github\\golovkina_oop_cp\\eventpass\\models\\tickets\\concertticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56A47727-F98D-4C2A-8868-2965520DCCAE}|EventPass\\EventPass.csproj|solutionrelative:eventpass\\models\\tickets\\concertticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{56A47727-F98D-4C2A-8868-2965520DCCAE}|EventPass\\EventPass.csproj|d:\\1khai\\2 semester\\\u043E\u043E\u043F\\github\\golovkina_oop_cp\\eventpass\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{56A47727-F98D-4C2A-8868-2965520DCCAE}|EventPass\\EventPass.csproj|solutionrelative:eventpass\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69BE29E6-3EAF-4744-9EC2-42A3C5FA6D52}|TestProject\\UnitTests.csproj|d:\\1khai\\2 semester\\\u043E\u043E\u043F\\github\\golovkina_oop_cp\\testproject\\models\\tickets\\concerttickettests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69BE29E6-3EAF-4744-9EC2-42A3C5FA6D52}|TestProject\\UnitTests.csproj|solutionrelative:testproject\\models\\tickets\\concerttickettests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{56A47727-F98D-4C2A-8868-2965520DCCAE}|EventPass\\EventPass.csproj|d:\\1khai\\2 semester\\\u043E\u043E\u043F\\github\\golovkina_oop_cp\\eventpass\\view\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{56A47727-F98D-4C2A-8868-2965520DCCAE}|EventPass\\EventPass.csproj|solutionrelative:eventpass\\view\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{56A47727-F98D-4C2A-8868-2965520DCCAE}|EventPass\\EventPass.csproj|d:\\1khai\\2 semester\\\u043E\u043E\u043F\\github\\golovkina_oop_cp\\eventpass\\classdiagram.cd||{59B0B277-7DDF-4E36-A3ED-02DAC5B9E2FA}|",
-      "RelativeMoniker": "D:0:0:{56A47727-F98D-4C2A-8868-2965520DCCAE}|EventPass\\EventPass.csproj|solutionrelative:eventpass\\classdiagram.cd||{59B0B277-7DDF-4E36-A3ED-02DAC5B9E2FA}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56A47727-F98D-4C2A-8868-2965520DCCAE}|EventPass\\EventPass.csproj|d:\\1khai\\2 semester\\\u043E\u043E\u043F\\github\\golovkina_oop_cp\\eventpass\\interfaces\\iadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56A47727-F98D-4C2A-8868-2965520DCCAE}|EventPass\\EventPass.csproj|solutionrelative:eventpass\\interfaces\\iadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56A47727-F98D-4C2A-8868-2965520DCCAE}|EventPass\\EventPass.csproj|d:\\1khai\\2 semester\\\u043E\u043E\u043F\\github\\golovkina_oop_cp\\eventpass\\models\\users\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56A47727-F98D-4C2A-8868-2965520DCCAE}|EventPass\\EventPass.csproj|solutionrelative:eventpass\\models\\users\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56A47727-F98D-4C2A-8868-2965520DCCAE}|EventPass\\EventPass.csproj|d:\\1khai\\2 semester\\\u043E\u043E\u043F\\github\\golovkina_oop_cp\\eventpass\\interfaces\\iuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56A47727-F98D-4C2A-8868-2965520DCCAE}|EventPass\\EventPass.csproj|solutionrelative:eventpass\\interfaces\\iuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56A47727-F98D-4C2A-8868-2965520DCCAE}|EventPass\\EventPass.csproj|d:\\1khai\\2 semester\\\u043E\u043E\u043F\\github\\golovkina_oop_cp\\eventpass\\dateonlyjsonconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56A47727-F98D-4C2A-8868-2965520DCCAE}|EventPass\\EventPass.csproj|solutionrelative:eventpass\\dateonlyjsonconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{56A47727-F98D-4C2A-8868-2965520DCCAE}|EventPass\\EventPass.csproj|d:\\1khai\\2 semester\\\u043E\u043E\u043F\\github\\golovkina_oop_cp\\eventpass\\view\\loginwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56A47727-F98D-4C2A-8868-2965520DCCAE}|EventPass\\EventPass.csproj|solutionrelative:eventpass\\view\\loginwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
     {
-      "Orientation": 0,
+      "Orientation": 1,
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 26,
-          "SelectedChildIndex": 0,
+          "DockedHeight": 432,
+          "SelectedChildIndex": 3,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "TheaterTicketTests.cs",
-              "DocumentMoniker": "D:\\1KHAI\\2 semester\\\u041E\u041E\u041F\\GitHub\\Golovkina_OOP_CP\\TestProject\\Models\\Tickets\\TheaterTicketTests.cs",
-              "RelativeDocumentMoniker": "TestProject\\Models\\Tickets\\TheaterTicketTests.cs",
-              "ToolTip": "D:\\1KHAI\\2 semester\\\u041E\u041E\u041F\\GitHub\\Golovkina_OOP_CP\\TestProject\\Models\\Tickets\\TheaterTicketTests.cs",
-              "RelativeToolTip": "TestProject\\Models\\Tickets\\TheaterTicketTests.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAA1wCsAAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-05T23:00:32.754Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "TicketFactory.cs",
-              "DocumentMoniker": "D:\\1KHAI\\2 semester\\\u041E\u041E\u041F\\GitHub\\Golovkina_OOP_CP\\EventPass\\Models\\Tickets\\TicketFactory.cs",
-              "RelativeDocumentMoniker": "EventPass\\Models\\Tickets\\TicketFactory.cs",
-              "ToolTip": "D:\\1KHAI\\2 semester\\\u041E\u041E\u041F\\GitHub\\Golovkina_OOP_CP\\EventPass\\Models\\Tickets\\TicketFactory.cs",
-              "RelativeToolTip": "EventPass\\Models\\Tickets\\TicketFactory.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAcwC4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-05T22:43:23.766Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ConcertTicket.cs",
-              "DocumentMoniker": "D:\\1KHAI\\2 semester\\\u041E\u041E\u041F\\GitHub\\Golovkina_OOP_CP\\EventPass\\Models\\Tickets\\ConcertTicket.cs",
-              "RelativeDocumentMoniker": "EventPass\\Models\\Tickets\\ConcertTicket.cs",
-              "ToolTip": "D:\\1KHAI\\2 semester\\\u041E\u041E\u041F\\GitHub\\Golovkina_OOP_CP\\EventPass\\Models\\Tickets\\ConcertTicket.cs",
-              "RelativeToolTip": "EventPass\\Models\\Tickets\\ConcertTicket.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-05T22:42:25.266Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "StandUpTicketTests.cs",
-              "DocumentMoniker": "D:\\1KHAI\\2 semester\\\u041E\u041E\u041F\\GitHub\\Golovkina_OOP_CP\\TestProject\\Models\\Tickets\\StandUpTicketTests.cs",
-              "RelativeDocumentMoniker": "TestProject\\Models\\Tickets\\StandUpTicketTests.cs",
-              "ToolTip": "D:\\1KHAI\\2 semester\\\u041E\u041E\u041F\\GitHub\\Golovkina_OOP_CP\\TestProject\\Models\\Tickets\\StandUpTicketTests.cs",
-              "RelativeToolTip": "TestProject\\Models\\Tickets\\StandUpTicketTests.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAuwCIAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-05T22:55:19.985Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ConcertTicketTests.cs",
-              "DocumentMoniker": "D:\\1KHAI\\2 semester\\\u041E\u041E\u041F\\GitHub\\Golovkina_OOP_CP\\TestProject\\Models\\Tickets\\ConcertTicketTests.cs",
-              "RelativeDocumentMoniker": "TestProject\\Models\\Tickets\\ConcertTicketTests.cs",
-              "ToolTip": "D:\\1KHAI\\2 semester\\\u041E\u041E\u041F\\GitHub\\Golovkina_OOP_CP\\TestProject\\Models\\Tickets\\ConcertTicketTests.cs",
-              "RelativeToolTip": "TestProject\\Models\\Tickets\\ConcertTicketTests.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAQwB0AAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-05T22:53:17.446Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "TicketBase.cs",
-              "DocumentMoniker": "D:\\1KHAI\\2 semester\\\u041E\u041E\u041F\\GitHub\\Golovkina_OOP_CP\\EventPass\\Models\\Tickets\\TicketBase.cs",
-              "RelativeDocumentMoniker": "EventPass\\Models\\Tickets\\TicketBase.cs",
-              "ToolTip": "D:\\1KHAI\\2 semester\\\u041E\u041E\u041F\\GitHub\\Golovkina_OOP_CP\\EventPass\\Models\\Tickets\\TicketBase.cs",
-              "RelativeToolTip": "EventPass\\Models\\Tickets\\TicketBase.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-05T22:42:09.143Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "StandUpTicket.cs",
-              "DocumentMoniker": "D:\\1KHAI\\2 semester\\\u041E\u041E\u041F\\GitHub\\Golovkina_OOP_CP\\EventPass\\Models\\Tickets\\StandUpTicket.cs",
-              "RelativeDocumentMoniker": "EventPass\\Models\\Tickets\\StandUpTicket.cs",
-              "ToolTip": "D:\\1KHAI\\2 semester\\\u041E\u041E\u041F\\GitHub\\Golovkina_OOP_CP\\EventPass\\Models\\Tickets\\StandUpTicket.cs",
-              "RelativeToolTip": "EventPass\\Models\\Tickets\\StandUpTicket.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-05T22:42:43.608Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "TheaterTicket.cs",
-              "DocumentMoniker": "D:\\1KHAI\\2 semester\\\u041E\u041E\u041F\\GitHub\\Golovkina_OOP_CP\\EventPass\\Models\\Tickets\\TheaterTicket.cs",
-              "RelativeDocumentMoniker": "EventPass\\Models\\Tickets\\TheaterTicket.cs",
-              "ToolTip": "D:\\1KHAI\\2 semester\\\u041E\u041E\u041F\\GitHub\\Golovkina_OOP_CP\\EventPass\\Models\\Tickets\\TheaterTicket.cs",
-              "RelativeToolTip": "EventPass\\Models\\Tickets\\TheaterTicket.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-05T22:43:07.368Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ClassDiagram.cd",
-              "DocumentMoniker": "D:\\1KHAI\\2 semester\\\u041E\u041E\u041F\\GitHub\\Golovkina_OOP_CP\\EventPass\\ClassDiagram.cd",
-              "RelativeDocumentMoniker": "EventPass\\ClassDiagram.cd",
-              "ToolTip": "D:\\1KHAI\\2 semester\\\u041E\u041E\u041F\\GitHub\\Golovkina_OOP_CP\\EventPass\\ClassDiagram.cd",
-              "RelativeToolTip": "EventPass\\ClassDiagram.cd",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000968|",
-              "WhenOpened": "2025-05-05T22:48:28.444Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "IAdmin.cs",
-              "DocumentMoniker": "D:\\1KHAI\\2 semester\\\u041E\u041E\u041F\\GitHub\\Golovkina_OOP_CP\\EventPass\\Interfaces\\IAdmin.cs",
-              "RelativeDocumentMoniker": "EventPass\\Interfaces\\IAdmin.cs",
-              "ToolTip": "D:\\1KHAI\\2 semester\\\u041E\u041E\u041F\\GitHub\\Golovkina_OOP_CP\\EventPass\\Interfaces\\IAdmin.cs",
-              "RelativeToolTip": "EventPass\\Interfaces\\IAdmin.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAzwBoAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-05T22:35:55.654Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Admin.cs",
-              "DocumentMoniker": "D:\\1KHAI\\2 semester\\\u041E\u041E\u041F\\GitHub\\Golovkina_OOP_CP\\EventPass\\Models\\Users\\Admin.cs",
-              "RelativeDocumentMoniker": "EventPass\\Models\\Users\\Admin.cs",
-              "ToolTip": "D:\\1KHAI\\2 semester\\\u041E\u041E\u041F\\GitHub\\Golovkina_OOP_CP\\EventPass\\Models\\Users\\Admin.cs",
-              "RelativeToolTip": "EventPass\\Models\\Users\\Admin.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAAswAYAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-05T22:45:06.769Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "IUser.cs",
-              "DocumentMoniker": "D:\\1KHAI\\2 semester\\\u041E\u041E\u041F\\GitHub\\Golovkina_OOP_CP\\EventPass\\Interfaces\\IUser.cs",
-              "RelativeDocumentMoniker": "EventPass\\Interfaces\\IUser.cs",
-              "ToolTip": "D:\\1KHAI\\2 semester\\\u041E\u041E\u041F\\GitHub\\Golovkina_OOP_CP\\EventPass\\Interfaces\\IUser.cs",
-              "RelativeToolTip": "EventPass\\Interfaces\\IUser.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAgwBEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-05T22:36:01.557Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "DateOnlyJsonConverter.cs",
-              "DocumentMoniker": "D:\\1KHAI\\2 semester\\\u041E\u041E\u041F\\GitHub\\Golovkina_OOP_CP\\EventPass\\DateOnlyJsonConverter.cs",
-              "RelativeDocumentMoniker": "EventPass\\DateOnlyJsonConverter.cs",
-              "ToolTip": "D:\\1KHAI\\2 semester\\\u041E\u041E\u041F\\GitHub\\Golovkina_OOP_CP\\EventPass\\DateOnlyJsonConverter.cs",
-              "RelativeToolTip": "EventPass\\DateOnlyJsonConverter.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-05T21:46:05.573Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{6324226f-61b6-4f28-92ee-18d4b5fe1e48}"
@@ -243,12 +59,132 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AdminRemoveEventWindow.xaml",
+              "DocumentMoniker": "D:\\1KHAI\\2 semester\\\u041E\u041E\u041F\\GitHub\\Golovkina_OOP_CP\\EventPass\\View\\AdminRemoveEventWindow.xaml",
+              "RelativeDocumentMoniker": "EventPass\\View\\AdminRemoveEventWindow.xaml",
+              "ToolTip": "D:\\1KHAI\\2 semester\\\u041E\u041E\u041F\\GitHub\\Golovkina_OOP_CP\\EventPass\\View\\AdminRemoveEventWindow.xaml*",
+              "RelativeToolTip": "EventPass\\View\\AdminRemoveEventWindow.xaml*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-16T12:10:12.593Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AdminOrdersWindow.xaml",
+              "DocumentMoniker": "D:\\1KHAI\\2 semester\\\u041E\u041E\u041F\\GitHub\\Golovkina_OOP_CP\\EventPass\\View\\AdminOrdersWindow.xaml",
+              "RelativeDocumentMoniker": "EventPass\\View\\AdminOrdersWindow.xaml",
+              "ToolTip": "D:\\1KHAI\\2 semester\\\u041E\u041E\u041F\\GitHub\\Golovkina_OOP_CP\\EventPass\\View\\AdminOrdersWindow.xaml*",
+              "RelativeToolTip": "EventPass\\View\\AdminOrdersWindow.xaml*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-16T12:02:52.153Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "App.xaml",
+              "DocumentMoniker": "D:\\1KHAI\\2 semester\\\u041E\u041E\u041F\\GitHub\\Golovkina_OOP_CP\\EventPass\\App.xaml",
+              "RelativeDocumentMoniker": "EventPass\\App.xaml",
+              "ToolTip": "D:\\1KHAI\\2 semester\\\u041E\u041E\u041F\\GitHub\\Golovkina_OOP_CP\\EventPass\\App.xaml",
+              "RelativeToolTip": "EventPass\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-16T11:59:53.724Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EventControl.xaml",
+              "DocumentMoniker": "D:\\1KHAI\\2 semester\\\u041E\u041E\u041F\\GitHub\\Golovkina_OOP_CP\\EventPass\\EventControl.xaml",
+              "RelativeDocumentMoniker": "EventPass\\EventControl.xaml",
+              "ToolTip": "D:\\1KHAI\\2 semester\\\u041E\u041E\u041F\\GitHub\\Golovkina_OOP_CP\\EventPass\\EventControl.xaml",
+              "RelativeToolTip": "EventPass\\EventControl.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-16T11:54:14.929Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "D:\\1KHAI\\2 semester\\\u041E\u041E\u041F\\GitHub\\Golovkina_OOP_CP\\EventPass\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "EventPass\\MainWindow.xaml",
+              "ToolTip": "D:\\1KHAI\\2 semester\\\u041E\u041E\u041F\\GitHub\\Golovkina_OOP_CP\\EventPass\\MainWindow.xaml",
+              "RelativeToolTip": "EventPass\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-16T11:53:51.715Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AdminCreateEventWindow.xaml",
+              "DocumentMoniker": "D:\\1KHAI\\2 semester\\\u041E\u041E\u041F\\GitHub\\Golovkina_OOP_CP\\EventPass\\View\\AdminCreateEventWindow.xaml",
+              "RelativeDocumentMoniker": "EventPass\\View\\AdminCreateEventWindow.xaml",
+              "ToolTip": "D:\\1KHAI\\2 semester\\\u041E\u041E\u041F\\GitHub\\Golovkina_OOP_CP\\EventPass\\View\\AdminCreateEventWindow.xaml*",
+              "RelativeToolTip": "EventPass\\View\\AdminCreateEventWindow.xaml*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-16T11:45:31.895Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "LoginWindow.xaml",
+              "DocumentMoniker": "D:\\1KHAI\\2 semester\\\u041E\u041E\u041F\\GitHub\\Golovkina_OOP_CP\\EventPass\\View\\LoginWindow.xaml",
+              "RelativeDocumentMoniker": "EventPass\\View\\LoginWindow.xaml",
+              "ToolTip": "D:\\1KHAI\\2 semester\\\u041E\u041E\u041F\\GitHub\\Golovkina_OOP_CP\\EventPass\\View\\LoginWindow.xaml",
+              "RelativeToolTip": "EventPass\\View\\LoginWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-14T12:05:48.837Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UserOrdersWindow.xaml",
+              "DocumentMoniker": "D:\\1KHAI\\2 semester\\\u041E\u041E\u041F\\GitHub\\Golovkina_OOP_CP\\EventPass\\View\\UserOrdersWindow.xaml",
+              "RelativeDocumentMoniker": "EventPass\\View\\UserOrdersWindow.xaml",
+              "ToolTip": "D:\\1KHAI\\2 semester\\\u041E\u041E\u041F\\GitHub\\Golovkina_OOP_CP\\EventPass\\View\\UserOrdersWindow.xaml",
+              "RelativeToolTip": "EventPass\\View\\UserOrdersWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-14T12:04:30.899Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UserWindow.xaml",
+              "DocumentMoniker": "D:\\1KHAI\\2 semester\\\u041E\u041E\u041F\\GitHub\\Golovkina_OOP_CP\\EventPass\\View\\UserWindow.xaml",
+              "RelativeDocumentMoniker": "EventPass\\View\\UserWindow.xaml",
+              "ToolTip": "D:\\1KHAI\\2 semester\\\u041E\u041E\u041F\\GitHub\\Golovkina_OOP_CP\\EventPass\\View\\UserWindow.xaml",
+              "RelativeToolTip": "EventPass\\View\\UserWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-14T12:03:24.152Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "LoginWindow.xaml.cs",
+              "DocumentMoniker": "D:\\1KHAI\\2 semester\\\u041E\u041E\u041F\\GitHub\\Golovkina_OOP_CP\\EventPass\\View\\LoginWindow.xaml.cs",
+              "RelativeDocumentMoniker": "EventPass\\View\\LoginWindow.xaml.cs",
+              "ToolTip": "D:\\1KHAI\\2 semester\\\u041E\u041E\u041F\\GitHub\\Golovkina_OOP_CP\\EventPass\\View\\LoginWindow.xaml.cs",
+              "RelativeToolTip": "EventPass\\View\\LoginWindow.xaml.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAqwCcAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T11:49:33.03Z"
             }
           ]
         },
         {
-          "DockedWidth": 294,
-          "SelectedChildIndex": 2,
+          "DockedHeight": 90,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -257,28 +193,11 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "RegisteredUserTests.cs",
-              "DocumentMoniker": "D:\\1KHAI\\2 semester\\\u041E\u041E\u041F\\GitHub\\Golovkina_OOP_CP\\TestProject\\Models\\Users\\RegisteredUserTests.cs",
-              "RelativeDocumentMoniker": "TestProject\\Models\\Users\\RegisteredUserTests.cs",
-              "ToolTip": "D:\\1KHAI\\2 semester\\\u041E\u041E\u041F\\GitHub\\Golovkina_OOP_CP\\TestProject\\Models\\Users\\RegisteredUserTests.cs",
-              "RelativeToolTip": "TestProject\\Models\\Users\\RegisteredUserTests.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-05T23:02:40.951Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
             }
           ]
         },
         {
-          "DockedWidth": 1347,
+          "DockedHeight": 144,
           "SelectedChildIndex": -1,
           "Children": [
             {

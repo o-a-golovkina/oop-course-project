@@ -1,13 +1,5 @@
-﻿using System.Text;
+﻿using EventPass.View;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace EventPass
 {
@@ -19,6 +11,28 @@ namespace EventPass
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Button_Account_Click(object sender, RoutedEventArgs e)
+        {
+            LoginWindow modalWindow = new LoginWindow
+            {
+                Owner = Application.Current.MainWindow,
+                WindowStartupLocation = WindowStartupLocation.CenterOwner
+            };
+
+            modalWindow.ShowDialog();
+        }
+
+        private void TextBox_Search_GotFocus(object sender, RoutedEventArgs e)
+        {
+            TextBox_Search.Text = string.Empty;
+        }
+
+        private void TextBox_Search_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (TextBox_Search.Text == string.Empty || TextBox_Search.Text == " ")
+                TextBox_Search.Text = "Search event...";
         }
     }
 }

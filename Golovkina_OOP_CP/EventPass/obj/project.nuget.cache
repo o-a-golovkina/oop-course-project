@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "wDUK1f1KKIA=",
+  "dgSpecHash": "AzxBIqzUvD8=",
   "success": true,
   "projectFilePath": "D:\\1KHAI\\2 semester\\ООП\\GitHub\\Golovkina_OOP_CP\\EventPass\\EventPass.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Admin\\.nuget\\packages\\materialdesigncolors\\5.2.1\\materialdesigncolors.5.2.1.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\materialdesignthemes\\5.2.1\\materialdesignthemes.5.2.1.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.39\\microsoft.xaml.behaviors.wpf.1.1.39.nupkg.sha512"
+  ],
   "logs": []
 }

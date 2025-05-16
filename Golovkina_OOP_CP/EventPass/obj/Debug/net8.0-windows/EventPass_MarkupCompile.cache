@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 D:\1KHAI\2 semester\ООП\GitHub\Golovkina_OOP_CP\EventPass\App.xaml
-11407045341
+13416589799
 
-182054212026
-198-211836927
-MainWindow.xaml;
+30431472388
+201-1871804512
+EventControl.xaml;MainWindow.xaml;View\AccountWindow.xaml;View\AdminCreateEventWindow.xaml;View\AdminOrdersWindow.xaml;View\AdminRemoveEventWindow.xaml;View\BalanceWindow.xaml;View\InfoEventGuestWindow.xaml;View\InfoEventUserWindow.xaml;View\LoginWindow.xaml;View\RegistationWindow.xaml;View\UserOrdersWindow.xaml;View\UserWindow.xaml;
 
 False
 
