@@ -33,7 +33,7 @@
             <Grid HorizontalAlignment="Left" Height="339" VerticalAlignment="Center" Width="350" Margin="188,0,0,0">
                 <Label Content="Customer login" Margin="105,27,105,0" FontSize="18" FontWeight="Bold" Height="34" VerticalAlignment="Top"/>
                 <Label x:Name="Label_Exception" Content="Exception" HorizontalAlignment="Left" Margin="16,252,0,0" VerticalAlignment="Top" Width="312" Foreground="#FFCC0000" FontSize="14" FontWeight="Bold" Visibility="Hidden"/>
-                <Button x:Name="Button_LogOut" Content="Log out" Margin="196,281,18,0" Background="#FF9B72CF" Foreground="White" FontWeight="Bold" Height="40" VerticalAlignment="Top" Cursor="Hand" BorderBrush="{x:Null}" FontSize="14">
+                <Button x:Name="Button_LogOut" Content="Log out" Margin="196,281,18,0" Background="#FF9B72CF" Foreground="White" FontWeight="Bold" Height="40" VerticalAlignment="Top" Cursor="Hand" BorderBrush="{x:Null}" FontSize="14" Click="Button_LogOut_Click">
                     <Button.Template>
                         <ControlTemplate TargetType="{x:Type Button}">
                             <Border x:Name="border"

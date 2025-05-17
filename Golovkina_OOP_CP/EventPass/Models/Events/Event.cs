@@ -29,9 +29,18 @@ namespace EventPass.Models.Events
         public string? Name
         {
             get => name;
-            set => name = !string.IsNullOrWhiteSpace(value) && Regex.IsMatch(value, @"^[A-Za-z]{5,}$")
-                ? value
-                : throw new ArgumentException("Event name must have at least 5 Latin letters!");
+            set
+            {
+                if (string.IsNullOrWhiteSpace(value))
+                    throw new ArgumentException("Event name cannot be empty!");
+
+                string lettersOnly = value.Replace(" ", "");
+
+                if (lettersOnly.Length < 3 || !Regex.IsMatch(lettersOnly, @"^[A-Za-z]+$"))
+                    throw new ArgumentException("Event name must contain at least 5 Latin letters and only spaces!");
+
+                name = value;
+            }
         }
 
         public DateTime DateAndTime

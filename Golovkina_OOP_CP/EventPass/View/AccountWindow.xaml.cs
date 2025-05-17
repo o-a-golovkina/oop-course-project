@@ -55,5 +55,18 @@ namespace EventPass.View
             if (TextBox_Email.Text == string.Empty || TextBox_Email.Text == " ")
                 TextBox_Email.Text = "Email";
         }
+
+        private void Button_LogOut_Click(object sender, RoutedEventArgs e)
+        {
+            var currentMain = Application.Current.MainWindow;
+            var main = new MainWindow();
+            main.Show();
+
+            foreach (Window window in Application.Current.Windows)
+            {
+                if (window != main)
+                    window.Close();
+            }
+        }
     }
 }

@@ -10,10 +10,12 @@
             <Grid HorizontalAlignment="Center" Height="309" VerticalAlignment="Center" Width="600">
                 <Image x:Name="Image_EventImage" HorizontalAlignment="Left" Height="235" Margin="20,29,0,0" VerticalAlignment="Top" Width="270"/>
                 <Label x:Name="Label_EventName" Content="EVENT NAME" HorizontalAlignment="Left" Height="35" Margin="315,29,0,0" VerticalAlignment="Top" Width="275" FontWeight="Bold" FontSize="18"/>
+                <Label x:Name="Label_Date" Content="Date: " HorizontalAlignment="Left" Margin="315,64,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Width="126"/>
+                <Label x:Name="Label_Time" Content="Time: " HorizontalAlignment="Left" Margin="452,64,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Width="115"/>
                 <Image Margin="548,257,14,14" Source="/Resources/icon.png" Stretch="Fill"/>
                 <Label Content="Event" Margin="541,284,24,5" FontWeight="Bold" Foreground="#FFA6A6A6" FontSize="9"/>
                 <Label Content="Pass" Margin="565,284,6,5" FontWeight="Bold" Foreground="#FF9B72CF" FontSize="9"/>
-                <Button x:Name="Button_Buy" Content="Buy" Margin="374,0,70,44" Background="#FF9B72CF" Foreground="White" FontWeight="Bold" Height="35" VerticalAlignment="Bottom" Cursor="Hand" BorderBrush="{x:Null}">
+                <Button x:Name="Button_Buy" Content="Buy" Margin="374,0,70,44" Background="#FF9B72CF" Foreground="White" FontWeight="Bold" Height="35" VerticalAlignment="Bottom" Cursor="Hand" BorderBrush="{x:Null}" Click="Button_Buy_Click">
                     <Button.Template>
                         <ControlTemplate TargetType="{x:Type Button}">
                             <Border x:Name="border"
@@ -33,12 +35,13 @@
                         </ControlTemplate>
                     </Button.Template>
                 </Button>
+                <Border BorderThickness="1" HorizontalAlignment="Left" Height="31" Margin="315,184,0,0" VerticalAlignment="Top" Width="252" Background="#339B72CF" CornerRadius="8,8,8,8"/>
+                <Label x:Name="Label_City" Content="City: " HorizontalAlignment="Left" Margin="452,145,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Width="115"/>
             </Grid>
-            <Label x:Name="Label_Date" Content="Date: " HorizontalAlignment="Left" Margin="315,64,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14"/>
-            <Label x:Name="Label_City" Content="City: " HorizontalAlignment="Left" Margin="315,94,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14"/>
-            <Label x:Name="Label_Price" Content="Price: " HorizontalAlignment="Left" Margin="315,124,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14"/>
-            <Label x:Name="Label_FreePlaces" Content="Free: " HorizontalAlignment="Left" Margin="315,155,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14"/>
-            <Label x:Name="Label_EventType" Content="Type: " HorizontalAlignment="Left" Margin="315,187,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14"/>
+            <Label x:Name="Label_Price" Content="Price: " HorizontalAlignment="Left" Margin="315,105,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Width="125"/>
+            <Label x:Name="Label_FreePlaces" Content="Free: " HorizontalAlignment="Left" Margin="452,105,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Width="113"/>
+            <Label x:Name="Label_EventType" Content="Type: " HorizontalAlignment="Left" Margin="315,145,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Width="125"/>
+            <Label x:Name="Label_Extra" Content="Extra" HorizontalAlignment="Left" Margin="321,184,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14"/>
 
         </Grid>
     </Viewbox>

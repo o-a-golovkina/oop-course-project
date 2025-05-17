@@ -38,7 +38,7 @@ namespace EventPass.View
 
         private void TextBox_Date_GotFocus(object sender, RoutedEventArgs e)
         {
-            if (TextBox_Date.Text == "Date")
+            if (TextBox_Date.Text == "Date and time")
                 TextBox_Date.Text = string.Empty;
         }
 
@@ -69,7 +69,7 @@ namespace EventPass.View
         private void TextBox_Date_LostFocus(object sender, RoutedEventArgs e)
         {
             if (TextBox_Date.Text == string.Empty || TextBox_Date.Text == " ")
-                TextBox_Date.Text = "Date";
+                TextBox_Date.Text = "Date and time";
         }
 
         private void TextBox_Price_LostFocus(object sender, RoutedEventArgs e)
@@ -92,41 +92,60 @@ namespace EventPass.View
 
         private void Button_CreateEvent_Click(object sender, RoutedEventArgs e)
         {
-            if (TextBox_EventName.Text == "Event name" || TextBox_Date.Text == "Date" || TextBox_Price.Text == "Price" || TextBox_NumTickets.Text == "Count of tickets")
+            Label_Exception.Visibility = Visibility.Hidden;
+
+            if (TextBox_EventName.Text == "Event name"
+                || TextBox_Date.Text == "Date and time"
+                || TextBox_Price.Text == "Price"
+                || TextBox_NumTickets.Text == "Count of tickets")
             {
                 Label_Exception.Content = "Please fill in all fields";
                 Label_Exception.Visibility = Visibility.Visible;
+                return;
             }
-            else if (imagePath == null)
+            if (imagePath == null)
             {
                 Label_Exception.Content = "Please choose an image";
                 Label_Exception.Visibility = Visibility.Visible;
+                return;
             }
-            else
+
+            try
             {
-                Label_Exception.Visibility = Visibility.Hidden;
-                try
-                {
-                    string? name = TextBox_EventName.Text;
-                    DateTime dateAndTime = DateTime.Parse(TextBox_Date.Text);
-                    decimal price = decimal.Parse(TextBox_Price.Text);
-                    string? city = ComboBox_City.Text;
-                    int countFreeTickets = int.Parse(TextBox_NumTickets.Text);
-                    EventType eventType = (EventType)Enum.Parse(typeof(EventType), ComboBox_EventType.Text + "Event");
-                    string mes;
-                    Admin.Instance.CreateEvent(name, dateAndTime, price, city, imagePath, countFreeTickets, eventType, out mes, singer, includeDrink, numberOfActs);
-                    if (mes != null)
-                        throw new Exception(mes);
-                }
-                catch (Exception ex)
-                {
-                    Label_Exception.Content = ex.Message;
-                    Label_Exception.Visibility = Visibility.Visible;
-                }
-                FormReset();
+                string? name = TextBox_EventName.Text;
+                string? city = ComboBox_City.Text.ToString();
+
+                if (!DateTime.TryParse(TextBox_Date.Text, out var dateAndTime))
+                    throw new FormatException("Incorrect format of date and time");
+
+                if (!decimal.TryParse(TextBox_Price.Text, out var price))
+                    throw new FormatException("Incorrect format of price");
+
+                if (!int.TryParse(TextBox_NumTickets.Text, out var countFreeTickets))
+                    throw new FormatException("Incorrect format of ticket count");
+
+                Enum.TryParse<EventType>(ComboBox_EventType.Text + "Event", out var eventType);
+                numberOfActs = short.Parse(ComboBox_Acts.Text);
+                includeDrink = ComboBox_Drinks.Text == "Yes";
+
+                string? singer = !string.IsNullOrWhiteSpace(TextBox_Singer.Text) && TextBox_Singer.Text != "Singer"
+                    ? TextBox_Singer.Text
+                    : null;
+
+                bool create = Admin.Instance.CreateEvent(name, dateAndTime, price, city, imagePath, countFreeTickets, eventType, out string mes, singer, includeDrink, numberOfActs);
+                if (!string.IsNullOrEmpty(mes) || create != true)
+                    throw new Exception(mes);
+
                 MessageBox.Show("The event was created!", "Message", MessageBoxButton.OK, MessageBoxImage.Information);
+                FormReset();
+            }
+            catch (Exception ex)
+            {
+                Label_Exception.Content = ex.Message;
+                Label_Exception.Visibility = Visibility.Visible;
             }
         }
+
 
         private void Button_PlaceImage_Click(object sender, RoutedEventArgs e)
         {
@@ -197,18 +216,21 @@ namespace EventPass.View
         private void FormReset()
         {
             TextBox_EventName.Text = "Event name";
-            TextBox_Date.Text = "Date";
+            TextBox_Date.Text = "Date and time";
             TextBox_Price.Text = "Price";
             TextBox_NumTickets.Text = "Count of tickets";
             TextBox_Singer.Text = "Singer";
             Image_EmptyImage.Visibility = Visibility.Visible;
             Rectangle_Gray.Visibility = Visibility.Visible;
-            Image_Event.Source = null;
             Label_Exception.Visibility = Visibility.Hidden;
+            Image_Event.Source = null;
             ComboBox_EventType.Text = "Concert";
             ComboBox_City.Text = "Kharkiv";
             ComboBox_Acts.Text = "1";
             ComboBox_Drinks.Text = "No";
+            TextBox_Singer.IsEnabled = true;
+            ComboBox_Acts.IsEnabled = false;
+            ComboBox_Drinks.IsEnabled = false;
         }
 
         private void ComboBox_EventType_GotFocus(object sender, RoutedEventArgs e)
@@ -219,23 +241,18 @@ namespace EventPass.View
                     TextBox_Singer.IsEnabled = true;
                     ComboBox_Acts.IsEnabled = false;
                     ComboBox_Drinks.IsEnabled = false;
-                    singer = TextBox_Singer.Text;
-                    if (singer == "Singer" || singer == " " || singer == "")
-                        singer = null;
                     break;
 
                 case "Theater":
                     TextBox_Singer.IsEnabled = false;
                     ComboBox_Acts.IsEnabled = true;
                     ComboBox_Drinks.IsEnabled = false;
-                    numberOfActs = short.Parse(ComboBox_Acts.Text);
                     break;
 
                 case "StandUp":
                     TextBox_Singer.IsEnabled = false;
                     ComboBox_Acts.IsEnabled = false;
                     ComboBox_Drinks.IsEnabled = true;
-                    includeDrink = ComboBox_Drinks.Text == "Yes";
                     break;
             }
         }

@@ -45,7 +45,7 @@
             </Border>
             <Border BorderThickness="1" Background="White" CornerRadius="30,30,30,30" Margin="205,91,60,40"/>
             <Grid HorizontalAlignment="Left" Height="434" VerticalAlignment="Top" Width="800" Grid.ColumnSpan="2">
-                <Label x:Name="Label_Exception" Content="Exception" HorizontalAlignment="Left" Margin="472,335,0,0" VerticalAlignment="Top" Width="222" Foreground="#FFCC0000" FontWeight="Bold" FontSize="8" Visibility="Hidden"/>
+                <Label x:Name="Label_Exception" Content="Exception" HorizontalAlignment="Left" Margin="472,335,0,0" VerticalAlignment="Top" Width="252" Foreground="#FFCC0000" FontWeight="Bold" FontSize="8" Visibility="Hidden"/>
                 <Label Content="Event" Margin="34,64,718,342" FontWeight="Bold" Foreground="#FFA6A6A6" FontSize="14"/>
                 <Label Content="Pass" Margin="71,64,689,342" FontWeight="Bold" Foreground="#FF9B72CF" FontSize="14"/>
                 <Label Content="Create event" HorizontalAlignment="Left" Margin="227,105,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14"/>
@@ -104,7 +104,7 @@
                     Margin="472,189,0,0"
                     Width="103"
                     Height="22"
-                    Text="Date"
+                    Text="Date and time"
                     TextWrapping="Wrap"
                     Background="{x:Null}"
                     BorderBrush="{x:Null}"

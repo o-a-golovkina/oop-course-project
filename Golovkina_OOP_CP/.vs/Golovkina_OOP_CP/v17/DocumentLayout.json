@@ -3,28 +3,28 @@
   "WorkspaceRootPath": "D:\\1KHAI\\2 semester\\\u041E\u041E\u041F\\GitHub\\Golovkina_OOP_CP\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{56A47727-F98D-4C2A-8868-2965520DCCAE}|EventPass\\EventPass.csproj|d:\\1khai\\2 semester\\\u043E\u043E\u043F\\github\\golovkina_oop_cp\\eventpass\\view\\accountwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56A47727-F98D-4C2A-8868-2965520DCCAE}|EventPass\\EventPass.csproj|solutionrelative:eventpass\\view\\accountwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56A47727-F98D-4C2A-8868-2965520DCCAE}|EventPass\\EventPass.csproj|d:\\1khai\\2 semester\\\u043E\u043E\u043F\\github\\golovkina_oop_cp\\eventpass\\view\\accountwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{56A47727-F98D-4C2A-8868-2965520DCCAE}|EventPass\\EventPass.csproj|solutionrelative:eventpass\\view\\accountwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56A47727-F98D-4C2A-8868-2965520DCCAE}|EventPass\\EventPass.csproj|d:\\1khai\\2 semester\\\u043E\u043E\u043F\\github\\golovkina_oop_cp\\eventpass\\view\\userwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{56A47727-F98D-4C2A-8868-2965520DCCAE}|EventPass\\EventPass.csproj|solutionrelative:eventpass\\view\\userwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56A47727-F98D-4C2A-8868-2965520DCCAE}|EventPass\\EventPass.csproj|d:\\1khai\\2 semester\\\u043E\u043E\u043F\\github\\golovkina_oop_cp\\eventpass\\view\\userwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56A47727-F98D-4C2A-8868-2965520DCCAE}|EventPass\\EventPass.csproj|solutionrelative:eventpass\\view\\userwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{56A47727-F98D-4C2A-8868-2965520DCCAE}|EventPass\\EventPass.csproj|d:\\1khai\\2 semester\\\u043E\u043E\u043F\\github\\golovkina_oop_cp\\eventpass\\view\\admincreateeventwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{56A47727-F98D-4C2A-8868-2965520DCCAE}|EventPass\\EventPass.csproj|solutionrelative:eventpass\\view\\admincreateeventwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{56A47727-F98D-4C2A-8868-2965520DCCAE}|EventPass\\EventPass.csproj|d:\\1khai\\2 semester\\\u043E\u043E\u043F\\github\\golovkina_oop_cp\\eventpass\\models\\tickets\\ticketfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56A47727-F98D-4C2A-8868-2965520DCCAE}|EventPass\\EventPass.csproj|solutionrelative:eventpass\\models\\tickets\\ticketfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56A47727-F98D-4C2A-8868-2965520DCCAE}|EventPass\\EventPass.csproj|d:\\1khai\\2 semester\\\u043E\u043E\u043F\\github\\golovkina_oop_cp\\eventpass\\models\\events\\eventtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56A47727-F98D-4C2A-8868-2965520DCCAE}|EventPass\\EventPass.csproj|solutionrelative:eventpass\\models\\events\\eventtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56A47727-F98D-4C2A-8868-2965520DCCAE}|EventPass\\EventPass.csproj|d:\\1khai\\2 semester\\\u043E\u043E\u043F\\github\\golovkina_oop_cp\\eventpass\\models\\users\\registereduser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56A47727-F98D-4C2A-8868-2965520DCCAE}|EventPass\\EventPass.csproj|solutionrelative:eventpass\\models\\users\\registereduser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56A47727-F98D-4C2A-8868-2965520DCCAE}|EventPass\\EventPass.csproj|d:\\1khai\\2 semester\\\u043E\u043E\u043F\\github\\golovkina_oop_cp\\eventpass\\view\\registationwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56A47727-F98D-4C2A-8868-2965520DCCAE}|EventPass\\EventPass.csproj|solutionrelative:eventpass\\view\\registationwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56A47727-F98D-4C2A-8868-2965520DCCAE}|EventPass\\EventPass.csproj|d:\\1khai\\2 semester\\\u043E\u043E\u043F\\github\\golovkina_oop_cp\\eventpass\\view\\registationwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{56A47727-F98D-4C2A-8868-2965520DCCAE}|EventPass\\EventPass.csproj|solutionrelative:eventpass\\view\\registationwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{56A47727-F98D-4C2A-8868-2965520DCCAE}|EventPass\\EventPass.csproj|d:\\1khai\\2 semester\\\u043E\u043E\u043F\\github\\golovkina_oop_cp\\eventpass\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56A47727-F98D-4C2A-8868-2965520DCCAE}|EventPass\\EventPass.csproj|solutionrelative:eventpass\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{56A47727-F98D-4C2A-8868-2965520DCCAE}|EventPass\\EventPass.csproj|d:\\1khai\\2 semester\\\u043E\u043E\u043F\\github\\golovkina_oop_cp\\eventpass\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -35,12 +35,28 @@
       "RelativeMoniker": "D:0:0:{56A47727-F98D-4C2A-8868-2965520DCCAE}|EventPass\\EventPass.csproj|solutionrelative:eventpass\\view\\admincreateeventwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{56A47727-F98D-4C2A-8868-2965520DCCAE}|EventPass\\EventPass.csproj|d:\\1khai\\2 semester\\\u043E\u043E\u043F\\github\\golovkina_oop_cp\\eventpass\\view\\userwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{56A47727-F98D-4C2A-8868-2965520DCCAE}|EventPass\\EventPass.csproj|solutionrelative:eventpass\\view\\userwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{56A47727-F98D-4C2A-8868-2965520DCCAE}|EventPass\\EventPass.csproj|d:\\1khai\\2 semester\\\u043E\u043E\u043F\\github\\golovkina_oop_cp\\eventpass\\models\\events\\eventtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56A47727-F98D-4C2A-8868-2965520DCCAE}|EventPass\\EventPass.csproj|solutionrelative:eventpass\\models\\events\\eventtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{56A47727-F98D-4C2A-8868-2965520DCCAE}|EventPass\\EventPass.csproj|d:\\1khai\\2 semester\\\u043E\u043E\u043F\\github\\golovkina_oop_cp\\eventpass\\view\\userorderswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{56A47727-F98D-4C2A-8868-2965520DCCAE}|EventPass\\EventPass.csproj|solutionrelative:eventpass\\view\\userorderswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{56A47727-F98D-4C2A-8868-2965520DCCAE}|EventPass\\EventPass.csproj|d:\\1khai\\2 semester\\\u043E\u043E\u043F\\github\\golovkina_oop_cp\\eventpass\\view\\infoeventguestwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56A47727-F98D-4C2A-8868-2965520DCCAE}|EventPass\\EventPass.csproj|solutionrelative:eventpass\\view\\infoeventguestwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56A47727-F98D-4C2A-8868-2965520DCCAE}|EventPass\\EventPass.csproj|d:\\1khai\\2 semester\\\u043E\u043E\u043F\\github\\golovkina_oop_cp\\eventpass\\eventcontrol.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56A47727-F98D-4C2A-8868-2965520DCCAE}|EventPass\\EventPass.csproj|solutionrelative:eventpass\\eventcontrol.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56A47727-F98D-4C2A-8868-2965520DCCAE}|EventPass\\EventPass.csproj|d:\\1khai\\2 semester\\\u043E\u043E\u043F\\github\\golovkina_oop_cp\\eventpass\\view\\infoeventuserwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56A47727-F98D-4C2A-8868-2965520DCCAE}|EventPass\\EventPass.csproj|solutionrelative:eventpass\\view\\infoeventuserwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56A47727-F98D-4C2A-8868-2965520DCCAE}|EventPass\\EventPass.csproj|d:\\1khai\\2 semester\\\u043E\u043E\u043F\\github\\golovkina_oop_cp\\eventpass\\view\\infoeventuserwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{56A47727-F98D-4C2A-8868-2965520DCCAE}|EventPass\\EventPass.csproj|solutionrelative:eventpass\\view\\infoeventuserwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56A47727-F98D-4C2A-8868-2965520DCCAE}|EventPass\\EventPass.csproj|d:\\1khai\\2 semester\\\u043E\u043E\u043F\\github\\golovkina_oop_cp\\eventpass\\view\\infoeventguestwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{56A47727-F98D-4C2A-8868-2965520DCCAE}|EventPass\\EventPass.csproj|solutionrelative:eventpass\\view\\infoeventguestwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -67,32 +83,31 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "AdminCreateEventWindow.xaml.cs",
-              "DocumentMoniker": "D:\\1KHAI\\2 semester\\\u041E\u041E\u041F\\GitHub\\Golovkina_OOP_CP\\EventPass\\View\\AdminCreateEventWindow.xaml.cs",
-              "RelativeDocumentMoniker": "EventPass\\View\\AdminCreateEventWindow.xaml.cs",
-              "ToolTip": "D:\\1KHAI\\2 semester\\\u041E\u041E\u041F\\GitHub\\Golovkina_OOP_CP\\EventPass\\View\\AdminCreateEventWindow.xaml.cs",
-              "RelativeToolTip": "EventPass\\View\\AdminCreateEventWindow.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAOkAAAAcAAAAAAAAAA==",
+              "Title": "AccountWindow.xaml.cs",
+              "DocumentMoniker": "D:\\1KHAI\\2 semester\\\u041E\u041E\u041F\\GitHub\\Golovkina_OOP_CP\\EventPass\\View\\AccountWindow.xaml.cs",
+              "RelativeDocumentMoniker": "EventPass\\View\\AccountWindow.xaml.cs",
+              "ToolTip": "D:\\1KHAI\\2 semester\\\u041E\u041E\u041F\\GitHub\\Golovkina_OOP_CP\\EventPass\\View\\AccountWindow.xaml.cs",
+              "RelativeToolTip": "EventPass\\View\\AccountWindow.xaml.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAIA/wEQAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-16T22:42:17.257Z",
+              "WhenOpened": "2025-05-17T18:12:23.601Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "TicketFactory.cs",
-              "DocumentMoniker": "D:\\1KHAI\\2 semester\\\u041E\u041E\u041F\\GitHub\\Golovkina_OOP_CP\\EventPass\\Models\\Tickets\\TicketFactory.cs",
-              "RelativeDocumentMoniker": "EventPass\\Models\\Tickets\\TicketFactory.cs",
-              "ToolTip": "D:\\1KHAI\\2 semester\\\u041E\u041E\u041F\\GitHub\\Golovkina_OOP_CP\\EventPass\\Models\\Tickets\\TicketFactory.cs",
-              "RelativeToolTip": "EventPass\\Models\\Tickets\\TicketFactory.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-16T22:41:58.425Z",
+              "Title": "AccountWindow.xaml",
+              "DocumentMoniker": "D:\\1KHAI\\2 semester\\\u041E\u041E\u041F\\GitHub\\Golovkina_OOP_CP\\EventPass\\View\\AccountWindow.xaml",
+              "RelativeDocumentMoniker": "EventPass\\View\\AccountWindow.xaml",
+              "ToolTip": "D:\\1KHAI\\2 semester\\\u041E\u041E\u041F\\GitHub\\Golovkina_OOP_CP\\EventPass\\View\\AccountWindow.xaml",
+              "RelativeToolTip": "EventPass\\View\\AccountWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-17T18:12:13.613Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
               "Title": "EventType.cs",
               "DocumentMoniker": "D:\\1KHAI\\2 semester\\\u041E\u041E\u041F\\GitHub\\Golovkina_OOP_CP\\EventPass\\Models\\Events\\EventType.cs",
               "RelativeDocumentMoniker": "EventPass\\Models\\Events\\EventType.cs",
@@ -100,69 +115,108 @@
               "RelativeToolTip": "EventPass\\Models\\Events\\EventType.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-16T22:41:53.524Z",
+              "WhenOpened": "2025-05-17T18:09:07.505Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "RegisteredUser.cs",
-              "DocumentMoniker": "D:\\1KHAI\\2 semester\\\u041E\u041E\u041F\\GitHub\\Golovkina_OOP_CP\\EventPass\\Models\\Users\\RegisteredUser.cs",
-              "RelativeDocumentMoniker": "EventPass\\Models\\Users\\RegisteredUser.cs",
-              "ToolTip": "D:\\1KHAI\\2 semester\\\u041E\u041E\u041F\\GitHub\\Golovkina_OOP_CP\\EventPass\\Models\\Users\\RegisteredUser.cs",
-              "RelativeToolTip": "EventPass\\Models\\Users\\RegisteredUser.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAHwAAAAeAAAAAAAAAA==",
+              "DocumentIndex": 10,
+              "Title": "EventControl.xaml.cs",
+              "DocumentMoniker": "D:\\1KHAI\\2 semester\\\u041E\u041E\u041F\\GitHub\\Golovkina_OOP_CP\\EventPass\\EventControl.xaml.cs",
+              "RelativeDocumentMoniker": "EventPass\\EventControl.xaml.cs",
+              "ToolTip": "D:\\1KHAI\\2 semester\\\u041E\u041E\u041F\\GitHub\\Golovkina_OOP_CP\\EventPass\\EventControl.xaml.cs",
+              "RelativeToolTip": "EventPass\\EventControl.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-16T22:34:18.986Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "RegistationWindow.xaml",
-              "DocumentMoniker": "D:\\1KHAI\\2 semester\\\u041E\u041E\u041F\\GitHub\\Golovkina_OOP_CP\\EventPass\\View\\RegistationWindow.xaml",
-              "RelativeDocumentMoniker": "EventPass\\View\\RegistationWindow.xaml",
-              "ToolTip": "D:\\1KHAI\\2 semester\\\u041E\u041E\u041F\\GitHub\\Golovkina_OOP_CP\\EventPass\\View\\RegistationWindow.xaml",
-              "RelativeToolTip": "EventPass\\View\\RegistationWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-16T22:29:58.233Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "RegistationWindow.xaml.cs",
-              "DocumentMoniker": "D:\\1KHAI\\2 semester\\\u041E\u041E\u041F\\GitHub\\Golovkina_OOP_CP\\EventPass\\View\\RegistationWindow.xaml.cs",
-              "RelativeDocumentMoniker": "EventPass\\View\\RegistationWindow.xaml.cs",
-              "ToolTip": "D:\\1KHAI\\2 semester\\\u041E\u041E\u041F\\GitHub\\Golovkina_OOP_CP\\EventPass\\View\\RegistationWindow.xaml.cs",
-              "RelativeToolTip": "EventPass\\View\\RegistationWindow.xaml.cs",
-              "ViewState": "AgIAAFkAAAAAAAAAAAAmwDoAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-16T22:29:04.321Z",
+              "WhenOpened": "2025-05-17T17:48:35.982Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "UserOrdersWindow.xaml",
-              "DocumentMoniker": "D:\\1KHAI\\2 semester\\\u041E\u041E\u041F\\GitHub\\Golovkina_OOP_CP\\EventPass\\View\\UserOrdersWindow.xaml",
-              "RelativeDocumentMoniker": "EventPass\\View\\UserOrdersWindow.xaml",
-              "ToolTip": "D:\\1KHAI\\2 semester\\\u041E\u041E\u041F\\GitHub\\Golovkina_OOP_CP\\EventPass\\View\\UserOrdersWindow.xaml",
-              "RelativeToolTip": "EventPass\\View\\UserOrdersWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-16T22:09:35.888Z",
+              "Title": "InfoEventGuestWindow.xaml.cs",
+              "DocumentMoniker": "D:\\1KHAI\\2 semester\\\u041E\u041E\u041F\\GitHub\\Golovkina_OOP_CP\\EventPass\\View\\InfoEventGuestWindow.xaml.cs",
+              "RelativeDocumentMoniker": "EventPass\\View\\InfoEventGuestWindow.xaml.cs",
+              "ToolTip": "D:\\1KHAI\\2 semester\\\u041E\u041E\u041F\\GitHub\\Golovkina_OOP_CP\\EventPass\\View\\InfoEventGuestWindow.xaml.cs",
+              "RelativeToolTip": "EventPass\\View\\InfoEventGuestWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T17:33:44.198Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
+              "Title": "InfoEventUserWindow.xaml.cs",
+              "DocumentMoniker": "D:\\1KHAI\\2 semester\\\u041E\u041E\u041F\\GitHub\\Golovkina_OOP_CP\\EventPass\\View\\InfoEventUserWindow.xaml.cs",
+              "RelativeDocumentMoniker": "EventPass\\View\\InfoEventUserWindow.xaml.cs",
+              "ToolTip": "D:\\1KHAI\\2 semester\\\u041E\u041E\u041F\\GitHub\\Golovkina_OOP_CP\\EventPass\\View\\InfoEventUserWindow.xaml.cs",
+              "RelativeToolTip": "EventPass\\View\\InfoEventUserWindow.xaml.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAIwBcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T17:33:39.28Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "InfoEventUserWindow.xaml",
+              "DocumentMoniker": "D:\\1KHAI\\2 semester\\\u041E\u041E\u041F\\GitHub\\Golovkina_OOP_CP\\EventPass\\View\\InfoEventUserWindow.xaml",
+              "RelativeDocumentMoniker": "EventPass\\View\\InfoEventUserWindow.xaml",
+              "ToolTip": "D:\\1KHAI\\2 semester\\\u041E\u041E\u041F\\GitHub\\Golovkina_OOP_CP\\EventPass\\View\\InfoEventUserWindow.xaml",
+              "RelativeToolTip": "EventPass\\View\\InfoEventUserWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-17T17:32:33.994Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UserWindow.xaml.cs",
+              "DocumentMoniker": "D:\\1KHAI\\2 semester\\\u041E\u041E\u041F\\GitHub\\Golovkina_OOP_CP\\EventPass\\View\\UserWindow.xaml.cs",
+              "RelativeDocumentMoniker": "EventPass\\View\\UserWindow.xaml.cs",
+              "ToolTip": "D:\\1KHAI\\2 semester\\\u041E\u041E\u041F\\GitHub\\Golovkina_OOP_CP\\EventPass\\View\\UserWindow.xaml.cs",
+              "RelativeToolTip": "EventPass\\View\\UserWindow.xaml.cs",
+              "ViewState": "AgIAAEgBAAAAAAAAAADwv3YAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T13:43:59.528Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "UserWindow.xaml",
               "DocumentMoniker": "D:\\1KHAI\\2 semester\\\u041E\u041E\u041F\\GitHub\\Golovkina_OOP_CP\\EventPass\\View\\UserWindow.xaml",
               "RelativeDocumentMoniker": "EventPass\\View\\UserWindow.xaml",
               "ToolTip": "D:\\1KHAI\\2 semester\\\u041E\u041E\u041F\\GitHub\\Golovkina_OOP_CP\\EventPass\\View\\UserWindow.xaml",
               "RelativeToolTip": "EventPass\\View\\UserWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-16T22:09:25.536Z",
+              "WhenOpened": "2025-05-17T13:43:57.644Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "InfoEventGuestWindow.xaml",
+              "DocumentMoniker": "D:\\1KHAI\\2 semester\\\u041E\u041E\u041F\\GitHub\\Golovkina_OOP_CP\\EventPass\\View\\InfoEventGuestWindow.xaml",
+              "RelativeDocumentMoniker": "EventPass\\View\\InfoEventGuestWindow.xaml",
+              "ToolTip": "D:\\1KHAI\\2 semester\\\u041E\u041E\u041F\\GitHub\\Golovkina_OOP_CP\\EventPass\\View\\InfoEventGuestWindow.xaml",
+              "RelativeToolTip": "EventPass\\View\\InfoEventGuestWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-17T12:51:08.792Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "D:\\1KHAI\\2 semester\\\u041E\u041E\u041F\\GitHub\\Golovkina_OOP_CP\\EventPass\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "EventPass\\MainWindow.xaml.cs",
+              "ToolTip": "D:\\1KHAI\\2 semester\\\u041E\u041E\u041F\\GitHub\\Golovkina_OOP_CP\\EventPass\\MainWindow.xaml.cs",
+              "RelativeToolTip": "EventPass\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAHAAAAAAAAAAAAAqwIEAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T12:22:19.512Z",
               "EditorCaption": ""
             },
             {
@@ -174,7 +228,7 @@
               "ToolTip": "D:\\1KHAI\\2 semester\\\u041E\u041E\u041F\\GitHub\\Golovkina_OOP_CP\\EventPass\\MainWindow.xaml",
               "RelativeToolTip": "EventPass\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-16T22:08:17.201Z",
+              "WhenOpened": "2025-05-17T12:22:03.716Z",
               "EditorCaption": ""
             },
             {
@@ -186,7 +240,20 @@
               "ToolTip": "D:\\1KHAI\\2 semester\\\u041E\u041E\u041F\\GitHub\\Golovkina_OOP_CP\\EventPass\\View\\AdminCreateEventWindow.xaml",
               "RelativeToolTip": "EventPass\\View\\AdminCreateEventWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-16T12:55:26.502Z",
+              "WhenOpened": "2025-05-17T11:43:27.803Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AdminCreateEventWindow.xaml.cs",
+              "DocumentMoniker": "D:\\1KHAI\\2 semester\\\u041E\u041E\u041F\\GitHub\\Golovkina_OOP_CP\\EventPass\\View\\AdminCreateEventWindow.xaml.cs",
+              "RelativeDocumentMoniker": "EventPass\\View\\AdminCreateEventWindow.xaml.cs",
+              "ToolTip": "D:\\1KHAI\\2 semester\\\u041E\u041E\u041F\\GitHub\\Golovkina_OOP_CP\\EventPass\\View\\AdminCreateEventWindow.xaml.cs",
+              "RelativeToolTip": "EventPass\\View\\AdminCreateEventWindow.xaml.cs",
+              "ViewState": "AgIAALoAAAAAAAAAAAAuwMwAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T11:36:25.063Z",
               "EditorCaption": ""
             }
           ]
