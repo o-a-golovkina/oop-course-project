@@ -13,6 +13,10 @@ namespace EventPass
     public partial class MainWindow : Window
     {
         List<Event> createdEvents;
+        EventType? selectedEventType = null;
+        string selectedCity = "All cities";
+        DateTime? selectedDate = null;
+        string searchQuery = "";
 
         public MainWindow()
         {
@@ -129,53 +133,36 @@ namespace EventPass
 
         private void Button_Concert_Click(object sender, RoutedEventArgs e)
         {
-            var concerts = createdEvents.Where(c => c.EventType == EventType.ConcertEvent).ToList();
-            if (concerts.Count == 0)
-            {
-                Label_NoEvents.Visibility = Visibility.Visible;
-                HiddenControls();
-                return;
-            }
-
-            Label_NoEvents.Visibility = Visibility.Hidden;
-            Label_Poster.Content = "Consert posters";
-            DownloadEvents(concerts);
+            selectedEventType = EventType.ConcertEvent;
+            Label_Poster.Content = "Concert posters";
+            ApplyFilters();
         }
 
         private void Button_Theater_Click(object sender, RoutedEventArgs e)
         {
-            var theaters = createdEvents.Where(c => c.EventType == EventType.TheaterEvent).ToList();
-            if (theaters.Count == 0)
-            {
-                Label_NoEvents.Visibility = Visibility.Visible;
-                HiddenControls();
-                return;
-            }
-
-            Label_NoEvents.Visibility = Visibility.Hidden;
             Label_Poster.Content = "Theater posters";
-            DownloadEvents(theaters);
+            selectedEventType = EventType.TheaterEvent;
+            ApplyFilters();
         }
 
         private void Button_StandUp_Click(object sender, RoutedEventArgs e)
         {
-            var standUps = createdEvents.Where(c => c.EventType == EventType.StandUpEvent).ToList();
-            if (standUps.Count == 0)
-            {
-                Label_NoEvents.Visibility = Visibility.Visible;
-                HiddenControls();
-                return;
-            }
-
-            Label_NoEvents.Visibility = Visibility.Hidden;
             Label_Poster.Content = "StandUp posters";
-            DownloadEvents(standUps);
+            selectedEventType = EventType.StandUpEvent;
+            ApplyFilters();
         }
 
         private void Button_Home_Click(object sender, RoutedEventArgs e)
         {
             DownloadEvents(createdEvents);
-            Label_Poster.Content = "Event posters";
+            selectedEventType = null;
+            selectedCity = "All cities";
+            selectedDate = null;
+            searchQuery = "";
+            ComboBox_City.Text = "All cities";
+            Calendar_MyCalendar.SelectedDate = null;
+            TextBox_Search.Text = "Search event...";
+            Label_Poster.Content = "Events posters";
         }
 
         private List<EventControl> HiddenControls()
@@ -190,122 +177,10 @@ namespace EventPass
             return Controls;
         }
 
-        private void ComboBox_City_GotFocus(object sender, RoutedEventArgs e)
-        {
-            switch (ComboBox_City.Text.ToString())
-            {
-                case "All cities":
-                    DownloadEvents(createdEvents);
-                    break;
-
-                case "Kharkiv":
-                    KharkivEvents();
-                    break;
-
-                case "Odesa":
-                    OdesaEvents();
-                    break;
-
-                case "Dnipro":
-                    DniproEvents();
-                    break;
-
-                case "Kyiv":
-                    KyivEvents();
-                    break;
-            }
-        }
-
-        private void KharkivEvents()
-        {
-            var ev = createdEvents.Where(c => c.City == "Kharkiv").ToList();
-            if (ev.Count == 0)
-            {
-                Label_NoEvents.Visibility = Visibility.Visible;
-                HiddenControls();
-                return;
-            }
-
-            Label_NoEvents.Visibility = Visibility.Hidden;
-            DownloadEvents(ev);
-        }
-
-        private void OdesaEvents()
-        {
-            var ev = createdEvents.Where(c => c.City == "Odesa").ToList();
-            if (ev.Count == 0)
-            {
-                Label_NoEvents.Visibility = Visibility.Visible;
-                HiddenControls();
-                return;
-            }
-
-            Label_NoEvents.Visibility = Visibility.Hidden;
-            DownloadEvents(ev);
-        }
-
-        private void DniproEvents()
-        {
-            var ev = createdEvents.Where(c => c.City == "Dnipro").ToList();
-            if (ev.Count == 0)
-            {
-                Label_NoEvents.Visibility = Visibility.Visible;
-                HiddenControls();
-                return;
-            }
-
-            Label_NoEvents.Visibility = Visibility.Hidden;
-            DownloadEvents(ev);
-        }
-
-        private void KyivEvents()
-        {
-            var ev = createdEvents.Where(c => c.City == "Kyiv").ToList();
-            if (ev.Count == 0)
-            {
-                Label_NoEvents.Visibility = Visibility.Visible;
-                HiddenControls();
-                return;
-            }
-
-            Label_NoEvents.Visibility = Visibility.Hidden;
-            DownloadEvents(ev);
-        }
-
-        private void Calendar_MyCalendar_MouseDoubleClick(object sender, System.Windows.Input.MouseButtonEventArgs e)
-        {
-            if (Calendar_MyCalendar.SelectedDate is DateTime date)
-            {
-                var ev = createdEvents.Where(c => c.DateAndTime.Date == date).ToList();
-                if (ev.Count == 0)
-                {
-                    Label_NoEvents.Visibility = Visibility.Visible;
-                    HiddenControls();
-                    return;
-                }
-
-                Label_NoEvents.Visibility = Visibility.Hidden;
-                DownloadEvents(ev);
-            }
-        }
-
         private void TextBox_Search_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
         {
-            string query = TextBox_Search.Text.Trim().ToLower();
-            List<Event> filteredEvents = null!;
-            if (query != "Search event..." && createdEvents != null)
-            {
-                filteredEvents = createdEvents.Where(ev => ev.Name!.ToLower().Contains(query)).ToList();
-                if (filteredEvents.Count == 0)
-                {
-                    Label_NoEvents.Visibility = Visibility.Visible;
-                    HiddenControls();
-                    return;
-                }
-                DownloadEvents(filteredEvents);
-            }
-            else
-                return;
+            searchQuery = TextBox_Search.Text.Trim();
+            ApplyFilters();
         }
 
         private void TextBox_Search_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
@@ -315,6 +190,51 @@ namespace EventPass
                 TextBox_Search.Text = "Search event...";
                 Keyboard.ClearFocus();
             }
+        }
+
+        private void ApplyFilters()
+        {
+            if (createdEvents == null)
+                return;
+
+            var filtered = createdEvents.AsEnumerable();
+
+            if (selectedEventType != null)
+                filtered = filtered.Where(ev => ev.EventType == selectedEventType);
+
+            if (!string.IsNullOrWhiteSpace(selectedCity) && selectedCity != "All cities")
+                filtered = filtered.Where(ev => ev.City == selectedCity);
+
+            if (selectedDate.HasValue)
+                filtered = filtered.Where(ev => ev.DateAndTime.Date == selectedDate.Value);
+
+            if (!string.IsNullOrWhiteSpace(searchQuery) && searchQuery != "Search event...")
+                filtered = filtered.Where(ev => ev.Name!.ToLower().Contains(searchQuery.ToLower()));
+
+            var list = filtered.ToList();
+
+            if (list.Count == 0)
+            {
+                Label_NoEvents.Visibility = Visibility.Visible;
+                HiddenControls();
+            }
+            else
+            {
+                Label_NoEvents.Visibility = Visibility.Hidden;
+                DownloadEvents(list);
+            }
+        }
+
+        private void ComboBox_City_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        {
+            selectedCity = ComboBox_City.Text;
+            ApplyFilters();
+        }
+
+        private void Calendar_MyCalendar_SelectedDatesChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        {
+            selectedDate = Calendar_MyCalendar.SelectedDate;
+            ApplyFilters();
         }
     }
 }

@@ -244,12 +244,14 @@ namespace EventPass.View
                     break;
 
                 case "Theater":
+                    TextBox_Singer.Text = "Singer";
                     TextBox_Singer.IsEnabled = false;
                     ComboBox_Acts.IsEnabled = true;
                     ComboBox_Drinks.IsEnabled = false;
                     break;
 
                 case "StandUp":
+                    TextBox_Singer.Text = "Singer";
                     TextBox_Singer.IsEnabled = false;
                     ComboBox_Acts.IsEnabled = false;
                     ComboBox_Drinks.IsEnabled = true;
