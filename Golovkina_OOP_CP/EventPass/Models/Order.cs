@@ -25,7 +25,7 @@ namespace EventPass.Models
             set
             {
                 if (string.IsNullOrWhiteSpace(value))
-                    throw new ArgumentException("Login cannot be empty!");
+                    throw new ArgumentException("Login cannot be empty");
                 userLogin = value;
             }
         }
@@ -42,7 +42,7 @@ namespace EventPass.Models
             set
             {
                 if (value <= 0)
-                    throw new ArgumentException("Price must be positive!");
+                    throw new ArgumentException("Price must be positive");
                 price = value;
             }
         }

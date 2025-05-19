@@ -8,7 +8,7 @@ namespace EventPass.Models.Users
 {
     public class RegisteredUser : IUser, IEnumerable<Order>
     {
-        private static readonly HashSet<string> ExistingLogins = new();
+        private static readonly HashSet<string> ExistingLogins = [];
 
         private string? fullName;
         private DateOnly birthDate;
@@ -26,11 +26,11 @@ namespace EventPass.Models.Users
             set
             {
                 if (string.IsNullOrWhiteSpace(value))
-                    throw new ArgumentException("Full name cannot be empty!");
+                    throw new ArgumentException("Full name cannot be empty");
 
                 var parts = value.Trim().Split(' ', StringSplitOptions.RemoveEmptyEntries);
                 if (parts.Length < 2 || parts.Any(p => p.Length < 3))
-                    throw new ArgumentException("Full name must contain at least two words, each at least 3 characters long!");
+                    throw new ArgumentException("Full name: 2+ words, 3+ chars each");
 
                 fullName = value;
             }
@@ -42,7 +42,7 @@ namespace EventPass.Models.Users
             set
             {
                 if (value.Year < 1950)
-                    throw new ArgumentException("Birth year must be no earlier than 1950!");
+                    throw new ArgumentException("Birth year must be no earlier than 1950");
                 birthDate = value;
             }
         }
@@ -53,7 +53,7 @@ namespace EventPass.Models.Users
             set
             {
                 if (!Regex.IsMatch(value, @"^\d{9}$"))
-                    throw new ArgumentException("Phone number must contain exactly 9 digits!");
+                    throw new ArgumentException("Phone number must contain exactly 9 digits");
                 phoneNumber = "(+380)" + value;
             }
         }
@@ -64,7 +64,7 @@ namespace EventPass.Models.Users
             set
             {
                 if (string.IsNullOrWhiteSpace(value) || value.Length < 5 || !value.Contains('@') || !value.Contains('.'))
-                    throw new ArgumentException("Email must be at least 5 characters and contain '@' and '.'!");
+                    throw new ArgumentException("Email: 5+ chars, must include \"@\" and \".\"");
                 email = value;
             }
         }
@@ -75,13 +75,13 @@ namespace EventPass.Models.Users
             set
             {
                 if (string.IsNullOrWhiteSpace(value))
-                    throw new ArgumentException("Login cannot be empty!");
+                    throw new ArgumentException("Login cannot be empty");
 
                 if (login != null)
                     ExistingLogins.Remove(login); // удалить старый
 
                 if (ExistingLogins.Contains(value))
-                    throw new ArgumentException("This login is already taken!");
+                    throw new ArgumentException("This login is already taken");
 
                 login = value;
                 ExistingLogins.Add(value);
@@ -95,7 +95,7 @@ namespace EventPass.Models.Users
             {
                 if (string.IsNullOrWhiteSpace(value) || value.Length < 8 ||
                     !Regex.IsMatch(value, @"[A-Za-z]") || !Regex.IsMatch(value, @"\d"))
-                    throw new ArgumentException("Password must be at least 8 characters, contain letters and digits!");
+                    throw new ArgumentException("Password: 8+ chars, letters & digits required");
 
                 password = value;
             }
@@ -107,7 +107,7 @@ namespace EventPass.Models.Users
             set
             {
                 if (value < 0)
-                    throw new ArgumentException("Balance cannot be negative!");
+                    throw new ArgumentException("Balance cannot be negative");
                 balance = value;
             }
         }
@@ -128,9 +128,12 @@ namespace EventPass.Models.Users
         public static void RegisterLogin(string login) => ExistingLogins.Add(login);
         public static void UnregisterLogin(string login) => ExistingLogins.Remove(login);
 
-        public static bool SignIn(string? login, string? password)
+        public static bool SignIn(string? login, string? password, out RegisteredUser user)
         {
-            return UserRepository.Users.FirstOrDefault(u => u.Login == login && u.Password == password) != null;
+            user = UserRepository.Users.FirstOrDefault(u => u.Login == login && u.Password == password)!;
+            if (user != null)
+                return true;
+            else return false;
         }
 
         public bool PutMoney(decimal money)
@@ -147,23 +150,26 @@ namespace EventPass.Models.Users
             return true;
         }
 
-        public bool MakeOrder(Event orderedEvent, TicketBase ticket)
+        public bool MakeOrder(Event orderedEvent, TicketBase ticket, out int orderId)
         {
+            orderId = -1;
+            if (orderedEvent.CountFreeTickets == 0)
+                return false;
             if (ticket == null) return false;
 
             var newOrder = new Order(Login, orderedEvent, ticket.Price, ticket);
 
             Orders.Add(newOrder);
+            orderedEvent.Tickets.Remove(ticket);
+            orderedEvent.CountFreeTickets--;
+            orderId = newOrder.Id;
             return true;
         }
 
         public bool BuyOrder(int orderId)
         {
-            var order = Orders?.FirstOrDefault(o => o.Id == orderId);
-            if (order == null || order.Ticket == null)
-                return false;
-
-            decimal price = order.Ticket.Price;
+            var order = Orders.Find(o => o.Id == orderId);
+            decimal price = order!.Ticket.Price;
             if (Balance < price) return false;
 
             Balance -= price;
@@ -175,13 +181,10 @@ namespace EventPass.Models.Users
             return Orders;
         }
 
-        public bool DeleteAccount(string? login, string? password)
+        public bool DeleteAccount()
         {
-            if (Login != login || Password != password)
-                return false;
-
             ExistingLogins.Remove(Login);
-            return UserRepository.RemoveUser(login!);
+            return UserRepository.RemoveUser(Login!);
         }
 
         public IEnumerator<Order> GetEnumerator()

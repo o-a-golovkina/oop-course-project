@@ -35,7 +35,7 @@ namespace EventPass.View
         private void FillAllFields()
         {
             Label_EventName.Content = currentEvent.Name!.ToUpper();
-            Image_EventImage.Source = new BitmapImage(new Uri(currentEvent.ImagePath!));
+            ImageBrush_EventPic.ImageSource = new BitmapImage(new Uri(currentEvent.ImagePath!));
             Label_Date.Content += currentEvent.DateAndTime.ToString("dd.MM.yyyy");
             string time = currentEvent.DateAndTime.ToString("HH:mm");
             if (time == "00:00")

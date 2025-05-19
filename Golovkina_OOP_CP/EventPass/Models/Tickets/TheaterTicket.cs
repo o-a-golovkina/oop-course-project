@@ -9,7 +9,7 @@
             : base(eventId, price)
         {
             if (acts < 1)
-                throw new ArgumentException("Theater event must have at least 1 act!");
+                throw new ArgumentException("Theater event must have at least 1 act");
 
             NumberOfActs = acts;
             Id = Interlocked.Increment(ref Counter);

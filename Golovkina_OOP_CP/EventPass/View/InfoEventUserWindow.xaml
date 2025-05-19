@@ -8,7 +8,17 @@
     <Viewbox Stretch="Uniform">
         <Grid>
             <Grid HorizontalAlignment="Center" Height="309" VerticalAlignment="Center" Width="600">
-                <Image x:Name="Image_EventImage" HorizontalAlignment="Left" Height="235" Margin="20,29,0,0" VerticalAlignment="Top" Width="270"/>
+                <Border Margin="20,29,0,0"
+                        CornerRadius="20"
+                        VerticalAlignment="Top"
+                        Width="270"
+                        Height="235"
+                        HorizontalAlignment="Left"
+                        ClipToBounds="True">
+                    <Border.Background>
+                        <ImageBrush x:Name="ImageBrush_EventPic" Stretch="Fill"/>
+                    </Border.Background>
+                </Border>
                 <Label x:Name="Label_EventName" Content="EVENT NAME" HorizontalAlignment="Left" Height="35" Margin="315,29,0,0" VerticalAlignment="Top" Width="275" FontWeight="Bold" FontSize="18"/>
                 <Label x:Name="Label_Date" Content="Date: " HorizontalAlignment="Left" Margin="315,64,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Width="126"/>
                 <Label x:Name="Label_Time" Content="Time: " HorizontalAlignment="Left" Margin="452,64,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Width="115"/>

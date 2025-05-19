@@ -33,7 +33,7 @@
             <Grid HorizontalAlignment="Left" Height="339" VerticalAlignment="Center" Width="350" Margin="188,0,0,0">
                 <Label Content="Customer login" Margin="105,27,105,0" FontSize="18" FontWeight="Bold" Height="34" VerticalAlignment="Top"/>
                 <Label x:Name="Label_Exception" Content="Exception" HorizontalAlignment="Left" Margin="16,252,0,0" VerticalAlignment="Top" Width="312" Foreground="#FFCC0000" FontSize="14" FontWeight="Bold" Visibility="Hidden"/>
-                <Button x:Name="Button_LogOut" Content="Log out" Margin="196,281,18,0" Background="#FF9B72CF" Foreground="White" FontWeight="Bold" Height="40" VerticalAlignment="Top" Cursor="Hand" BorderBrush="{x:Null}" FontSize="14" Click="Button_LogOut_Click">
+                <Button x:Name="Button_LogOut" Content="Log out" Margin="196,295,18,0" Background="#FF9B72CF" Foreground="White" FontWeight="Bold" Height="40" VerticalAlignment="Top" Cursor="Hand" BorderBrush="{x:Null}" FontSize="14" Click="Button_LogOut_Click">
                     <Button.Template>
                         <ControlTemplate TargetType="{x:Type Button}">
                             <Border x:Name="border"
@@ -66,7 +66,7 @@
                     Foreground="#FFA6A6A6"
                     SelectionBrush="#FF9B72CF"
                     VerticalContentAlignment="Center"
-                    FocusVisualStyle="{x:Null}" GotFocus="TextBox_Name_GotFocus" LostFocus="TextBox_Name_LostFocus"/>
+                    FocusVisualStyle="{x:Null}" KeyDown="TextBox_Name_KeyDown"/>
                 <Rectangle HorizontalAlignment="Center" Height="1" Stroke="#FFA6A6A6" VerticalAlignment="Top" Width="314" Margin="0,103,0,0"/>
                 <TextBox x:Name="TextBox_Date"
                     VerticalAlignment="Top"
@@ -80,7 +80,7 @@
                     Foreground="#FFA6A6A6"
                     SelectionBrush="#FF9B72CF"
                     VerticalContentAlignment="Center"
-                    FocusVisualStyle="{x:Null}" GotFocus="TextBox_Date_GotFocus" LostFocus="TextBox_Date_LostFocus" Margin="18,118,18,0" />
+                    FocusVisualStyle="{x:Null}" Margin="18,118,18,0" KeyDown="TextBox_Date_KeyDown" PreviewTextInput="TextBox_Date_PreviewTextInput" />
                 <Rectangle Height="1" Stroke="#FFA6A6A6" VerticalAlignment="Top" Margin="18,150,18,0"/>
                 <TextBox x:Name="TextBox_Number"
                     VerticalAlignment="Top"
@@ -94,7 +94,7 @@
                     Foreground="#FFA6A6A6"
                     SelectionBrush="#FF9B72CF"
                     VerticalContentAlignment="Center"
-                    FocusVisualStyle="{x:Null}" GotFocus="TextBox_Number_GotFocus" LostFocus="TextBox_Number_LostFocus" Margin="18,166,18,0" />
+                    FocusVisualStyle="{x:Null}" Margin="18,166,18,0" KeyDown="TextBox_Number_KeyDown" />
                 <Rectangle HorizontalAlignment="Center" Height="1" Stroke="#FFA6A6A6" VerticalAlignment="Top" Width="314" Margin="0,198,0,0"/>
                 <TextBox x:Name="TextBox_Email"
                     VerticalAlignment="Top"
@@ -108,9 +108,9 @@
                     Foreground="#FFA6A6A6"
                     SelectionBrush="#FF9B72CF"
                     VerticalContentAlignment="Center"
-                    FocusVisualStyle="{x:Null}" GotFocus="TextBox_Email_GotFocus" LostFocus="TextBox_Email_LostFocus" Margin="18,214,18,0" />
+                    FocusVisualStyle="{x:Null}" Margin="18,214,18,0" KeyDown="TextBox_Email_KeyDown" />
                 <Rectangle HorizontalAlignment="Center" Height="1" Stroke="#FFA6A6A6" VerticalAlignment="Top" Width="314" Margin="0,246,0,0"/>
-                <Button x:Name="Button_DeleteAccount" Content="Delete account" Margin="18,281,196,0" Background="#FF9B72CF" Foreground="White" FontWeight="Bold" Height="40" VerticalAlignment="Top" Cursor="Hand" BorderBrush="{x:Null}" FontSize="14">
+                <Button x:Name="Button_DeleteAccount" Content="Delete account" Margin="18,295,196,0" Background="#FF9B72CF" Foreground="White" FontWeight="Bold" Height="40" VerticalAlignment="Top" Cursor="Hand" BorderBrush="{x:Null}" FontSize="14" Click="Button_DeleteAccount_Click">
                     <Button.Template>
                         <ControlTemplate TargetType="{x:Type Button}">
                             <Border x:Name="border"

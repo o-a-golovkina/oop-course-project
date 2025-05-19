@@ -16,13 +16,16 @@ namespace EventPass.View
         string selectedCity = "All cities";
         DateTime? selectedDate = null;
         string searchQuery = "";
+        RegisteredUser currentUser;
 
-        public UserWindow()
+        public UserWindow(RegisteredUser currentUser)
         {
             InitializeComponent();
             WindowState = WindowState.Maximized;
             createdEvents = Admin.Instance.CreatedEvents;
             DownloadEvents(createdEvents);
+            this.currentUser = currentUser;
+            Label_Poster.Content = "Events posters";
         }
 
         private void TextBox_Search_GotFocus(object sender, RoutedEventArgs e)
@@ -35,6 +38,7 @@ namespace EventPass.View
         {
             if (TextBox_Search.Text == string.Empty || TextBox_Search.Text == " ")
                 TextBox_Search.Text = "Search event...";
+            Label_Poster.Content = "Events posters";
         }
 
         private void DownloadEvents(List<Event> Events)
@@ -50,13 +54,13 @@ namespace EventPass.View
                 Controls[i].Visibility = Visibility.Visible;
                 Controls[i].Label_EventName.Content = Events[i].Name;
                 Controls[i].Label_EventType.Content = Events[i].EventType.ToString().Replace("Event", "");
-                Controls[i].Image_EventImage.Source = new BitmapImage(new Uri(Events[i].ImagePath!));
+                Controls[i].ImageBrush_EventPic.ImageSource = new BitmapImage(new Uri(Events[i].ImagePath!));
             }
         }
 
         private void EventControl_1_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-            InfoEventGuestWindow modalWindow = new InfoEventGuestWindow(EventControl_1.CurrentEvent)
+            InfoEventUserWindow modalWindow = new InfoEventUserWindow(EventControl_1.CurrentEvent, currentUser)
             {
                 Owner = Application.Current.MainWindow,
                 WindowStartupLocation = WindowStartupLocation.CenterOwner,
@@ -67,7 +71,7 @@ namespace EventPass.View
 
         private void EventControl_2_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-            InfoEventGuestWindow modalWindow = new InfoEventGuestWindow(EventControl_2.CurrentEvent)
+            InfoEventUserWindow modalWindow = new InfoEventUserWindow(EventControl_2.CurrentEvent, currentUser)
             {
                 Owner = Application.Current.MainWindow,
                 WindowStartupLocation = WindowStartupLocation.CenterOwner,
@@ -78,7 +82,7 @@ namespace EventPass.View
 
         private void EventControl_3_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-            InfoEventGuestWindow modalWindow = new InfoEventGuestWindow(EventControl_3.CurrentEvent)
+            InfoEventUserWindow modalWindow = new InfoEventUserWindow(EventControl_3.CurrentEvent, currentUser)
             {
                 Owner = Application.Current.MainWindow,
                 WindowStartupLocation = WindowStartupLocation.CenterOwner,
@@ -89,7 +93,7 @@ namespace EventPass.View
 
         private void EventControl_4_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-            InfoEventGuestWindow modalWindow = new InfoEventGuestWindow(EventControl_4.CurrentEvent)
+            InfoEventUserWindow modalWindow = new InfoEventUserWindow(EventControl_4.CurrentEvent, currentUser)
             {
                 Owner = Application.Current.MainWindow,
                 WindowStartupLocation = WindowStartupLocation.CenterOwner,
@@ -100,7 +104,7 @@ namespace EventPass.View
 
         private void EventControl_5_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-            InfoEventGuestWindow modalWindow = new InfoEventGuestWindow(EventControl_5.CurrentEvent)
+            InfoEventUserWindow modalWindow = new InfoEventUserWindow(EventControl_5.CurrentEvent, currentUser)
             {
                 Owner = Application.Current.MainWindow,
                 WindowStartupLocation = WindowStartupLocation.CenterOwner,
@@ -111,7 +115,7 @@ namespace EventPass.View
 
         private void EventControl_6_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-            InfoEventGuestWindow modalWindow = new InfoEventGuestWindow(EventControl_6.CurrentEvent)
+            InfoEventUserWindow modalWindow = new InfoEventUserWindow(EventControl_6.CurrentEvent, currentUser)
             {
                 Owner = Application.Current.MainWindow,
                 WindowStartupLocation = WindowStartupLocation.CenterOwner,
@@ -169,6 +173,7 @@ namespace EventPass.View
         private void TextBox_Search_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
         {
             searchQuery = TextBox_Search.Text.Trim();
+            Label_Poster.Content = $"Events with name \"{searchQuery}\"";
             ApplyFilters();
         }
 
@@ -177,6 +182,7 @@ namespace EventPass.View
             if (e.Key == Key.Escape)
             {
                 TextBox_Search.Text = "Search event...";
+                Label_Poster.Content = "Events posters";
                 Keyboard.ClearFocus();
             }
         }
@@ -228,7 +234,7 @@ namespace EventPass.View
 
         private void Button_Balance_Click(object sender, RoutedEventArgs e)
         {
-            BalanceWindow modalWindow = new BalanceWindow
+            BalanceWindow modalWindow = new BalanceWindow(currentUser)
             {
                 Owner = Application.Current.MainWindow,
                 WindowStartupLocation = WindowStartupLocation.CenterOwner
@@ -239,7 +245,7 @@ namespace EventPass.View
 
         private void Button_UserLogin_Click(object sender, RoutedEventArgs e)
         {
-            AccountWindow modalWindow = new AccountWindow
+            AccountWindow modalWindow = new AccountWindow(currentUser)
             {
                 Owner = Application.Current.MainWindow,
                 WindowStartupLocation = WindowStartupLocation.CenterOwner
@@ -254,7 +260,7 @@ namespace EventPass.View
                 .OfType<Window>()
                 .SingleOrDefault(w => w.IsActive);
 
-            var ordersWindow = new UserOrdersWindow();
+            var ordersWindow = new UserOrdersWindow(currentUser);
 
             if (currentActiveWindow != null && currentActiveWindow.WindowState == WindowState.Maximized)
             {

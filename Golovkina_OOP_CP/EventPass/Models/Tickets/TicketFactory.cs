@@ -12,7 +12,7 @@ namespace EventPass.Models.Tickets
             short numberOfActs = 1)
         {
             if (price <= 0)
-                throw new ArgumentOutOfRangeException(nameof(price), "Price must be positive!");
+                throw new ArgumentOutOfRangeException(nameof(price), "Price must be positive");
 
             var result = new List<TicketBase>();
             var count = ev?.CountFreeTickets ?? 0;
@@ -21,7 +21,7 @@ namespace EventPass.Models.Tickets
             {
                 case EventType.ConcertEvent:
                     if (singer is null)
-                        throw new ArgumentException("Singer must be provided!");
+                        throw new ArgumentException("Singer must be provided");
                     result.AddRange(Enumerable.Range(0, count)
                         .Select(_ => new ConcertTicket(ev.Id, price, singer)));
                     break;
@@ -37,7 +37,7 @@ namespace EventPass.Models.Tickets
                     break;
 
                 default:
-                    throw new NotSupportedException("Unsupported event type.");
+                    throw new NotSupportedException("Unsupported event type");
             }
 
             return result;

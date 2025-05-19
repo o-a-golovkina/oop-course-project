@@ -51,7 +51,7 @@
                 <Label Content="Create event" HorizontalAlignment="Left" Margin="227,105,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14"/>
                 <Image Margin="210,25,571,390" Source="/Resources/icon-cart.png" Stretch="Fill"/>
                 <Button x:Name="Button_Orders" Content="Orders" Margin="224,24,540,0" Height="20" VerticalAlignment="Top"
-                    Style="{StaticResource TextOnlyHoverButtonStyle}" Cursor="Hand" FontSize="8"/>
+                    Style="{StaticResource TextOnlyHoverButtonStyle}" Cursor="Hand" FontSize="8" Click="Button_Orders_Click"/>
                 <Button x:Name="Button_AddEvent" Content="Add event" Margin="306,25,450,0" Height="20" VerticalAlignment="Top"
                     Style="{StaticResource TextOnlyHoverButtonStyle}" Cursor="Hand" FontSize="8"/>
                 <Button x:Name="Button_AdminExit" Content="Admin exit" Margin="724,25,30,0" Height="20" VerticalAlignment="Top"
@@ -79,7 +79,17 @@
                         </TransformGroup>
                     </Image.RenderTransform>
                 </Image>
-                <Image x:Name="Image_Event" HorizontalAlignment="Left" Height="160" Margin="272,178,0,0" VerticalAlignment="Top" Width="168" Stretch="Fill"/>
+                <Border HorizontalAlignment="Left" 
+                        Height="160"
+                        Margin="272,178,0,0" 
+                        VerticalAlignment="Top" 
+                        Width="168"
+                        CornerRadius="20"
+                        ClipToBounds="True">
+                    <Border.Background>
+                        <ImageBrush x:Name="ImageBrush_EventPic" Stretch="Fill"/>
+                    </Border.Background>
+                </Border>
                 <Button x:Name="Button_RemoveEvent" Content="Remove event" Margin="397,25,344,0" Height="20" VerticalAlignment="Top"
                     Style="{StaticResource TextOnlyHoverButtonStyle}" Cursor="Hand" FontSize="8"/>
                 <TextBox x:Name="TextBox_EventName" 
@@ -112,7 +122,7 @@
                     Foreground="#FFA6A6A6"
                     SelectionBrush="#FF9B72CF"
                     VerticalContentAlignment="Center"
-                    FocusVisualStyle="{x:Null}" GotFocus="TextBox_Date_GotFocus" LostFocus="TextBox_Date_LostFocus" FontSize="8"/>
+                    FocusVisualStyle="{x:Null}" GotFocus="TextBox_Date_GotFocus" LostFocus="TextBox_Date_LostFocus" FontSize="8" PreviewTextInput="TextBox_Date_PreviewTextInput"/>
                 <Rectangle HorizontalAlignment="Left" Height="0.5" Stroke="#FFA6A6A6" VerticalAlignment="Top" Width="103" Margin="472,210,0,0"/>
                 <TextBox x:Name="TextBox_Price" 
                     HorizontalAlignment="Left"
@@ -166,7 +176,7 @@
                     VerticalContentAlignment="Center"
                     FocusVisualStyle="{x:Null}" GotFocus="TextBox_Singer_GotFocus" FontSize="8" LostFocus="TextBox_Singer_LostFocus"/>
                 <Rectangle HorizontalAlignment="Left" Height="0.5" Stroke="#FFA6A6A6" VerticalAlignment="Top" Width="103" Margin="472,244,0,0"/>
-                <Rectangle x:Name="Rectangle_Gray" HorizontalAlignment="Left" Height="159" Margin="272,178,0,0" Stroke="#FFDFDFDF" VerticalAlignment="Top" Width="168" Fill="#FFDFDFDF"/>
+                <Rectangle x:Name="Rectangle_Gray" HorizontalAlignment="Left" Height="159" Margin="272,178,0,0" Stroke="#FFDFDFDF" VerticalAlignment="Top" Width="168" Fill="#FFDFDFDF" RadiusX="20" RadiusY="20"/>
                 <Image x:Name="Image_EmptyImage" Margin="305,220,393,139" Source="/Resources/placeholder-img.jpg" Stretch="Fill"/>
             </Grid>
             <ComboBox x:Name="ComboBox_City" Width="102"

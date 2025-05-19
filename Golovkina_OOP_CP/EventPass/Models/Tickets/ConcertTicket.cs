@@ -12,7 +12,7 @@ namespace EventPass.Models.Tickets
         {
             if (string.IsNullOrWhiteSpace(singer) ||
                 !Regex.IsMatch(singer, @"^([A-Za-z]{3,})(\s[A-Za-z]{3,})*$"))
-                throw new ArgumentException("Each part of the singer's name must contain at least 3 Latin letters!");
+                throw new ArgumentException("Name parts must contain at least 3 Latin letters");
 
             Singer = singer;
             Id = Interlocked.Increment(ref Counter);

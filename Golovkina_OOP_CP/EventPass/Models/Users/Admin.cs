@@ -28,7 +28,7 @@ namespace EventPass.Models.Users
         private Admin(string? login, string? password)
         {
             if (string.IsNullOrWhiteSpace(login) || string.IsNullOrWhiteSpace(password))
-                throw new ArgumentException("Login and password cannot be empty!");
+                throw new ArgumentException("Login and password cannot be empty");
             Login = login;
             Password = password;
         }

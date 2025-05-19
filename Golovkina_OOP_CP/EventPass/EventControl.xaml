@@ -11,7 +11,13 @@
         <Grid Width="400" Height="450">
             <Border BorderBrush="White" BorderThickness="1" CornerRadius="30" Background="White"/>
             <Grid Margin="10">
-                <Image x:Name="Image_EventImage" Margin="21,23,25,134" Stretch="Fill"/>
+                <Border Margin="21,23,25,134"
+        CornerRadius="20"
+        ClipToBounds="True">
+                    <Border.Background>
+                        <ImageBrush x:Name="ImageBrush_EventPic" Stretch="Fill"/>
+                    </Border.Background>
+                </Border>
                 <Label x:Name="Label_EventName" Content="Label" Margin="27,340,27,0" FontSize="28" FontWeight="Bold" Height="60" VerticalAlignment="Top"/>
                 <Label x:Name="Label_EventType" Content="Type" Margin="27,308,27,0" FontSize="18" FontWeight="Bold" Height="39" VerticalAlignment="Top" Foreground="#FF9B72CF"/>
             </Grid>

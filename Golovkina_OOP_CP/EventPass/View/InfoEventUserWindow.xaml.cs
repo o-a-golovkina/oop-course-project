@@ -1,6 +1,9 @@
 ﻿using EventPass.Models.Events;
 using EventPass.Models.Tickets;
+using EventPass.Models.Users;
 using System.Windows;
+using System.Windows.Input;
+using System.Windows.Media;
 using System.Windows.Media.Imaging;
 
 namespace EventPass.View
@@ -11,23 +14,42 @@ namespace EventPass.View
     public partial class InfoEventUserWindow : Window
     {
         Event currentEvent;
+        RegisteredUser currentUser;
 
-        public InfoEventUserWindow(Event currentEvent)
+        public InfoEventUserWindow(Event currentEvent, RegisteredUser currentUser)
         {
             InitializeComponent();
             this.currentEvent = currentEvent;
             FillAllFields();
+            this.currentUser = currentUser;
+            Button_Buy.Content = "Buy";
         }
 
         private void Button_Buy_Click(object sender, RoutedEventArgs e)
         {
+            if (!currentUser.MakeOrder(currentEvent, currentEvent.First(), out int id))
+            {
+                MessageBox.Show("All tickets are sold out", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
 
+            if (!currentUser.BuyOrder(id))
+            {
+                MessageBox.Show("Not enough money in the balance", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+            Button_Buy.IsEnabled = false;
+            Button_Buy.Content = "Bought";
+            Button_Buy.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#A6A6A6"));
+            Button_Buy.Cursor = Cursors.Arrow;
+            Label_FreePlaces.Content = $"Free: {currentEvent.CountFreeTickets.ToString()}";
         }
 
         private void FillAllFields()
         {
             Label_EventName.Content = currentEvent.Name!.ToUpper();
-            Image_EventImage.Source = new BitmapImage(new Uri(currentEvent.ImagePath!));
+            ImageBrush_EventPic.ImageSource = new BitmapImage(new Uri(currentEvent.ImagePath!));
             Label_Date.Content += currentEvent.DateAndTime.ToString("dd.MM.yyyy");
             string time = currentEvent.DateAndTime.ToString("HH:mm");
             if (time == "00:00")

@@ -46,16 +46,7 @@
             <Grid HorizontalAlignment="Left" Height="434" VerticalAlignment="Top" Width="800" Grid.ColumnSpan="2">
                 <Label Content="Event" Margin="34,64,718,342" FontWeight="Bold" Foreground="#FFA6A6A6" FontSize="14"/>
                 <Label Content="Pass" Margin="71,64,689,342" FontWeight="Bold" Foreground="#FF9B72CF" FontSize="14"/>
-                <Label Content="Your orders" HorizontalAlignment="Left" Margin="170,81,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14"/>
-                <Button x:Name="Button_Concerts" Content="Concerts" Margin="42,164,670,0" Width="88" Height="25" VerticalAlignment="Top"
-        Style="{StaticResource TextOnlyHoverButtonStyle}" Cursor="Hand"/>
-                <Button x:Name="Button_Theater" Content="Theater" Margin="42,205,670,0" Width="88" Height="28" VerticalAlignment="Top"
-        Style="{StaticResource TextOnlyHoverButtonStyle}" Cursor="Hand"/>
-                <Button x:Name="Button_StandUp" Content="StandUp" Margin="42,245,670,0" Width="88" Height="25" VerticalAlignment="Top"
-        Style="{StaticResource TextOnlyHoverButtonStyle}" Cursor="Hand"/>
-                <Image Margin="24,168,757,247" Source="/Resources/icon-concert.png" Stretch="Fill"/>
-                <Image Margin="24,208,757,207" Source="/Resources/icon-theater.png" Stretch="Fill"/>
-                <Image Margin="24,251,757,165" Source="/Resources/icon-comedy.png" Stretch="Fill"/>
+                <Label x:Name="Label_YourOrders" Content="Your orders" HorizontalAlignment="Left" Margin="170,81,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14"/>
                 <Border BorderBrush="#FFA6A6A6" BorderThickness="0.5" HorizontalAlignment="Left" Height="25" Margin="173,21,0,0" VerticalAlignment="Top" Width="232" Background="White" CornerRadius="15,15,15,15">
                     <TextBox x:Name="TextBox_Search" 
     HorizontalAlignment="Left"
@@ -70,7 +61,7 @@
     Text="Search event..."
     Margin="32,0,0,0"
     FontSize="8"
-    FocusVisualStyle="{x:Null}" GotFocus="TextBox_Search_GotFocus" LostFocus="TextBox_Search_LostFocus" />
+    FocusVisualStyle="{x:Null}" GotFocus="TextBox_Search_GotFocus" LostFocus="TextBox_Search_LostFocus" TextChanged="TextBox_Search_TextChanged" KeyDown="TextBox_Search_KeyDown" />
                 </Border>
                 <Image Margin="186,27,601,394" Source="/Resources/icon-search.png" Stretch="Fill"/>
                 <Image Margin="694,22,82,388" Source="/Resources/icon-person.png" Stretch="Fill"/>
@@ -82,17 +73,26 @@
                     Style="{StaticResource TextOnlyHoverButtonStyle}" Cursor="Hand" FontSize="8" Click="Button_Balance_Click"/>
                 <Button x:Name="Button_UserLogin" Content="User login" Margin="712,25,44,0" Height="20" VerticalAlignment="Top"
                     Style="{StaticResource TextOnlyHoverButtonStyle}" Cursor="Hand" FontSize="8" Click="Button_UserLogin_Click"/>
-                <Button x:Name="Button_Home" Content="Button" HorizontalAlignment="Left" Margin="49,35,0,0" VerticalAlignment="Top" BorderBrush="{x:Null}" Foreground="{x:Null}" Height="44" Width="43" Background="{x:Null}" Cursor="Hand" Click="Button_Home_Click">
-                    <Button.Template>
-                        <ControlTemplate TargetType="Button">
-                            <Border Background="{TemplateBinding Background}">
-                                <Image Source="/Resources/icon.png"/>
-                            </Border>
-                        </ControlTemplate>
-                    </Button.Template>
-                </Button>
-                <DataGrid x:Name="DataGrid_Orders" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="174,116,20,35" Background="{x:Null}" Foreground="Gray" BorderBrush="{x:Null}" HorizontalGridLinesBrush="Gray" VerticalGridLinesBrush="Gray"/>
+                <DataGrid x:Name="DataGrid_Orders" HorizontalAlignment="Left" Height="302" Margin="173,115,0,0" VerticalAlignment="Top" Width="602" d:ItemsSource="{d:SampleData ItemCount=5}" Background="{x:Null}" BorderBrush="{x:Null}" VerticalGridLinesBrush="#FFA6A6A6" HorizontalGridLinesBrush="#FFA6A6A6" FontSize="10" AutoGenerateColumns="False">
+                <DataGrid.Columns>
+                        <DataGridTextColumn Header="Id" Binding="{Binding Id}" Width="*" />
+                        <DataGridTextColumn Header="Event - id" Binding="{Binding EventName}" Width="*" />
+                        <DataGridTextColumn Header="Date" Binding="{Binding EventDate}" Width="*" />
+                        <DataGridTextColumn Header="Price" Binding="{Binding Price}" Width="*" />
+                        <DataGridTextColumn Header="City" Binding="{Binding City}" Width="*" />
+                    </DataGrid.Columns>
+                </DataGrid>
             </Grid>
+            <Button x:Name="Button_Home" Content="Button" HorizontalAlignment="Left" Margin="49,35,0,0" VerticalAlignment="Top" BorderBrush="{x:Null}" Foreground="{x:Null}" Height="44" Width="43" Background="{x:Null}" Cursor="Hand" Click="Button_Home_Click">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}">
+                            <Image Source="/Resources/icon.png"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <Label x:Name="Label_No" Content="You haven't placed any orders yet. Time to fix that!" HorizontalAlignment="Left" Margin="181,110,0,0" VerticalAlignment="Top" Width="249" Foreground="#FFA6A6A6" FontStyle="Italic"/>
         </Grid>
     </Viewbox>
 </Window>

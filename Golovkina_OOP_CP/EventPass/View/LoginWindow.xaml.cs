@@ -1,4 +1,6 @@
-﻿using System.Windows;
+﻿using EventPass.Models.Users;
+using System.Windows;
+using System.Windows.Input;
 
 namespace EventPass.View
 {
@@ -10,11 +12,13 @@ namespace EventPass.View
         public LoginWindow()
         {
             InitializeComponent();
+            Label_Exception.Visibility = Visibility.Hidden;
         }
 
         private void TextBox_Login_GotFocus(object sender, RoutedEventArgs e)
         {
-            TextBox_Login.Text = string.Empty;
+            if (TextBox_Login.Text == "Login")
+                TextBox_Login.Text = string.Empty;
         }
 
         private void TextBox_Login_LostFocus(object sender, RoutedEventArgs e)
@@ -23,7 +27,7 @@ namespace EventPass.View
                 TextBox_Login.Text = "Login";
         }
 
-        private void Button_HaveAccount_Click(object sender, RoutedEventArgs e)
+        private void Button_NotHaveAccount_Click(object sender, RoutedEventArgs e)
         {
             Close();
             RegistationWindow modalWindow = new RegistationWindow
@@ -37,13 +41,40 @@ namespace EventPass.View
 
         private void Button_Login_Click(object sender, RoutedEventArgs e)
         {
-            var currentMain = Application.Current.MainWindow;
-            var userWindow = new UserWindow();
+            Window currentMain;
+            string login = TextBox_Login.Text;
+            string password = PasswordBox_Password.Password;
+            Label_Exception.Visibility = Visibility.Hidden;
 
-            if (currentMain != null && currentMain.WindowState == WindowState.Maximized)
+            if (login == "Login" || string.IsNullOrEmpty(password))
             {
-                userWindow.WindowState = WindowState.Maximized;
+                Label_Exception.Visibility = Visibility.Visible;
+                Label_Exception.Content = "Please fill all fields";
+                return;
             }
+
+            if (!RegisteredUser.SignIn(login, password, out RegisteredUser user))
+            {
+                if (Admin.Instance.IsAuthenticated(login, password))
+                {
+                    currentMain = Application.Current.MainWindow;
+                    var adminWindow = new AdminCreateEventWindow();
+                    adminWindow.Show();
+
+                    foreach (Window window in Application.Current.Windows)
+                    {
+                        if (window != adminWindow)
+                            window.Close();
+                    }
+                    return;
+                }
+                Label_Exception.Visibility = Visibility.Visible;
+                Label_Exception.Content = "User not found";
+                return;
+            }
+
+            currentMain = Application.Current.MainWindow;
+            var userWindow = new UserWindow(user);
             userWindow.Show();
 
             foreach (Window window in Application.Current.Windows)
@@ -51,11 +82,12 @@ namespace EventPass.View
                 if (window != userWindow)
                     window.Close();
             }
-
+            return;
         }
 
         private void PasswordBox_Password_GotFocus(object sender, RoutedEventArgs e)
         {
+            TextBox_Password.Text = "Password";
             TextBox_Password.Text = string.Empty;
         }
 
@@ -63,6 +95,18 @@ namespace EventPass.View
         {
             if (PasswordBox_Password.Password == string.Empty || PasswordBox_Password.Password == " ")
                 TextBox_Password.Text = "Password";
+        }
+
+        private void TextBox_Login_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Tab || e.Key == Key.Enter)
+                PasswordBox_Password.Focus();
+        }
+
+        private void PasswordBox_Password_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+                Button_Login_Click(Button_Login, new RoutedEventArgs());
         }
     }
 }

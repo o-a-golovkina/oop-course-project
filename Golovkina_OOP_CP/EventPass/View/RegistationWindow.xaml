@@ -44,7 +44,7 @@
     Foreground="#FFA6A6A6"
     SelectionBrush="#FF9B72CF"
     VerticalContentAlignment="Center"
-    FocusVisualStyle="{x:Null}" GotFocus="TextBox_Name_GotFocus" LostFocus="TextBox_Name_LostFocus"/>
+    FocusVisualStyle="{x:Null}" GotFocus="TextBox_Name_GotFocus" LostFocus="TextBox_Name_LostFocus" KeyDown="TextBox_Name_KeyDown"/>
                 <Rectangle HorizontalAlignment="Center" Height="1" Stroke="#FFA6A6A6" VerticalAlignment="Top" Width="314" Margin="0,41,0,0"/>
                 <TextBox x:Name="TextBox_Date"
     VerticalAlignment="Top"
@@ -58,7 +58,7 @@
     Foreground="#FFA6A6A6"
     SelectionBrush="#FF9B72CF"
     VerticalContentAlignment="Center"
-    FocusVisualStyle="{x:Null}" GotFocus="TextBox_Date_GotFocus" LostFocus="TextBox_Date_LostFocus" Margin="18,56,18,0" />
+    FocusVisualStyle="{x:Null}" GotFocus="TextBox_Date_GotFocus" LostFocus="TextBox_Date_LostFocus" Margin="18,56,18,0" PreviewTextInput="TextBox_Date_PreviewTextInput" KeyDown="TextBox_Date_KeyDown" />
                 <Rectangle Height="1" Stroke="#FFA6A6A6" VerticalAlignment="Top" Margin="18,88,18,0"/>
                 <Label x:Name="Label_Exception" Content="Exception" HorizontalAlignment="Center" Margin="0,281,0,0" VerticalAlignment="Top" Width="312" Foreground="#FFCC0000" FontSize="14" FontWeight="Bold" Visibility="Hidden"/>
                 <Button x:Name="Button_Register" Content="Register" Margin="89,318,89,0" Background="#FF9B72CF" Foreground="White" FontWeight="Bold" Height="36" VerticalAlignment="Top" Cursor="Hand" BorderBrush="{x:Null}" FontSize="14" Click="Button_Register_Click">
@@ -95,7 +95,7 @@ Style="{StaticResource TextOnlyHoverButtonStyle}" Cursor="Hand" Click="Button_Ha
                 Foreground="#FFA6A6A6"
                 SelectionBrush="#FF9B72CF"
                 VerticalContentAlignment="Center"
-                FocusVisualStyle="{x:Null}" GotFocus="TextBox_Number_GotFocus" LostFocus="TextBox_Number_LostFocus" Margin="18,104,18,0" />
+                FocusVisualStyle="{x:Null}" GotFocus="TextBox_Number_GotFocus" LostFocus="TextBox_Number_LostFocus" Margin="18,104,18,0" PreviewTextInput="TextBox_Number_PreviewTextInput" KeyDown="TextBox_Number_KeyDown" />
                 <Rectangle HorizontalAlignment="Center" Height="1" Stroke="#FFA6A6A6" VerticalAlignment="Top" Width="314" Margin="0,136,0,0"/>
                 <TextBox x:Name="TextBox_Email"
                     VerticalAlignment="Top"
@@ -109,7 +109,7 @@ Style="{StaticResource TextOnlyHoverButtonStyle}" Cursor="Hand" Click="Button_Ha
                     Foreground="#FFA6A6A6"
                     SelectionBrush="#FF9B72CF"
                     VerticalContentAlignment="Center"
-                    FocusVisualStyle="{x:Null}" GotFocus="TextBox_Email_GotFocus" LostFocus="TextBox_Email_LostFocus" Margin="18,152,18,0" />
+                    FocusVisualStyle="{x:Null}" GotFocus="TextBox_Email_GotFocus" LostFocus="TextBox_Email_LostFocus" Margin="18,152,18,0" KeyDown="TextBox_Email_KeyDown" />
                 <Rectangle HorizontalAlignment="Center" Height="1" Stroke="#FFA6A6A6" VerticalAlignment="Top" Width="314" Margin="0,184,0,0"/>
                 <TextBox x:Name="TextBox_Login"
                     VerticalAlignment="Top"
@@ -123,7 +123,7 @@ Style="{StaticResource TextOnlyHoverButtonStyle}" Cursor="Hand" Click="Button_Ha
                     Foreground="#FFA6A6A6"
                     SelectionBrush="#FF9B72CF"
                     VerticalContentAlignment="Center"
-                    FocusVisualStyle="{x:Null}" GotFocus="TextBox_Login_GotFocus" LostFocus="TextBox_Login_LostFocus" Margin="18,200,18,0" />
+                    FocusVisualStyle="{x:Null}" GotFocus="TextBox_Login_GotFocus" LostFocus="TextBox_Login_LostFocus" Margin="18,200,18,0" KeyDown="TextBox_Login_KeyDown" />
                 <Rectangle HorizontalAlignment="Center" Height="1" Stroke="#FFA6A6A6" VerticalAlignment="Top" Width="314" Margin="0,232,0,0"/>
                 <TextBox x:Name="TextBox_Password"
                     VerticalAlignment="Top"
@@ -137,7 +137,7 @@ Style="{StaticResource TextOnlyHoverButtonStyle}" Cursor="Hand" Click="Button_Ha
                     Foreground="#FFA6A6A6"
                     SelectionBrush="#FF9B72CF"
                     VerticalContentAlignment="Center"
-                    FocusVisualStyle="{x:Null}" GotFocus="TextBox_Password_GotFocus" LostFocus="TextBox_Password_LostFocus" Margin="18,243,18,0" />
+                    FocusVisualStyle="{x:Null}" GotFocus="TextBox_Password_GotFocus" LostFocus="TextBox_Password_LostFocus" Margin="18,243,18,0" KeyDown="TextBox_Password_KeyDown" />
                 <Rectangle HorizontalAlignment="Center" Height="1" Stroke="#FFA6A6A6" VerticalAlignment="Top" Width="314" Margin="0,275,0,0"/>
             </Grid>
             <Image Margin="0,97,512,230" Source="/Resources/icon.png" Stretch="Fill" HorizontalAlignment="Right" Width="53"/>

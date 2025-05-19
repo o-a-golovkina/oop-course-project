@@ -10,7 +10,7 @@
         protected TicketBase(int eventId, decimal price)
         {
             if (price <= 0)
-                throw new ArgumentOutOfRangeException(nameof(price), "Price must be positive!");
+                throw new ArgumentOutOfRangeException(nameof(price), "Price must be positive");
 
             EventId = eventId;
             Price = price;

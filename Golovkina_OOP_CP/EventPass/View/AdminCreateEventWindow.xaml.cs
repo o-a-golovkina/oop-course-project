@@ -24,7 +24,7 @@ namespace EventPass.View
             WindowState = WindowState.Maximized;
             Image_EmptyImage.Visibility = Visibility.Visible;
             Rectangle_Gray.Visibility = Visibility.Visible;
-            Image_Event.Source = null;
+            ImageBrush_EventPic.ImageSource = null;
             TextBox_Singer.IsEnabled = true;
             ComboBox_Acts.IsEnabled = false;
             ComboBox_Drinks.IsEnabled = false;
@@ -160,7 +160,7 @@ namespace EventPass.View
             {
                 imagePath = dialog.FileName;
 
-                Image_Event.Source = new BitmapImage(new Uri(imagePath));
+                ImageBrush_EventPic.ImageSource = new BitmapImage(new Uri(imagePath));
                 Image_EmptyImage.Visibility = Visibility.Hidden;
                 Rectangle_Gray.Visibility = Visibility.Hidden;
             }
@@ -223,7 +223,7 @@ namespace EventPass.View
             Image_EmptyImage.Visibility = Visibility.Visible;
             Rectangle_Gray.Visibility = Visibility.Visible;
             Label_Exception.Visibility = Visibility.Hidden;
-            Image_Event.Source = null;
+            ImageBrush_EventPic.ImageSource = null;
             ComboBox_EventType.Text = "Concert";
             ComboBox_City.Text = "Kharkiv";
             ComboBox_Acts.Text = "1";
@@ -241,6 +241,8 @@ namespace EventPass.View
                     TextBox_Singer.IsEnabled = true;
                     ComboBox_Acts.IsEnabled = false;
                     ComboBox_Drinks.IsEnabled = false;
+                    ComboBox_Acts.Text = "1";
+                    ComboBox_Drinks.Text = "No";
                     break;
 
                 case "Theater":
@@ -248,6 +250,7 @@ namespace EventPass.View
                     TextBox_Singer.IsEnabled = false;
                     ComboBox_Acts.IsEnabled = true;
                     ComboBox_Drinks.IsEnabled = false;
+                    ComboBox_Drinks.Text = "No";
                     break;
 
                 case "StandUp":
@@ -255,8 +258,33 @@ namespace EventPass.View
                     TextBox_Singer.IsEnabled = false;
                     ComboBox_Acts.IsEnabled = false;
                     ComboBox_Drinks.IsEnabled = true;
+                    ComboBox_Acts.Text = "1";
                     break;
             }
+        }
+
+        private void Button_Orders_Click(object sender, RoutedEventArgs e)
+        {
+            var currentMain = Application.Current.MainWindow;
+            var main = new AdminOrdersWindow();
+            main.Show();
+
+            foreach (Window window in Application.Current.Windows)
+            {
+                if (window != main)
+                    window.Close();
+            }
+        }
+
+        private void TextBox_Date_PreviewTextInput(object sender, System.Windows.Input.TextCompositionEventArgs e)
+        {
+            TextBox? textBox = sender as TextBox;
+
+            bool isAllowed = e.Text.All(c => char.IsDigit(c) || c == '.' || c == '/' || c == ':' || c == ' ');
+
+            bool willExceedLength = textBox!.Text.Length - textBox.SelectionLength + e.Text.Length > 19;
+
+            e.Handled = !isAllowed || willExceedLength;
         }
     }
 }

@@ -24,6 +24,7 @@ namespace EventPass
             WindowState = WindowState.Maximized;
             createdEvents = Admin.Instance.CreatedEvents;
             DownloadEvents(createdEvents);
+            Label_Poster.Content = "Events posters";
         }
 
         private void Button_Account_Click(object sender, RoutedEventArgs e)
@@ -46,6 +47,7 @@ namespace EventPass
         {
             if (TextBox_Search.Text == string.Empty || TextBox_Search.Text == " ")
                 TextBox_Search.Text = "Search event...";
+            Label_Poster.Content = "Events posters";
         }
 
         private void DownloadEvents(List<Event> Events)
@@ -61,7 +63,7 @@ namespace EventPass
                 Controls[i].Visibility = Visibility.Visible;
                 Controls[i].Label_EventName.Content = Events[i].Name;
                 Controls[i].Label_EventType.Content = Events[i].EventType.ToString().Replace("Event", "");
-                Controls[i].Image_EventImage.Source = new BitmapImage(new Uri(Events[i].ImagePath!));
+                Controls[i].ImageBrush_EventPic.ImageSource = new BitmapImage(new Uri(Events[i].ImagePath!));
             }
         }
 
@@ -180,6 +182,7 @@ namespace EventPass
         private void TextBox_Search_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
         {
             searchQuery = TextBox_Search.Text.Trim();
+            Label_Poster.Content = $"Events with name \"{searchQuery}\"";
             ApplyFilters();
         }
 
@@ -188,6 +191,7 @@ namespace EventPass
             if (e.Key == Key.Escape)
             {
                 TextBox_Search.Text = "Search event...";
+                Label_Poster.Content = "Events posters";
                 Keyboard.ClearFocus();
             }
         }

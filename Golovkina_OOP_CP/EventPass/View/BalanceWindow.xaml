@@ -10,11 +10,11 @@
             <Grid HorizontalAlignment="Center" Height="375" VerticalAlignment="Center" Width="600">
                 <Label Content="Balance" Height="35" Margin="253,77,252,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="22"/>
                 <Label Content="On your balance:" Margin="204,316,0,0" VerticalAlignment="Top" FontSize="18" Foreground="Gray" HorizontalAlignment="Left" Width="144"/>
-                <Label x:Name="Label_SUM" Content="SUM" Margin="0,316,204,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="18" Foreground="#FF9B72CF" HorizontalAlignment="Right" Width="50"/>
+                <Label x:Name="Label_SUM" Content="SUM" Margin="0,316,67,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="18" Foreground="#FF9B72CF" HorizontalAlignment="Right" Width="187"/>
                 <Image Margin="0,15,538,0" Source="/Resources/icon.png" Stretch="Fill" Height="38" VerticalAlignment="Top" HorizontalAlignment="Right" Width="38"/>
                 <Label Content="Event" Margin="17,42,548,312" FontWeight="Bold" Foreground="#FFA6A6A6" FontSize="9"/>
                 <Label Content="Pass" Margin="41,42,530,312" FontWeight="Bold" Foreground="#FF9B72CF" FontSize="9"/>
-                <Button x:Name="Button_PutMoney" Content="Put money" Margin="54,209,329,0" Background="#FF9B72CF" Foreground="White" FontWeight="Bold" Height="44" VerticalAlignment="Top" Cursor="Hand" BorderBrush="{x:Null}" FontSize="18">
+                <Button x:Name="Button_PutMoney" Content="Put money" Margin="54,223,329,0" Background="#FF9B72CF" Foreground="White" FontWeight="Bold" Height="44" VerticalAlignment="Top" Cursor="Hand" BorderBrush="{x:Null}" FontSize="18" Click="Button_PutMoney_Click">
                     <Button.Template>
                         <ControlTemplate TargetType="{x:Type Button}">
                             <Border x:Name="border"
@@ -34,7 +34,7 @@
                         </ControlTemplate>
                     </Button.Template>
                 </Button>
-                <Button x:Name="Button_WithdrawMoney" Content="Withdraw money" Margin="329,209,54,0" Background="#FF9B72CF" Foreground="White" FontWeight="Bold" Height="44" VerticalAlignment="Top" Cursor="Hand" BorderBrush="{x:Null}" FontSize="18">
+                <Button x:Name="Button_WithdrawMoney" Content="Withdraw money" Margin="329,223,54,0" Background="#FF9B72CF" Foreground="White" FontWeight="Bold" Height="44" VerticalAlignment="Top" Cursor="Hand" BorderBrush="{x:Null}" FontSize="18" Click="Button_WithdrawMoney_Click">
                     <Button.Template>
                         <ControlTemplate TargetType="{x:Type Button}">
                             <Border x:Name="border"
@@ -67,8 +67,9 @@
                     Foreground="#FFA6A6A6"
                     SelectionBrush="#FF9B72CF"
                     VerticalContentAlignment="Center"
-                    FocusVisualStyle="{x:Null}" GotFocus="TextBox_SUM_GotFocus" LostFocus="TextBox_SUM_LostFocus" HorizontalContentAlignment="Center" />
+                    FocusVisualStyle="{x:Null}" GotFocus="TextBox_SUM_GotFocus" LostFocus="TextBox_SUM_LostFocus" HorizontalContentAlignment="Center" PreviewTextInput="TextBox_SUM_PreviewTextInput" />
                 <Rectangle HorizontalAlignment="Center" Height="1" Stroke="#FFA6A6A6" VerticalAlignment="Top" Width="208" Margin="0,171,0,0"/>
+                <Label x:Name="Label_Exception" Content="Exception" Margin="0,177,0,0" VerticalAlignment="Top" Foreground="#FFCC0000" FontSize="14" FontWeight="Bold" Visibility="Hidden" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Width="312"/>
             </Grid>
 
         </Grid>

@@ -1,4 +1,7 @@
-﻿using System.Windows;
+﻿using EventPass.Models.Users;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Input;
 
 namespace EventPass.View
 {
@@ -7,9 +10,12 @@ namespace EventPass.View
     /// </summary>
     public partial class RegistationWindow : Window
     {
+        RegisteredUser newUser = null!;
+
         public RegistationWindow()
         {
             InitializeComponent();
+            Label_Exception.Visibility = Visibility.Hidden;
         }
 
         private void Button_HaveAccount_Click(object sender, RoutedEventArgs e)
@@ -99,19 +105,123 @@ namespace EventPass.View
 
         private void Button_Register_Click(object sender, RoutedEventArgs e)
         {
-            var currentMain = Application.Current.MainWindow;
-            var adminWindow = new AdminCreateEventWindow();
-
-            if (currentMain != null && currentMain.WindowState == WindowState.Maximized)
+            Label_Exception.Visibility = Visibility.Hidden;
+            if (TextBox_Name.Text == "Your full name" ||
+                TextBox_Date.Text == "Date of birth" ||
+                TextBox_Number.Text == "Phone number" ||
+                TextBox_Email.Text == "Email" ||
+                TextBox_Login.Text == "Create login" ||
+                TextBox_Password.Text == "Password")
             {
-                adminWindow.WindowState = WindowState.Maximized;
+                Label_Exception.Visibility = Visibility.Visible;
+                Label_Exception.Content = "Please fill all fields";
+                return;
             }
-            adminWindow.Show();
-
-            foreach (Window window in Application.Current.Windows)
+            string name = TextBox_Name.Text;
+            if (!DateOnly.TryParse(TextBox_Date.Text, out DateOnly date))
             {
-                if (window != adminWindow)
-                    window.Close();
+                Label_Exception.Visibility = Visibility.Visible;
+                Label_Exception.Content = "Invalid date";
+                return;
+            }
+            string phone = TextBox_Number.Text.Replace("(+380)", "");
+            string email = TextBox_Email.Text;
+            string login = TextBox_Login.Text;
+            string password = TextBox_Password.Text;
+
+
+            if (string.IsNullOrEmpty(name) ||
+                string.IsNullOrEmpty(phone) ||
+                string.IsNullOrEmpty(email) ||
+                string.IsNullOrEmpty(login) ||
+                string.IsNullOrEmpty(password))
+            {
+                Label_Exception.Visibility = Visibility.Visible;
+                Label_Exception.Content = "Please fill all fields";
+                return;
+            }
+
+            try
+            {
+                newUser = new(name, date, phone, email, login, password);
+                if (!UserRepository.AddUser(newUser))
+                    throw new Exception("Login already exists");
+                var currentMain = Application.Current.MainWindow;
+                var userWindow = new UserWindow(newUser);
+                userWindow.Show();
+
+                foreach (Window window in Application.Current.Windows)
+                {
+                    if (window != userWindow)
+                        window.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                Label_Exception.Visibility = Visibility.Visible;
+                Label_Exception.Content = ex.Message;
+            }
+        }
+
+        private void TextBox_Number_PreviewTextInput(object sender, System.Windows.Input.TextCompositionEventArgs e)
+        {
+            TextBox? textBox = sender as TextBox;
+
+            bool isDigit = e.Text.All(char.IsDigit);
+
+            bool willExceedLength = textBox!.Text.Length - textBox.SelectionLength + e.Text.Length > 15;
+
+            e.Handled = !isDigit || willExceedLength;
+        }
+
+        private void TextBox_Date_PreviewTextInput(object sender, System.Windows.Input.TextCompositionEventArgs e)
+        {
+            TextBox? textBox = sender as TextBox;
+
+            bool isAllowed = e.Text.All(c => char.IsDigit(c) || c == '.' || c == '/');
+
+            bool willExceedLength = textBox!.Text.Length - textBox.SelectionLength + e.Text.Length > 10;
+
+            e.Handled = !isAllowed || willExceedLength;
+        }
+
+        private void TextBox_Name_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
+        {
+            if (e.Key == Key.Tab || e.Key == Key.Enter)
+                TextBox_Date.Focus();
+        }
+
+        private void TextBox_Date_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
+        {
+            if (e.Key == Key.Tab || e.Key == Key.Enter)
+                TextBox_Number.Focus();
+        }
+
+        private void TextBox_Number_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
+        {
+            if (e.Key == Key.Tab || e.Key == Key.Enter)
+                TextBox_Email.Focus();
+        }
+
+        private void TextBox_Email_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
+        {
+            if (e.Key == Key.Tab || e.Key == Key.Enter)
+                TextBox_Login.Focus();
+
+        }
+
+        private void TextBox_Login_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
+        {
+            if (e.Key == Key.Tab || e.Key == Key.Enter)
+                TextBox_Password.Focus();
+        }
+
+        private void TextBox_Password_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                Button_Register_Click(Button_Register, new RoutedEventArgs());
+                Keyboard.ClearFocus();
             }
         }
     }
