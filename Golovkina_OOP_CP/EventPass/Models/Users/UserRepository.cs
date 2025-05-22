@@ -6,8 +6,6 @@ namespace EventPass.Models.Users
 {
     public static class UserRepository
     {
-        private static string FilePath = "users.json";
-
         public static List<RegisteredUser> Users { get; private set; } = [];
 
         public static bool AddUser(RegisteredUser user)
@@ -29,48 +27,34 @@ namespace EventPass.Models.Users
             return Users.Remove(user);
         }
 
-        public static void SaveToFile()
+        public static void SaveToFile(string filePath)
         {
-            try
+            var options = new JsonSerializerOptions
             {
-                var options = new JsonSerializerOptions
-                {
-                    WriteIndented = true,
-                    ReferenceHandler = ReferenceHandler.IgnoreCycles,
-                    Converters = { new DateOnlyJsonConverter() }
-                };
-                var json = JsonSerializer.Serialize(Users, options);
-                File.WriteAllText(FilePath, json);
-            }
-            catch (Exception ex)
-            {
-                Console.Error.WriteLine($"Error saving users: {ex.Message}");
-            }
+                WriteIndented = true,
+                ReferenceHandler = ReferenceHandler.IgnoreCycles,
+                Converters = { new DateOnlyJsonConverter() }
+            };
+            var json = JsonSerializer.Serialize(Users, options);
+            File.WriteAllText(filePath, json);
         }
 
-        public static void LoadFromFile()
+        public static void LoadFromFile(string filePath)
         {
-            try
+            if (!File.Exists(filePath))
+                return;
+
+            var options = new JsonSerializerOptions
             {
-                if (!File.Exists(FilePath))
-                    return;
+                Converters = { new DateOnlyJsonConverter() }
+            };
 
-                var options = new JsonSerializerOptions
-                {
-                    Converters = { new DateOnlyJsonConverter() }
-                };
+            var json = File.ReadAllText(filePath);
+            var usersFromFile = JsonSerializer.Deserialize<List<RegisteredUser>>(json, options);
 
-                var json = File.ReadAllText(FilePath);
-                var usersFromFile = JsonSerializer.Deserialize<List<RegisteredUser>>(json, options);
-
-                Users = usersFromFile ?? [];
-                foreach (var user in Users)
-                    RegisteredUser.RegisterLogin(user.Login);
-            }
-            catch (Exception ex)
-            {
-                Console.Error.WriteLine($"Error loading users: {ex.Message}");
-            }
+            Users = usersFromFile ?? [];
+            foreach (var user in Users)
+                RegisteredUser.RegisterLogin(user.Login);
         }
     }
 }

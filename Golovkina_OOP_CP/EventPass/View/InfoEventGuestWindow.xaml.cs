@@ -1,6 +1,8 @@
 ﻿using EventPass.Models.Events;
 using EventPass.Models.Tickets;
 using System.Windows;
+using System.Windows.Input;
+using System.Windows.Media;
 using System.Windows.Media.Imaging;
 
 namespace EventPass.View
@@ -18,6 +20,15 @@ namespace EventPass.View
             InitializeComponent();
             this.currentEvent = currentEvent;
             FillAllFields();
+            if (currentEvent.CountFreeTickets == 0)
+            {
+                Button_LoginToBuy.IsEnabled = false;
+                Button_LoginToBuy.Content = "Sold out";
+                Button_LoginToBuy.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#A6A6A6"));
+                Button_LoginToBuy.Cursor = Cursors.Arrow;
+            }
+            else
+                Button_LoginToBuy.Content = "Login to buy";
         }
 
         private void Button_LoginToBuy_Click(object sender, RoutedEventArgs e)

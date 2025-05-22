@@ -22,18 +22,20 @@ namespace EventPass.View
             this.currentEvent = currentEvent;
             FillAllFields();
             this.currentUser = currentUser;
-            Button_Buy.Content = "Buy";
+            if (currentEvent.CountFreeTickets == 0)
+            {
+                Button_Buy.IsEnabled = false;
+                Button_Buy.Content = "Sold out";
+                Button_Buy.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#A6A6A6"));
+                Button_Buy.Cursor = Cursors.Arrow;
+            }
+            else
+                Button_Buy.Content = "Buy";
         }
 
         private void Button_Buy_Click(object sender, RoutedEventArgs e)
         {
-            if (!currentUser.MakeOrder(currentEvent, currentEvent.First(), out int id))
-            {
-                MessageBox.Show("All tickets are sold out", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-                return;
-            }
-
-            if (!currentUser.BuyOrder(id))
+            if (!currentUser.MakeOrderAndBuy(currentEvent, currentEvent.First(), out int id))
             {
                 MessageBox.Show("Not enough money in the balance", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;

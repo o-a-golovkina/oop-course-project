@@ -10,6 +10,12 @@
 
   <ItemGroup>
     <None Remove="icon.png" />
+    <None Remove="Posters\PosterC-AudioPop.png" />
+    <None Remove="Posters\PosterC-LiveMusic.png" />
+    <None Remove="Posters\PosterS-FunniestPersonEver.png" />
+    <None Remove="Posters\PosterS-Paradise.png" />
+    <None Remove="Posters\PosterT-LittleKingdom.png" />
+    <None Remove="Posters\PosterT-RomeoAndJuliet.png" />
     <None Remove="Posters\Poster_Kalush.png" />
     <None Remove="Resources\icon-account.png" />
     <None Remove="Resources\icon-add.png" />
@@ -17,9 +23,11 @@
     <None Remove="Resources\icon-cart.png" />
     <None Remove="Resources\icon-comedy.png" />
     <None Remove="Resources\icon-concert.png" />
+    <None Remove="Resources\icon-load.png" />
     <None Remove="Resources\icon-money.png" />
     <None Remove="Resources\icon-person.png" />
     <None Remove="Resources\icon-remove.png" />
+    <None Remove="Resources\icon-save.png" />
     <None Remove="Resources\icon-search.png" />
     <None Remove="Resources\icon-theater.png" />
     <None Remove="Resources\icon.png" />
@@ -32,6 +40,24 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Posters\PosterC-AudioPop.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Posters\PosterC-LiveMusic.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Posters\PosterS-FunniestPersonEver.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Posters\PosterS-Paradise.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Posters\PosterT-LittleKingdom.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Posters\PosterT-RomeoAndJuliet.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Resources\icon-account.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
@@ -46,6 +72,9 @@
     </Resource>
     <Resource Include="Resources\icon-comedy.png" />
     <Resource Include="Resources\icon-concert.png" />
+    <Resource Include="Resources\icon-load.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Resources\icon-money.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
@@ -53,6 +82,9 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Resources\icon-remove.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\icon-save.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Resources\icon-search.png">

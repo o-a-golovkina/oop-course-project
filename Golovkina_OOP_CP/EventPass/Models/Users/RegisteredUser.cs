@@ -84,7 +84,6 @@ namespace EventPass.Models.Users
                     throw new ArgumentException("This login is already taken");
 
                 login = value;
-                ExistingLogins.Add(value);
             }
         }
 
@@ -123,6 +122,7 @@ namespace EventPass.Models.Users
             Login = login!;
             Password = password!;
             UserRegistered?.Invoke(Login);
+            ExistingLogins.Add(login!);
         }
 
         public static void RegisterLogin(string login) => ExistingLogins.Add(login);
@@ -150,29 +150,25 @@ namespace EventPass.Models.Users
             return true;
         }
 
-        public bool MakeOrder(Event orderedEvent, TicketBase ticket, out int orderId)
+        public bool MakeOrderAndBuy(Event orderedEvent, TicketBase ticket, out int orderId)
         {
             orderId = -1;
-            if (orderedEvent.CountFreeTickets == 0)
+
+            if (orderedEvent.CountFreeTickets == 0 || ticket == null)
                 return false;
-            if (ticket == null) return false;
+
+            if (Balance < ticket.Price)
+                return false;
 
             var newOrder = new Order(Login, orderedEvent, ticket.Price, ticket);
-
             Orders.Add(newOrder);
+
             orderedEvent.Tickets.Remove(ticket);
             orderedEvent.CountFreeTickets--;
+
+            Balance -= ticket.Price;
             orderId = newOrder.Id;
-            return true;
-        }
 
-        public bool BuyOrder(int orderId)
-        {
-            var order = Orders.Find(o => o.Id == orderId);
-            decimal price = order!.Ticket.Price;
-            if (Balance < price) return false;
-
-            Balance -= price;
             return true;
         }
 

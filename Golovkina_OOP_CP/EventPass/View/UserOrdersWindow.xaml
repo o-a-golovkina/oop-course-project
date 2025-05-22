@@ -47,23 +47,6 @@
                 <Label Content="Event" Margin="34,64,718,342" FontWeight="Bold" Foreground="#FFA6A6A6" FontSize="14"/>
                 <Label Content="Pass" Margin="71,64,689,342" FontWeight="Bold" Foreground="#FF9B72CF" FontSize="14"/>
                 <Label x:Name="Label_YourOrders" Content="Your orders" HorizontalAlignment="Left" Margin="170,81,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14"/>
-                <Border BorderBrush="#FFA6A6A6" BorderThickness="0.5" HorizontalAlignment="Left" Height="25" Margin="173,21,0,0" VerticalAlignment="Top" Width="232" Background="White" CornerRadius="15,15,15,15">
-                    <TextBox x:Name="TextBox_Search" 
-    HorizontalAlignment="Left"
-    TextWrapping="Wrap"
-    VerticalAlignment="Center"
-    Width="118"
-    Background="{x:Null}"
-    BorderBrush="{x:Null}"
-    BorderThickness="0"
-    Foreground="#FFA6A6A6"
-    SelectionBrush="#FF9B72CF"
-    Text="Search event..."
-    Margin="32,0,0,0"
-    FontSize="8"
-    FocusVisualStyle="{x:Null}" GotFocus="TextBox_Search_GotFocus" LostFocus="TextBox_Search_LostFocus" TextChanged="TextBox_Search_TextChanged" KeyDown="TextBox_Search_KeyDown" />
-                </Border>
-                <Image Margin="186,27,601,394" Source="/Resources/icon-search.png" Stretch="Fill"/>
                 <Image Margin="694,22,82,388" Source="/Resources/icon-person.png" Stretch="Fill"/>
                 <Image Margin="616,22,160,388" Source="/Resources/icon-money.png" Stretch="Fill"/>
                 <Image Margin="540,25,241,390" Source="/Resources/icon-cart.png" Stretch="Fill"/>
@@ -77,7 +60,7 @@
                 <DataGrid.Columns>
                         <DataGridTextColumn Header="Id" Binding="{Binding Id}" Width="*" />
                         <DataGridTextColumn Header="Event - id" Binding="{Binding EventName}" Width="*" />
-                        <DataGridTextColumn Header="Date" Binding="{Binding EventDate}" Width="*" />
+                        <DataGridTextColumn Header="Date and time" Binding="{Binding EventDate}" Width="*" />
                         <DataGridTextColumn Header="Price" Binding="{Binding Price}" Width="*" />
                         <DataGridTextColumn Header="City" Binding="{Binding City}" Width="*" />
                     </DataGrid.Columns>

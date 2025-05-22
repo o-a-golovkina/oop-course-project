@@ -46,14 +46,12 @@
             <Grid HorizontalAlignment="Left" Height="434" VerticalAlignment="Top" Width="800" Grid.ColumnSpan="2">
                 <Label Content="Event" Margin="34,64,718,342" FontWeight="Bold" Foreground="#FFA6A6A6" FontSize="14"/>
                 <Label Content="Pass" Margin="71,64,689,342" FontWeight="Bold" Foreground="#FF9B72CF" FontSize="14"/>
-                <Label Content="Customers orders" HorizontalAlignment="Left" Margin="170,81,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14"/>
+                <Label Content="Created events" HorizontalAlignment="Left" Margin="170,81,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14"/>
                 <Image Margin="210,25,571,390" Source="/Resources/icon-cart.png" Stretch="Fill"/>
                 <Button x:Name="Button_Orders" Content="Orders" Margin="224,24,540,0" Height="20" VerticalAlignment="Top"
-                    Style="{StaticResource TextOnlyHoverButtonStyle}" Cursor="Hand" FontSize="8"/>
+                    Style="{StaticResource TextOnlyHoverButtonStyle}" Cursor="Hand" FontSize="8" Click="Button_Orders_Click"/>
                 <Button x:Name="Button_AddEvent" Content="Add event" Margin="306,25,450,0" Height="20" VerticalAlignment="Top"
-                    Style="{StaticResource TextOnlyHoverButtonStyle}" Cursor="Hand" FontSize="8"/>
-                <Button x:Name="Button_Admin" Content="Admin" Margin="726,25,30,0" Height="20" VerticalAlignment="Top"
-                    Style="{StaticResource TextOnlyHoverButtonStyle}" Cursor="Hand" FontSize="8"/>
+                    Style="{StaticResource TextOnlyHoverButtonStyle}" Cursor="Hand" FontSize="8" Click="Button_AddEvent_Click"/>
                 <Button x:Name="Button_Home" Content="Button" HorizontalAlignment="Left" Margin="49,35,0,0" VerticalAlignment="Top" BorderBrush="{x:Null}" Foreground="{x:Null}" Height="44" Width="43" Background="{x:Null}" Cursor="Hand">
                     <Button.Template>
                         <ControlTemplate TargetType="Button">
@@ -63,7 +61,6 @@
                         </ControlTemplate>
                     </Button.Template>
                 </Button>
-                <DataGrid x:Name="DataGrid_Orders" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="174,116,20,35" Background="{x:Null}" Foreground="Gray" BorderBrush="{x:Null}" HorizontalGridLinesBrush="Gray" VerticalGridLinesBrush="Gray"/>
                 <Button x:Name="Button_RemoveEvent" Content="Remove event" Margin="397,25,344,0" Height="20" VerticalAlignment="Top"
                     Style="{StaticResource TextOnlyHoverButtonStyle}" Cursor="Hand" FontSize="8"/>
                 <Image Margin="288,25,492,389" Source="/Resources/icon-add.png" Stretch="Fill"/>
@@ -78,7 +75,27 @@
                         </TransformGroup>
                     </Image.RenderTransform>
                 </Image>
+                <Button x:Name="Button_LoadUsers" Content="Load users" Margin="496,25,254,0" Height="20" VerticalAlignment="Top"
+                    Style="{StaticResource TextOnlyHoverButtonStyle}" Cursor="Hand" FontSize="8" Click="Button_LoadUsers_Click"/>
+                <Button x:Name="Button_SaveUsers" Content="Save users" Margin="578,24,173,0" Height="20" VerticalAlignment="Top"
+                    Style="{StaticResource TextOnlyHoverButtonStyle}" Cursor="Hand" FontSize="8" Click="Button_SaveUsers_Click"/>
+                <Image Margin="483,26,300,390" Source="/Resources/icon-load.png" Stretch="Fill"/>
+                <Image Margin="563,27,222,391" Source="/Resources/icon-save.png" Stretch="Fill"/>
             </Grid>
+            <Button x:Name="Button_AdminExit" Content="Admin exit" Margin="720,25,30,0" Height="20" VerticalAlignment="Top"
+                Style="{StaticResource TextOnlyHoverButtonStyle}" Cursor="Hand" FontSize="8" Click="Button_AdminExit_Click"/>
+            <DataGrid x:Name="DataGrid_Events" HorizontalAlignment="Left" Height="302" Margin="173,115,0,0" VerticalAlignment="Top" Width="602" d:ItemsSource="{d:SampleData ItemCount=5}" Background="{x:Null}" BorderBrush="{x:Null}" VerticalGridLinesBrush="#FFA6A6A6" HorizontalGridLinesBrush="#FFA6A6A6" FontSize="10" AutoGenerateColumns="False" MouseDoubleClick="DataGrid_Events_MouseDoubleClick">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Id" Binding="{Binding Id}" Width="*" />
+                    <DataGridTextColumn Header="Name" Binding="{Binding EventName}" Width="*" />
+                    <DataGridTextColumn Header="Type" Binding="{Binding Type}" Width="*" />
+                    <DataGridTextColumn Header="Date and time" Binding="{Binding EventDate}" Width="*" />
+                    <DataGridTextColumn Header="Price" Binding="{Binding Price}" Width="*" />
+                    <DataGridTextColumn Header="City" Binding="{Binding City}" Width="*" />
+                    <DataGridTextColumn Header="Free" Binding="{Binding Free}" Width="*" />
+                </DataGrid.Columns>
+            </DataGrid>
+            <Label x:Name="Label_No" Content="You haven't created any events yet." HorizontalAlignment="Left" Margin="181,110,0,0" VerticalAlignment="Top" Width="249" Foreground="#FFA6A6A6" FontStyle="Italic"/>
         </Grid>
     </Viewbox>
 </Window>

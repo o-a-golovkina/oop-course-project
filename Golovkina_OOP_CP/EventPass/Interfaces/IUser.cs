@@ -18,8 +18,7 @@ namespace EventPass.Interfaces
 
         public bool PutMoney(decimal money);
         public bool WithdrawMoney(decimal money);
-        public bool MakeOrder(Event orderedEvent, TicketBase ticket, out int orderId);
-        public bool BuyOrder(int orderId);
+        public bool MakeOrderAndBuy(Event orderedEvent, TicketBase ticket, out int orderId);
         public List<Order> GetListOfOrders();
         public bool DeleteAccount();
     }

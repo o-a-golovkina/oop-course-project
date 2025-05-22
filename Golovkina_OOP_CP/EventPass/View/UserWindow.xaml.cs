@@ -30,14 +30,12 @@ namespace EventPass.View
 
         private void TextBox_Search_GotFocus(object sender, RoutedEventArgs e)
         {
-            if (TextBox_Search.Text == "Search event...")
-                TextBox_Search.Text = string.Empty;
+            TextBox_Search.Text = string.Empty;
         }
 
         private void TextBox_Search_LostFocus(object sender, RoutedEventArgs e)
         {
-            if (TextBox_Search.Text == string.Empty || TextBox_Search.Text == " ")
-                TextBox_Search.Text = "Search event...";
+            TextBox_Search.Text = "Search event...";
             Label_Poster.Content = "Events posters";
         }
 
@@ -173,7 +171,8 @@ namespace EventPass.View
         private void TextBox_Search_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
         {
             searchQuery = TextBox_Search.Text.Trim();
-            Label_Poster.Content = $"Events with name \"{searchQuery}\"";
+            if (!Label_Poster.Content.ToString()!.Contains("with"))
+                Label_Poster.Content += $" with name \"{searchQuery}\"";
             ApplyFilters();
         }
 

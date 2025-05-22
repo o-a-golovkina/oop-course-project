@@ -1,7 +1,6 @@
 ﻿using EventPass.Models;
 using EventPass.Models.Users;
 using System.Windows;
-using System.Windows.Input;
 
 namespace EventPass.View
 {
@@ -47,25 +46,12 @@ namespace EventPass.View
             {
                 Id = order.Id.ToString(),
                 EventName = order.OrderedEvent.Name! + " - " + order.OrderedEvent.Id,
-                EventDate = order.OrderedEvent.DateAndTime.ToString(),
+                EventDate = order.OrderedEvent.DateAndTime.ToString("dd/MM/yyyy hh:mm"),
                 Price = order.Price.ToString(),
                 City = order.OrderedEvent.City!
             };
             downloadOrders.Add(view);
             return view;
-        }
-
-        private void TextBox_Search_GotFocus(object sender, RoutedEventArgs e)
-        {
-            if (TextBox_Search.Text == "Search event...")
-                TextBox_Search.Text = string.Empty;
-        }
-
-        private void TextBox_Search_LostFocus(object sender, RoutedEventArgs e)
-        {
-            if (TextBox_Search.Text == string.Empty || TextBox_Search.Text == " ")
-                TextBox_Search.Text = "Search event...";
-            Label_YourOrders.Content = "Your orders";
         }
 
         private void Button_Home_Click(object sender, RoutedEventArgs e)
@@ -80,35 +66,6 @@ namespace EventPass.View
                     window.Close();
             }
             return;
-        }
-
-        private void TextBox_Search_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
-        {
-            if (downloadOrders.Count == 0)
-                return;
-            searchQuery = TextBox_Search.Text.Trim();
-            Label_YourOrders.Content = $"Your orders with event name \"{searchQuery}\"";
-            string query = TextBox_Search.Text.Trim().ToLower();
-
-            var filtered = downloadOrders.Where(o =>
-                o.EventName.ToLower().Contains(query) ||
-                o.City.ToLower().Contains(query) ||
-                o.Price.Contains(query) ||
-                o.EventDate.Contains(query)
-            ).ToList();
-
-            DataGrid_Orders.ItemsSource = filtered;
-        }
-
-        private void TextBox_Search_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
-        {
-            if (e.Key == Key.Escape)
-            {
-                TextBox_Search.Text = "Search event...";
-                Label_YourOrders.Content = "Your orders";
-                Keyboard.ClearFocus();
-                DownloadOrders();
-            }
         }
 
         private void Button_Balance_Click(object sender, RoutedEventArgs e)

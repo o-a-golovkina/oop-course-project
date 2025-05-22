@@ -286,5 +286,59 @@ namespace EventPass.View
 
             e.Handled = !isAllowed || willExceedLength;
         }
+
+        private void Button_RemoveEvent_Click(object sender, RoutedEventArgs e)
+        {
+            var currentMain = Application.Current.MainWindow;
+            var main = new AminRemoveEventWindow();
+            main.Show();
+
+            foreach (Window window in Application.Current.Windows)
+            {
+                if (window != main)
+                    window.Close();
+            }
+        }
+
+        private void Button_LoadUsers_Click(object sender, RoutedEventArgs e)
+        {
+            var openFileDialog = new OpenFileDialog
+            {
+                Filter = "JSON files (*.json)|*.json|All files (*.*)|*.*"
+            };
+
+            if (openFileDialog.ShowDialog() == true)
+            {
+                try
+                {
+                    UserRepository.LoadFromFile(openFileDialog.FileName);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error loading users", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            }
+        }
+
+        private void Button_SaveUsers_Click(object sender, RoutedEventArgs e)
+        {
+            var saveFileDialog = new SaveFileDialog
+            {
+                Filter = "JSON files (*.json)|*.json|All files (*.*)|*.*",
+                FileName = "users.json"
+            };
+
+            if (saveFileDialog.ShowDialog() == true)
+            {
+                try
+                {
+                    UserRepository.SaveToFile(saveFileDialog.FileName);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error saving users", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            }
+        }
     }
 }
