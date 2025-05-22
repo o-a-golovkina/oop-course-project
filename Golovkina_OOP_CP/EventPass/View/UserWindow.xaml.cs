@@ -17,6 +17,7 @@ namespace EventPass.View
         DateTime? selectedDate = null;
         string searchQuery = "";
         RegisteredUser currentUser;
+        private bool isSearchResetting = false;
 
         public UserWindow(RegisteredUser currentUser)
         {
@@ -26,11 +27,6 @@ namespace EventPass.View
             DownloadEvents(createdEvents);
             this.currentUser = currentUser;
             Label_Poster.Content = "Events posters";
-        }
-
-        private void TextBox_Search_GotFocus(object sender, RoutedEventArgs e)
-        {
-            TextBox_Search.Text = string.Empty;
         }
 
         private void TextBox_Search_LostFocus(object sender, RoutedEventArgs e)
@@ -170,9 +166,19 @@ namespace EventPass.View
 
         private void TextBox_Search_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
         {
+            if (isSearchResetting)
+            {
+                isSearchResetting = false;
+                return;
+            }
+
             searchQuery = TextBox_Search.Text.Trim();
-            if (!Label_Poster.Content.ToString()!.Contains("with"))
-                Label_Poster.Content += $" with name \"{searchQuery}\"";
+
+            if (!string.IsNullOrWhiteSpace(searchQuery))
+            {
+                Label_Poster.Content = $"{selectedEventType?.ToString().Replace("Event", "") ?? "Events"} with name {searchQuery}";
+            }
+
             ApplyFilters();
         }
 
@@ -180,9 +186,19 @@ namespace EventPass.View
         {
             if (e.Key == Key.Escape)
             {
+                isSearchResetting = true;
+                TextBox_Search.Text = "";
+                searchQuery = "";
                 TextBox_Search.Text = "Search event...";
-                Label_Poster.Content = "Events posters";
+                Label_Poster.Content = selectedEventType switch
+                {
+                    EventType.ConcertEvent => "Concert posters",
+                    EventType.TheaterEvent => "Theater posters",
+                    EventType.StandUpEvent => "StandUp posters",
+                    _ => "Events posters"
+                };
                 Keyboard.ClearFocus();
+                ApplyFilters();
             }
         }
 
@@ -273,6 +289,11 @@ namespace EventPass.View
                 if (window != ordersWindow)
                     window.Close();
             }
+        }
+
+        private void TextBox_Search_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            TextBox_Search.Text = string.Empty;
         }
     }
 }

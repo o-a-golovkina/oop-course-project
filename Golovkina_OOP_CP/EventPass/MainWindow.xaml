@@ -83,7 +83,7 @@
     Text="Search event..."
     Margin="32,0,0,0"
     FontSize="8"
-    FocusVisualStyle="{x:Null}" GotFocus="TextBox_Search_GotFocus" LostFocus="TextBox_Search_LostFocus" TextChanged="TextBox_Search_TextChanged" KeyDown="TextBox_Search_KeyDown" />
+    FocusVisualStyle="{x:Null}" LostFocus="TextBox_Search_LostFocus" TextChanged="TextBox_Search_TextChanged" KeyDown="TextBox_Search_KeyDown" PreviewMouseLeftButtonDown="TextBox_Search_PreviewMouseLeftButtonDown" />
                 </Border>
                 <Image Margin="186,27,601,394" Source="/Resources/icon-search.png" Stretch="Fill"/>
                 <Button x:Name="Button_Account" Width="24"
