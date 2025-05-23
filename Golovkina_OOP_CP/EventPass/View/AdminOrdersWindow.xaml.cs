@@ -54,7 +54,7 @@ namespace EventPass.View
             {
                 Id = order.Id.ToString(),
                 EventName = order.OrderedEvent.Name! + " - " + order.OrderedEvent.Id,
-                EventDate = order.OrderedEvent.DateAndTime.ToString("dd/MM/yyyy hh:mm"),
+                EventDate = order.OrderedEvent.DateAndTime.ToString("dd/MM/yyyy HH:mm"),
                 Price = order.Price.ToString(),
                 City = order.OrderedEvent.City!,
                 Login = order.UserLogin,

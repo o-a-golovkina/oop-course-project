@@ -49,3 +49,4 @@ D:\1KHAI\2 semester\ООП\GitHub\Golovkina_OOP_CP\EventPass\obj\Debug\net8.0-wi
 D:\1KHAI\2 semester\ООП\GitHub\Golovkina_OOP_CP\EventPass\obj\Debug\net8.0-windows\EventPass.pdb
 D:\1KHAI\2 semester\ООП\GitHub\Golovkina_OOP_CP\EventPass\obj\Debug\net8.0-windows\EventPass.genruntimeconfig.cache
 D:\1KHAI\2 semester\ООП\GitHub\Golovkina_OOP_CP\EventPass\obj\Debug\net8.0-windows\ref\EventPass.dll
+D:\1KHAI\2 semester\ООП\GitHub\Golovkina_OOP_CP\EventPass\bin\Debug\net8.0-windows\Newtonsoft.Json.dll

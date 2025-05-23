@@ -39,9 +39,9 @@ namespace EventPass.View
             var view = new AdminEventView
             {
                 Id = e.Id.ToString(),
-                Type = e.EventType.ToString(),
+                Type = e.EventType.ToString().Replace("Event", ""),
                 EventName = e.Name!,
-                EventDate = e.DateAndTime.ToString("dd/MM/yyyy hh:mm"),
+                EventDate = e.DateAndTime.ToString("dd/MM/yyyy HH:mm"),
                 Price = e.Tickets.First().Price.ToString(),
                 City = e.City!,
                 Free = e.CountFreeTickets.ToString(),

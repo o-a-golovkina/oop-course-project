@@ -1,0 +1,92 @@
+[
+  {
+    "FullName": "Ivan Petrenko",
+    "BirthDate": "1995-03-14",
+    "PhoneNumber": "934567890",
+    "Email": "ivan.petrenko@gmail.com",
+    "Login": "ipetrenko",
+    "Password": "Gx9tV2m1",
+    "Balance": 0
+  },
+  {
+    "FullName": "Olena Shevchenko",
+    "BirthDate": "1992-07-22",
+    "PhoneNumber": "671234567",
+    "Email": "olena.shevchenko@yahoo.com",
+    "Login": "oshevchenko",
+    "Password": "Lq7Re1p8",
+    "Balance": 1500
+  },
+  {
+    "FullName": "Dmytro Boyko",
+    "BirthDate": "1988-11-09",
+    "PhoneNumber": "992345678",
+    "Email": "dmytro.boyko@ukr.net",
+    "Login": "dboyko",
+    "Password": "Zb4Yn8k3",
+    "Balance": 500
+  },
+  {
+    "FullName": "Kateryna Melnyk",
+    "BirthDate": "1994-05-30",
+    "PhoneNumber": "689876543",
+    "Email": "kateryna.melnyk@gmail.com",
+    "Login": "kmelnyk",
+    "Password": "Mw3Xp6d7",
+    "Balance": 2000
+  },
+  {
+    "FullName": "Andrii Kovalenko",
+    "BirthDate": "1990-12-17",
+    "PhoneNumber": "733456789",
+    "Email": "andrii.kovalenko@outlook.com",
+    "Login": "akovalenko",
+    "Password": "Vc8Lm5q2",
+    "Balance": 300
+  },
+  {
+    "FullName": "Nataliia Bondarenko",
+    "BirthDate": "1993-06-05",
+    "PhoneNumber": "668765432",
+    "Email": "nataliia.bondarenko@gmail.com",
+    "Login": "nbondarenko",
+    "Password": "Hr2Pz7w9",
+    "Balance": 100
+  },
+  {
+    "FullName": "Mykhailo Tkachenko",
+    "BirthDate": "1987-08-28",
+    "PhoneNumber": "961122334",
+    "Email": "mykhailo.tkachenko@ukr.net",
+    "Login": "mtkachenko",
+    "Password": "Nk6Ts9a4",
+    "Balance": 50
+  },
+  {
+    "FullName": "Iryna Polishchuk",
+    "BirthDate": "1991-04-12",
+    "PhoneNumber": "919988776",
+    "Email": "iryna.polishchuk@yahoo.com",
+    "Login": "ipolishchuk",
+    "Password": "Fb1Gw4e5",
+    "Balance": 0
+  },
+  {
+    "FullName": "Oleksandr Hnatiuk",
+    "BirthDate": "1989-10-03",
+    "PhoneNumber": "507654321",
+    "Email": "oleksandr.hnatiuk@gmail.com",
+    "Login": "ohnatiuk",
+    "Password": "Jd5Kv3u0",
+    "Balance": 900
+  },
+  {
+    "FullName": "Tetiana Kravchenko",
+    "BirthDate": "1996-01-25",
+    "PhoneNumber": "633214567",
+    "Email": "tetiana.kravchenko@outlook.com",
+    "Login": "tkravchenko",
+    "Password": "Ty0Nz8r6",
+    "Balance": 3500
+  }
+]

@@ -1,6 +1,5 @@
-﻿using System.IO;
-using System.Text.Json;
-using System.Text.Json.Serialization;
+﻿using Newtonsoft.Json;
+using System.IO;
 
 namespace EventPass.Models.Users
 {
@@ -29,32 +28,14 @@ namespace EventPass.Models.Users
 
         public static void SaveToFile(string filePath)
         {
-            var options = new JsonSerializerOptions
-            {
-                WriteIndented = true,
-                ReferenceHandler = ReferenceHandler.IgnoreCycles,
-                Converters = { new DateOnlyJsonConverter() }
-            };
-            var json = JsonSerializer.Serialize(Users, options);
-            File.WriteAllText(filePath, json);
+            string jsonstring = JsonConvert.SerializeObject(Users, Formatting.Indented);
+            File.WriteAllText(filePath, jsonstring);
         }
 
         public static void LoadFromFile(string filePath)
         {
-            if (!File.Exists(filePath))
-                return;
-
-            var options = new JsonSerializerOptions
-            {
-                Converters = { new DateOnlyJsonConverter() }
-            };
-
-            var json = File.ReadAllText(filePath);
-            var usersFromFile = JsonSerializer.Deserialize<List<RegisteredUser>>(json, options);
-
-            Users = usersFromFile ?? [];
-            foreach (var user in Users)
-                RegisteredUser.RegisterLogin(user.Login);
+            string text = File.ReadAllText(filePath);
+            Users.AddRange(JsonConvert.DeserializeObject<List<RegisteredUser>>(text)!);
         }
     }
 }

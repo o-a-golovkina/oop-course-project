@@ -1,11 +1,13 @@
 ﻿using EventPass.Interfaces;
 using EventPass.Models.Events;
 using EventPass.Models.Tickets;
+using Newtonsoft.Json;
 using System.Collections;
 using System.Text.RegularExpressions;
 
 namespace EventPass.Models.Users
 {
+    [JsonObject]
     public class RegisteredUser : IUser, IEnumerable<Order>
     {
         private static readonly HashSet<string> ExistingLogins = [];
@@ -20,6 +22,7 @@ namespace EventPass.Models.Users
 
         public static event Action<string>? UserRegistered;
 
+        [JsonProperty]
         public string FullName
         {
             get => fullName!;
@@ -36,6 +39,7 @@ namespace EventPass.Models.Users
             }
         }
 
+        [JsonProperty]
         public DateOnly BirthDate
         {
             get => birthDate;
@@ -47,6 +51,7 @@ namespace EventPass.Models.Users
             }
         }
 
+        [JsonProperty]
         public string PhoneNumber
         {
             get => phoneNumber!;
@@ -58,6 +63,7 @@ namespace EventPass.Models.Users
             }
         }
 
+        [JsonProperty]
         public string Email
         {
             get => email!;
@@ -69,6 +75,7 @@ namespace EventPass.Models.Users
             }
         }
 
+        [JsonProperty]
         public string Login
         {
             get => login!;
@@ -87,6 +94,7 @@ namespace EventPass.Models.Users
             }
         }
 
+        [JsonProperty]
         public string Password
         {
             get => password!;
@@ -100,6 +108,7 @@ namespace EventPass.Models.Users
             }
         }
 
+        [JsonIgnore]
         public decimal Balance
         {
             get => balance;
@@ -111,7 +120,10 @@ namespace EventPass.Models.Users
             }
         }
 
+        [JsonIgnore]
         public List<Order> Orders { get; set; } = [];
+
+        RegisteredUser() { }
 
         public RegisteredUser(string? fullName, DateOnly birthDate, string? phoneNumber, string? email, string? login, string? password)
         {

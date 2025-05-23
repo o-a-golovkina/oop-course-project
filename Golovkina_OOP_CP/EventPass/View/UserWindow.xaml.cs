@@ -159,7 +159,7 @@ namespace EventPass.View
                 EventControl_1, EventControl_2, EventControl_3, EventControl_4, EventControl_5, EventControl_6
             };
 
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < Controls.Count; i++)
                 Controls[i].Visibility = Visibility.Hidden;
             return Controls;
         }

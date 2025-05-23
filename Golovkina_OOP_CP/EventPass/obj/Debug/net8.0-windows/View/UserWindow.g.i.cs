@@ -197,7 +197,7 @@ namespace EventPass.View {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/EventPass;V1.0.0.0;component/view/userwindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/EventPass;component/view/userwindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\View\UserWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
